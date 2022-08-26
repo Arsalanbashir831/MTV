@@ -47,10 +47,13 @@ const DesktopNavbar = () => {
         <div className='rightContainer'>
           <div className="buttons">
             <div className="end-nav">
-              <Button className=' login-btn' variant="contained">Login</Button>
+              <Button className=' login-btn' variant="contained">Log in</Button>
               <Button className='order-btn' variant="contained">Order Now</Button>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
+        <div className='hamburger-menu'>
+        <i class="fa-solid fa-bars"></i>
+        </div>
             </div>
             <div className="tool-nav">
               <i class="fa-solid fa-moon"></i>
