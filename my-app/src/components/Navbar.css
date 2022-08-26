@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Clicker+Script&family=Great+Vibes&family=Lato&display=swap');
+#navbar{
+    padding: 20px 9.3% 15px 12.8%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content auto;
+    grid-auto-flow: column;
+    position: sticky;
+    top: -0.1px;
+    z-index: 10000;
+    grid-gap: 5.3vw;
+    gap: 8.3vw;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-property: transform,opacity,background-color,color;
+
+}
+.is-pinned{
+    background-color: var(--components-light-theme);
+    
+}
+
+.leftContainer{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 0;
+    z-index: 1;
+}
+
+.centerContainer {
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: space-between;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-property: transform,opacity,background-color,color;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 0;
+    z-index: 1;
+}
+.nav-links{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-gap: 1.9vw;
+    gap: 1.9vw;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.nav-link{
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+.fa-moon{
+    color: white;
+    font-size: 1.6rem;
+    margin-left: 20px !important;
+    max-width: 22px;
+    max-height: 22px;
+    padding: 0px 2px;
+    cursor: pointer;
+}
+.buttons{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    gap: 10px;
+    align-items: center;
+}
+.end-nav{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 0;
+    z-index: 1;
+    grid-gap: 10px;
+    gap: 10px;
+}
+.login-btn{
+    color: #112a78 !important;
+    padding: 4px 14px 3px !important;;
+    background-color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 3px !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+.order-btn{
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 3px !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    padding:4px 14px 3px !important;;
+    box-shadow: 0 12px 24px 0 rgb(0 0 0 / 9%)!important;
+    background-color: var( --green-button-bg) !important;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+.tool-nav{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 0;
+    z-index: 1;
+    grid-gap: 10px;
+    gap: 10px;
+}
+
+  

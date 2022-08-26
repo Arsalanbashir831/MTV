@@ -1,0 +1,10 @@
+/* light body  */
+body {
+    padding-top: 0.1px;
+    background-size: max(1440px, 100vw) auto !important;
+    background-position: top;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-property: transform, opacity, background-color, color;
+    background: var(--bg-light-shadow) var(--bg-light-img) no-repeat;
+  }
