@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Clicker+Script&family=Great+Vibes&family=Lato&display=swap');
 #navbar{
-    padding: 20px 9.3% 15px 12.8%;
+    padding: 20px 9.3% 0px 12.8%;
     display: grid;
     align-items: center;
     grid-template-columns: max-content auto;
     grid-auto-flow: column;
-    position: sticky;
+    position: fixed;
     top: -0.1px;
     z-index: 10000;
     grid-gap: 5.3vw;
@@ -15,10 +15,10 @@
     transition-property: transform,opacity,background-color,color;
 
 }
-.is-pinned{
+/* .is-pinned{
     background-color: var(--components-light-theme);
     
-}
+} */
 
 .leftContainer{
     display: grid;
@@ -26,6 +26,13 @@
     grid-auto-flow: column;
     padding: 0;
     z-index: 1;
+}
+
+.rightContainer{
+    display: grid;
+    align-items: flex-end;
+    grid-gap: 10px;
+    justify-self: flex-end;
 }
 
 .centerContainer {
