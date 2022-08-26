@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Clicker+Script&family=Great+Vibes&family=Lato&display=swap');
 #navbar{
+    min-width: 100%;
     padding: 20px 9.3% 0px 12.8%;
     display: grid;
-    align-items: center;
+    align-items: right;
     grid-template-columns: max-content auto;
     grid-auto-flow: column;
     position: fixed;
