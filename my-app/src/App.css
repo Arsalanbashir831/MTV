@@ -9,3 +9,7 @@ body {
     background: var(--bg-light-shadow) var(--bg-light-img) no-repeat;
     
   }
+
+.ham{
+  z-index: 9999;
+}

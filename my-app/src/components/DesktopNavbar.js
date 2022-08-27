@@ -6,12 +6,16 @@ import Button from '@mui/material/Button';
 // you can change the logo 
 import logo from "../assets/logo.svg"
 import { useState } from 'react';
+import MobileNavbar from './MobileNavbar';
 
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
+  const [mobileActive, setMobileActive] = useState(false)
   
-
+  function handleChange() {
+    setMobileActive(!mobileActive);
+  }
   return (
     <>
       <header id="navbar" >
@@ -43,7 +47,7 @@ const DesktopNavbar = () => {
               <Button className='order-btn' variant="contained">Order Now</Button>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
-        <div className='hamburger-menu'>
+        <div id='click' onClick={()=>handleChange()} className='hamburger-menu'>
         <i  class="fa-solid fa-bars"></i>
         </div>
             </div>
@@ -54,6 +58,8 @@ const DesktopNavbar = () => {
         </div>
 
       </header>
+
+      {mobileActive ? <MobileNavbar></MobileNavbar> : '' }
     </>
   )
 }
