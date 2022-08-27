@@ -1,10 +1,10 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
-const MobileNavbar = () => {
+const MobileNavbar = (props) => {
   return (
     <>
-      <div id="mob-navbar" className=''>
+      <div onClick={props.clickhandler} id="mob-navbar"  className={ (props.active==="true")? `slide-open`:`slide-close`}>
         <div className='upper-Container' >
           <ul className=' nav-links mob-nav-links'>
             {/* LOGO */}
@@ -24,7 +24,7 @@ const MobileNavbar = () => {
             <div className='tool-nav mob-icon'>
               <div className="switchMode">
 
-                <i className="fa-solid fa-moon"></i> <p className='mode-text'>Dark Mode</p>
+                <i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Light Mode</p>
               </div>
             </div>
           </div>

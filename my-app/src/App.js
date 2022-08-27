@@ -10,13 +10,12 @@ import { Button } from '@mui/material'
 import zIndex from '@mui/material/styles/zIndex'
 
 const App = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
+ 
 
   return (
     <>
       {/* navbar */}
       <DivScroll></DivScroll>
-
       <DesktopNavbar></DesktopNavbar>
 
 
