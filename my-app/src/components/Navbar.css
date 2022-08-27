@@ -300,20 +300,20 @@
   
 }
 
-.fade-enter {
+.slide-enter {
     transform: translateX(100%);
   }
   
-  .fade-enter-active {
+  .slide-enter-active {
     transform: translateX(0%);
     transition:all 1s ease;
   }
   
-  .fade-exit {
+  .slide-exit {
     transform: translateX(0);
   }
   
-  .fade-exit-active {
+  .slide-exit-active {
     transform: translateX(100%);
     transition:all 1s ease ;
   }
