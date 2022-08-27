@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbar.css";
-import Stack from '@mui/material/Stack';
+
 import Button from '@mui/material/Button';
 
 // you can change the logo 
@@ -10,25 +10,17 @@ import { useState } from 'react';
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
-  const [navbar, setNavbar] = useState(false);
-
-  const changeNavBg = () => {
-    if (window.scrollY > 0) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  }
+  
 
   return (
     <>
-      <header id="navbar" className={navbar ? `is-pinned` : ` `}>
+      <header id="navbar" >
         <div className="leftContainer">
           {/* logo */}
           <img id='logo' src={logo} alt="" />
 
         </div>
-        <div className="centerContainer">
+        <div className="centerContainer ">
           {/* menu links  */}
           <ul className='nav-links'>
 
@@ -37,7 +29,7 @@ const DesktopNavbar = () => {
             <li className='nav-link'>SETUP</li>
             <li className='nav-link'>RESELLERS</li>
           </ul>
-
+        
           {/* <Stack spacing={1} direction="row">
       <Button className=' login-btn'  variant="contained">Login</Button>
       <Button className='order-btn'  variant="contained">Order Now</Button>
@@ -52,7 +44,7 @@ const DesktopNavbar = () => {
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
         <div className='hamburger-menu'>
-        <i class="fa-solid fa-bars"></i>
+        <i  class="fa-solid fa-bars"></i>
         </div>
             </div>
             <div className="tool-nav">

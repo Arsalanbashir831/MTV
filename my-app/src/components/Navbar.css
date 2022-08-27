@@ -151,6 +151,108 @@
   }
 
 
+
+
+
+#mob-navbar{
+    grid-auto-flow: row;
+    position: absolute;
+    right: 0;
+    top: -0.1px;
+    /* height: 100vh!important; */
+    height: calc(var(--vh, 1vh)*100);
+    width: 0;
+    overflow: hidden;
+    background: #0f266b;
+    justify-content: center;
+    padding: 16px 13.4% 0;
+    grid-auto-columns: 100%;
+    align-items: start;
+    align-content: start;
+    transform: translateX(100vw) scaleX(0);
+    transform-origin: top right;
+    box-shadow: 0 20px 38px -2px rgb(14 31 53 / 6%), 0 16px 24px -1px rgb(14 31 53 / 12%), 0 10px 20px 0 rgb(14 31 53 / 12%), 0 5px 10px 0 rgb(14 31 53 / 6%);
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-property: transform,opacity,background-color,color;
+    width: 76vw;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    display: none;
+}
+.mob-nav-links{
+    grid-auto-flow: row;
+    grid-gap: 23px;
+    gap: 23px;
+    text-align: left;
+    width: 100%;
+}
+.mob-logo{
+    display: block;
+    width: 156px;
+    margin: 0 auto 24px;
+}
+.mob-nav-link{
+    opacity: .6;
+    font-size: 17px;
+}
+.mob-hr{
+    display: block;
+    margin: 27px 0 23px;
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: hsla(0,0%,100%,.13);
+}
+.upper-Container.right>* {
+    width: 100%;
+}
+
+.lower-container{
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    gap: 30px;
+    align-content: flex-start;
+    justify-content: start;
+}
+.btn-grp-mob{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: grid;
+    grid-auto-columns: 100%;
+    padding: 35px 10%;
+    grid-gap: 17px;
+    gap: 17px;
+    background: #122250;
+    grid-auto-flow: row;
+    border-top: 1px solid hsla(0,0%,100%,.09);
+}
+
+.mob-icon{
+    display: grid;
+    grid-gap: 6px;
+    gap: 6px;
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+}
+.mode-text{
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: unset;
+}
+.switchMode{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 15px;
+    gap: 15px;
+    align-items: center;
+    justify-content: start;
+    opacity: .6;
+    cursor: pointer;
+}
 /* Responsive navbar  */
 
 @media  screen and (max-width:1143px)  {
@@ -164,6 +266,7 @@
 @media screen and (max-width:950px){
    #navbar{
     padding: 20px 4.3% 16px 4.3% !important;
+    z-index: -1;
    }
     #navbar .nav-links{
         display: none;
@@ -174,5 +277,18 @@
     .hamburger-menu{
         display: flex;
     }
-    
+    #mob-navbar{
+        /* display the mobile navigation bar or u can say sidebar  */
+        display: grid;
+    }
+    .btn-mob{
+        width: 100% !important;
+        height: 37px !important;
+        display: block !important;
+    }
+    .fa-moon{
+        display: block !important;
+    }
+   
+
 }
