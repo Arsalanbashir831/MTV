@@ -52,7 +52,9 @@ const DesktopNavbar = () => {
         </div>
             </div>
             <div className="tool-nav">
-              <i class="fa-solid fa-moon"></i>
+           
+            <i class="fa-solid fa-sun"></i>
+            
             </div>
           </div>
         </div>

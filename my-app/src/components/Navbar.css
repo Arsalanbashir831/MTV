@@ -74,7 +74,7 @@
 }
 
 
-.fa-moon{
+.fa-sun{
     color: white;
     font-size: 1.2rem;
     margin-left: 0px !important;
@@ -83,6 +83,7 @@
     padding: 0px 2px;
     cursor: pointer;
 }
+
 .buttons{
     display: grid;
     grid-auto-flow: column;
@@ -261,9 +262,14 @@
     }
 }
 
-/* 950 mobile display code  */
 
-@media screen and (max-width:950px){
+@media screen and (max-width:960px) {
+    #navbar{
+        padding: 20px 4.3% 16px 4.3% !important;
+    }
+}
+/* 920 mobile display code  */
+@media screen and (max-width:920px){
    #navbar{
     padding: 20px 4.3% 16px 4.3% !important;
     z-index: 20;
@@ -271,7 +277,7 @@
     #navbar .nav-links{
         display: none;
     }
-    #navbar .login-btn,.order-btn,.fa-moon{
+    #navbar .login-btn,.order-btn,.fa-sun{
         display: none !important;
     }
     .hamburger-menu{
@@ -280,13 +286,14 @@
     #mob-navbar{
         /* display the mobile navigation bar or u can say sidebar  */
         display: grid;
+        z-index: 100;
     }
     .btn-mob{
         width: 100% !important;
         height: 37px !important;
         display: block !important;
     }
-    .fa-moon{
+    .switch-icon  {
         display: block !important;
     }
    

@@ -24,7 +24,7 @@ const MobileNavbar = () => {
             <div className='tool-nav mob-icon'>
               <div className="switchMode">
 
-                <i className="fa-solid fa-moon"></i> <p className='mode-text'>Dark Mode</p>
+                <i className="fa-solid fa-sun switch-icon"></i> <p className='mode-text'>Light Mode</p>
               </div>
             </div>
           </div>
