@@ -56,10 +56,11 @@ const DesktopNavbar = () => {
             </div>
           </div>
         </div>
-
+      
+      
       </header>
 
-      {mobileActive ? <div onClick={()=>{setMobileActive(!mobileActive)}}><MobileNavbar></MobileNavbar> </div> : console.log("hello") }
+      {mobileActive ? <div id= 'temp' onClick={()=>{setMobileActive(false)}}><MobileNavbar></MobileNavbar> </div> : console.log("hello") }
     </>
   )
 }
