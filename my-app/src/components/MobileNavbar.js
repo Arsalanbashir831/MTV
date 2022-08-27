@@ -2,7 +2,6 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
 const MobileNavbar = () => {
-  
   return (
     <>
       <div id="mob-navbar" className=''>
@@ -25,7 +24,7 @@ const MobileNavbar = () => {
             <div className='tool-nav mob-icon'>
               <div className="switchMode">
 
-                <i className="fa-solid fa-sun switch-icon"></i> <p className='mode-text'>Light Mode</p>
+                <i className="fa-solid fa-moon"></i> <p className='mode-text'>Dark Mode</p>
               </div>
             </div>
           </div>

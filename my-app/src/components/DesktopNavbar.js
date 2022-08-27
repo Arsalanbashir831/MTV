@@ -7,12 +7,12 @@ import Button from '@mui/material/Button';
 import logo from "../assets/logo.svg"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
-
+import { CSSTransition } from "react-transition-group";
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
   const [mobileActive, setMobileActive] = useState(false)
-  
+
   function handleChange() {
     setMobileActive(!mobileActive);
   }
@@ -33,7 +33,7 @@ const DesktopNavbar = () => {
             <li className='nav-link'>SETUP</li>
             <li className='nav-link'>RESELLERS</li>
           </ul>
-        
+
           {/* <Stack spacing={1} direction="row">
       <Button className=' login-btn'  variant="contained">Login</Button>
       <Button className='order-btn'  variant="contained">Order Now</Button>
@@ -47,22 +47,27 @@ const DesktopNavbar = () => {
               <Button className='order-btn' variant="contained">Order Now</Button>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
-        <div id='click' onClick={()=>handleChange()} className='hamburger-menu'>
-        <i  class="fa-solid fa-bars"></i>
-        </div>
+              <div id='click' onClick={() => handleChange()} className='hamburger-menu'>
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </div>
             <div className="tool-nav">
-           
-            <i class="fa-solid fa-sun"></i>
-            
+
+              <i class="fa-solid fa-sun"></i>
+
             </div>
           </div>
         </div>
-      
-      
-      </header>
 
-      {mobileActive ? <div id= 'temp' onClick={()=>{setMobileActive(false)}}><MobileNavbar></MobileNavbar> </div> : console.log("hello") }
+
+      </header>
+      <CSSTransition in={mobileActive}
+       
+        timeout={1000}
+        classNames={"fade"}
+        unmountOnExit>
+        <div key='zx' id='temp' onClick={() => { setMobileActive(false) }}><MobileNavbar></MobileNavbar> </div> 
+        </CSSTransition>
     </>
   )
 }
