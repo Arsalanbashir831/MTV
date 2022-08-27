@@ -59,7 +59,7 @@ const DesktopNavbar = () => {
 
       </header>
 
-      {mobileActive ? <MobileNavbar></MobileNavbar> : '' }
+      {mobileActive ? <div onClick={()=>{setMobileActive(!mobileActive)}}><MobileNavbar></MobileNavbar> </div> : console.log("hello") }
     </>
   )
 }
