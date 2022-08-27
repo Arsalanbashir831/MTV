@@ -332,6 +332,14 @@
     }
   
 }
+@media  screen and (max-height:490px) {
+    .btn-grp-mob {
+        padding: 7px 10%;
+    }
+    .mob-nav-links{
+        gap: 8px
+    }
+}
 
 /* .slide-enter {
     animation: enter-active 1s ;

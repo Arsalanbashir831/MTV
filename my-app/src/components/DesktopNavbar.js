@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import logo from "../assets/logo.svg"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
-import { CSSTransition } from "react-transition-group";
+
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {

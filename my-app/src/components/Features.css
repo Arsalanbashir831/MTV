@@ -1,0 +1,34 @@
+#ccc_features {
+    padding-top: 47.5px;
+    padding-bottom: 42px;
+    width: 100%;
+    max-width: 1037px;
+    margin: 0 auto;
+}
+/* .dark-mode  */
+#ccc_features .ccc_container {
+    background-color: #030e2e ;
+    box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
+}
+#ccc_features .ccc_container .ccc_column {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 15px;
+    gap: 15px;
+    justify-content: left;
+}
+#ccc_features .ccc_container .ccc_column img {
+   
+    overflow: visible;
+   -webkit-filter: drop-shadow(0 2px 4px rgba(36,8,128,.15));
+}
+#ccc_features .ccc_container .ccc_column p {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    /* light mode */
+    /* color: #11255d; */
+    max-width: 125px;
+    padding-top: 3px;
+    line-height: 1.23529;
+}
