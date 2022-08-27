@@ -1,6 +1,7 @@
 import React from 'react'
 import Discover from '../components/Discover'
 import Features from '../components/Features'
+
 import  './Home.css'
 
 const Home = () => {
