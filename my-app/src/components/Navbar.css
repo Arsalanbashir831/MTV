@@ -156,6 +156,7 @@
 
 
 #mob-navbar{
+    z-index: 20;
     position: fixed;
     grid-auto-flow: row;
     right: 0;

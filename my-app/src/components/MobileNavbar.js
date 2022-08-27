@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
 const MobileNavbar = () => {
+  
   return (
     <>
       <div id="mob-navbar" className=''>
