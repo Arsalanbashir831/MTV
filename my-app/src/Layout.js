@@ -7,14 +7,8 @@ import Footer from './components/Footer';
 const Layout = () => {
   return (
     <React.Fragment>
-      {/* <CssBaseline /> */}
-      {/* <div style={{ maxWidth: "1040px", margin: "auto" ,height: "770vh !important"}} className='container'>
-        <Box sx={{ height: '100vh' }}> */}
+      {/* Routes will be initialized here  */}
           <Home></Home>
-        {/* </Box>
-      </div> */}
-      
-
     </React.Fragment>
   )
 }

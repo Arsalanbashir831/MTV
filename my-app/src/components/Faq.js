@@ -5,19 +5,34 @@ import arrow from "../assets/rightArrowImage.svg";
 import Accordion from "./Accordian";
 import "./Faq.css"
 
-
+const FAQ=[
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
+    {question:"How many channels & VOD do you provide?",
+    answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."}
+    
+]
 
 const Faq = () => {
     return (
         <div id="ccc_FAQ"><p class="ccc_title">FAQ</p>
        {/* div of the accordian */}
        <div className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
-
-       <Accordion></Accordion>
-       <Accordion></Accordion>
-       <Accordion></Accordion>
-       <Accordion></Accordion>
-       <Accordion></Accordion>
+{ FAQ.map((data,index)=>{
+    return(<>
+    <Accordion question={data.question} answer={data.answer} key={index} ></Accordion>
+    
+    </>)
+})}
+      
        </div>
        {/* <Accordion></Accordion> */}
         <div class="ccc_getAccess">
