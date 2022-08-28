@@ -17,9 +17,9 @@ const ChannelsLeftSidebar = () => {
     return (
         <div class="ccc_column ccc_countryList">
             <div class="v-virtual-scroll">
-                <div class="v-virtual-scroll__container" style={{ height: '3195px', alignContent:'center' }}>
-                    <Box sx={{ flexGrow: 1 , margin:'5%'}}>
-                        <Grid container spacing={2}>
+                <div class="v-virtual-scroll__container" style={{ height: '3195px', alignContent: 'center' }}>
+                    <Box sx={{ flexGrow: 1, margin: '5%' }}>
+                        <Grid container spacing={1}>
                             <Grid item xs={6} md={4}>
                                 <div
                                     style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
@@ -27,16 +27,16 @@ const ChannelsLeftSidebar = () => {
                                         {Languages.map((element, index) => {
                                             console.log(element);
                                             console.log(index);
-                                            let temp = element.slice(0,25)
+                                            let temp = element.slice(0, 25)
 
                                             return (
 
                                                 <ListItem onClick={() => { setSelectedIndex(index) }} key={index} id={index} disablePadding sx={{ padding: 0.2 }} >
-                                                    <div className={selectedIndex === index ? 'divSelected': 'divUnselected'}>
-                                                        <ListItemButton  sx={{ background: 'white', borderRadius: 2 }}>
-                                                            <ListItemText style={{whiteSpace:'nowrap'}} primary={temp} />
+                                                    <div className={selectedIndex === index ? 'divSelected' : 'divUnselected'}>
+                                                        <ListItemButton sx={{ background: 'white', borderRadius: 2 }}>
+                                                            <ListItemText style={{ whiteSpace: 'nowrap' }} primary={temp} />
                                                             {selectedIndex === index ?
-                                                                <ListItemIcon style={{paddingLeft:'11%'}} >
+                                                                <ListItemIcon style={{ paddingLeft: '11%' }} >
                                                                     <ArrowForwardIosRoundedIcon />
                                                                 </ListItemIcon>
                                                                 :
@@ -55,7 +55,9 @@ const ChannelsLeftSidebar = () => {
                                 </div>
                             </Grid>
                             <Grid item xs={6} md={8}>
-
+                                <div style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
+                                        
+                                </div>
                             </Grid>
 
                         </Grid>
