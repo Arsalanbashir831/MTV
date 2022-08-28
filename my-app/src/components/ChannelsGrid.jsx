@@ -44,7 +44,7 @@ const ChannelsGrid = () => {
     return (
         <div class="ccc_column ccc_countryList">
             <div class="v-virtual-scroll">
-                <div class="v-virtual-scroll__container" style={{ height: '3195px', alignContent: 'center' }}>
+                <div class="v-virtual-scroll__container" >
                     <Box sx={{ flexGrow: 1, margin: '5%' }}>
                         <Grid container spacing={1}>
                             <Grid item xs={6} md={4}>
