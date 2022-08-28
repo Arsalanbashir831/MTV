@@ -5,34 +5,39 @@
 .Mui-selected{
     background-color: white;
     text-decoration: solid;
+    max-height: 40px;
+    padding-top: 1;
 }
 
 .divSelected{
     background-color: white;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
     color: purple;
     padding-left: 1%;
     padding-right: 1%;
+    max-height: 40px;
 }
 
 .divUnselected{
     width: 100%;
-    border-radius: 10px;
+    border-radius:4px;
+    max-height: 40px;
   
 }
 
 .divUnselectedColored{
     width: 100%;
     background-color: hsla(0,0%,100%,.1);
-    border-radius: 10px;
+    border-radius: 4px;
     padding-left: 1%;
     padding-right: 1%;
+    max-height: 40px;
 }
 
  .ccc_searchBar {
     padding: 11px 59px 10px 20px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: hsla(0,0%,100%,.17);;
     font-size: 17px;
     
@@ -77,4 +82,27 @@ button, input, optgroup, select, textarea {
 
 textarea:focus, input:focus{
     outline: none;
+}
+
+@media (max-width: 720px){
+.ccc_column.ccc_countryList .ccc_row select#countrieName {
+    display: grid;
+    width: 100%;
+    padding: 0 11px;
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+}
+
+.text{
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.listItem{
+    min-height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    max-height: 40px;
 }
