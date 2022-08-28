@@ -43,19 +43,20 @@
 @media screen and (max-width:720px) {
     #features_Section {
         padding-top: 32.5px;
+      
     }
     #features_Section .ccc_container {
         padding: 22px 67px 24px 45px;
         grid-template-columns: 1fr !important;
         grid-auto-rows: 1fr;
-        grid-gap: 27px;
-        gap: 27px;
+        grid-gap: 27px !important;
+        gap: 27px !important;
     }
 }
 
 @media screen and (max-width:768px) {
     #features_Section {
-        width: 95vw ;
+        width: 95vw !important ;
     }
 }
 

@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <React.Fragment>
     <CssBaseline />
-    <div style={{maxWidth:"1000px" ,margin:"auto"}} className='container'>
+    <div style={{maxWidth:"1040px" ,margin:"auto"}} className='container'>
       <Box sx={{ height: '100vh' }}>
         <Home></Home>
        
