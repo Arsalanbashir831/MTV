@@ -1,10 +1,12 @@
 import ChannelsHeading from './../components/ChannelsHeading';
-import ChannelsContainer from './../components/ChannelsContainer'
+import ChannelsLeftSidebar from '../components/ChannelsLeftSidebar';
 const Channels = () => {
     return (
         <>
             <ChannelsHeading></ChannelsHeading>
-            <ChannelsContainer></ChannelsContainer>
+            <div className="ccc_container">
+                <ChannelsLeftSidebar></ChannelsLeftSidebar>
+            </div>
         </>
     )
 
