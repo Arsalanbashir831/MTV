@@ -8,6 +8,9 @@ import MobileNavbar from './components/MobileNavbar'
 import { useMediaQuery } from 'react-responsive'
 import { Button } from '@mui/material'
 import zIndex from '@mui/material/styles/zIndex'
+import Footer from './components/Footer'
+
+
 
 const App = () => {
  
@@ -19,6 +22,8 @@ const App = () => {
       <DesktopNavbar></DesktopNavbar>
       <Layout>
       </Layout>
+      <Footer></Footer>
+     
     </>
   )
 }

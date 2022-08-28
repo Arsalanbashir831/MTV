@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Uptime.css"
 import progress from "../assets/progress.svg"
+import dimProgress from "../assets/dimProgress.svg"
+import UptimeRow from './UptimeRow'
 const Uptime = () => {
     return (
         <>
@@ -11,54 +13,11 @@ const Uptime = () => {
                 </p>
 
                 <div className='ccc_container'>
-                    <div className='ccc_rows'>
-                        <p className='ccc_name'>IPTV Panel</p>
-                        <p className='ccc_percent'>100.00%</p>
-                        <div className='ccc_img'>
-                            {/* image */}
-                            <img className='ccc_img' src={progress} alt=""/>
-                        </div>
-
-                        <div class="ccc_status">
-                            <div id="ccc_badge">
-                                <div class="ccc_circle"></div>
-                            </div>
-                            <p class="ccc_type">Up</p>
-                        </div>
-                    </div>
+                   <UptimeRow name="IPTV Panel" percentage="100.00%" img={progress}></UptimeRow>
                     <hr className='ccc_divider' />
-                    <div className='ccc_rows'>
-                        <p className='ccc_name'>IPTV Panel</p>
-                        <p className='ccc_percent'>100.00%</p>
-                        <div className='ccc_img'>
-                            {/* image */}
-                            <img className='ccc_img' src={progress} alt=""/>
-                        </div>
-
-                        <div class="ccc_status">
-                            <div id="ccc_badge">
-                                <div class="ccc_circle"></div>
-                            </div>
-                            <p class="ccc_type">Up</p>
-                        </div>
-                    </div>
+                    <UptimeRow name="Load Balancers" percentage="99.99%" img={progress}></UptimeRow>
                     <hr className='ccc_divider' />
-                    <div className='ccc_rows'>
-                        <p className='ccc_name'>IPTV Panel</p>
-                        <p className='ccc_percent'>100.00%</p>
-                        <div className='ccc_img'>
-                            {/* image */}
-                            <img className='ccc_img' src={progress} alt=""/>
-                        </div>
-
-                        <div class="ccc_status">
-                            <div id="ccc_badge">
-                                <div class="ccc_circle"></div>
-                            </div>
-                            <p class="ccc_type">Up</p>
-                        </div>
-                    </div>
-                 
+                    <UptimeRow name="Members Area" percentage="99.95%" img={dimProgress}></UptimeRow>
                 </div>
             </div>
         </>
