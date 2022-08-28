@@ -10,7 +10,7 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-
+import {Languages} from '../Data/Languages'
 const ChannelsLeftSidebar = () => {
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     return (
@@ -23,16 +23,21 @@ const ChannelsLeftSidebar = () => {
                                 <div
                                     style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
                                     <List>
-                                        {['inboxs', 'drafts'].map((element, index) => {
+                                        {Languages.map((element, index) => {
                                             console.log(element);
                                             console.log(index);
+                                            
                                             return (
-                                            <ListItem key={index} id={index} disablePadding sx={{ padding: 0.3 }} >
+                                            <ListItem onClick={()=>{setSelectedIndex(index)}} key={index} id={index} disablePadding sx={{ padding: 0.3 }} >
                                                 <ListItemButton sx={{ background: 'pink', borderRadius: 2 }}>
                                                     <ListItemText primary={element} />
+                                                    {selectedIndex === index ?
                                                     <ListItemIcon>
                                                         <ArrowForwardIosRoundedIcon />
                                                     </ListItemIcon>
+                                                    :
+                                                    ''
+                                                    }
                                                 </ListItemButton>
                                             </ListItem>
                                             )
