@@ -27,15 +27,16 @@ const ChannelsLeftSidebar = () => {
                                         {Languages.map((element, index) => {
                                             console.log(element);
                                             console.log(index);
+                                            let temp = element.slice(0,25)
 
                                             return (
 
-                                                <ListItem onClick={() => { setSelectedIndex(index) }} key={index} id={index} disablePadding sx={{ padding: 0.3 }} >
+                                                <ListItem onClick={() => { setSelectedIndex(index) }} key={index} id={index} disablePadding sx={{ padding: 0.2 }} >
                                                     <div className={selectedIndex === index ? 'divSelected': 'divUnselected'}>
                                                         <ListItemButton  sx={{ background: 'white', borderRadius: 2 }}>
-                                                            <ListItemText primary={element} />
+                                                            <ListItemText style={{whiteSpace:'nowrap'}} primary={temp} />
                                                             {selectedIndex === index ?
-                                                                <ListItemIcon style={{paddingLeft:'50%'}} >
+                                                                <ListItemIcon style={{paddingLeft:'11%'}} >
                                                                     <ArrowForwardIosRoundedIcon />
                                                                 </ListItemIcon>
                                                                 :
