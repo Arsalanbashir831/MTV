@@ -1,5 +1,5 @@
 import ChannelsHeading from './../components/ChannelsHeading';
-import ChannelsLeftSidebar from '../components/ChannelsLeftSidebar';
+import ChannelsLeftSidebar from '../components/ChannelsGrid';
 const Channels = () => {
     return (
         <>

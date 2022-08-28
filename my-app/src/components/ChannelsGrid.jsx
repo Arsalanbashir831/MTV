@@ -11,8 +11,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import { Languages } from '../Data/Languages'
-import './ChannelsLeftSidebar.css'
-const ChannelsLeftSidebar = () => {
+import './ChannelsGrid.css'
+const ChannelsGrid = () => {
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     return (
         <div class="ccc_column ccc_countryList">
@@ -55,8 +55,19 @@ const ChannelsLeftSidebar = () => {
                                 </div>
                             </Grid>
                             <Grid item xs={6} md={8}>
-                                <div style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
-                                        
+                                <div style={{ background: '#030e2e', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
+                                    <div class="ccc_column ccc_channelList">
+                                        <div class="ccc_searchBar">
+                                            <input type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                        </div>
+                                    </div>
+                                    <Box sx={{ flexGrow: 1}}>
+                                        <Grid container spacing={1}>
+                                            
+
+                                        </Grid>
+                                    </Box>
+
                                 </div>
                             </Grid>
 
@@ -73,4 +84,4 @@ const ChannelsLeftSidebar = () => {
     )
 }
 
-export default ChannelsLeftSidebar
+export default ChannelsGrid
