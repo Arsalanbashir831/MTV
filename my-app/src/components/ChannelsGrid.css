@@ -8,19 +8,32 @@
 }
 
 .divSelected{
-    background-color: blue;
+    background-color: white;
     width: 100%;
     border-radius: 10px;
+    color: purple;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .divUnselected{
     width: 100%;
+    border-radius: 10px;
+  
+}
+
+.divUnselectedColored{
+    width: 100%;
+    background-color: hsla(0,0%,100%,.1);
+    border-radius: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
  .ccc_searchBar {
     padding: 11px 59px 10px 20px;
     border-radius: 5px;
-    background-color: rgba(50, 72, 197, 0.912);
+    background-color: hsla(0,0%,100%,.17);;
     font-size: 17px;
     
     overflow: hidden;
@@ -39,6 +52,7 @@
     transition-duration: .3s;
     transition-timing-function: ease;
     transition-property: transform,opacity,background-color,color;
+    color: white;
     
 }
 

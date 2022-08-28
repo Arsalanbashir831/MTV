@@ -15,6 +15,8 @@ import './ChannelsGrid.css'
 import { ChannelNames } from './../Data/ChannelNames'
 const ChannelsGrid = () => {
 
+    const blurredColor = 'hsla(0,0%,100%,.1)'
+    const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--components-dark-theme')
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const [firstHalfArray, setFirstHalfArray] = React.useState([...ChannelNames[0]].splice(0, Math.ceil(ChannelNames[0].length / 2)))
     const [secondHalfArray, setSecondHalfArray] = React.useState([...ChannelNames[0]].splice(Math.ceil(ChannelNames[0].length / 2)))
@@ -22,6 +24,22 @@ const ChannelsGrid = () => {
         setSelectedIndex(index);
         setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
         setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
+    }
+
+    const searchResults = () => {
+        let searchQuery = document.querySelector('input').value
+        let results = []
+        for (let index = 0; index < ChannelNames.length; index++) {
+            const tempChannel = ChannelNames[index];
+            for (let i = 0; i < tempChannel.length; i++) {
+                const result = tempChannel[i];
+                if (result.includes(searchQuery)) {
+                    results.push(result);
+                }
+            }
+        }
+        setFirstHalfArray(results.splice(0, Math.ceil(results.length / 2)));
+        setSecondHalfArray(results.splice(Math.ceil(results.length / 2)));
     }
     return (
         <div class="ccc_column ccc_countryList">
@@ -31,7 +49,7 @@ const ChannelsGrid = () => {
                         <Grid container spacing={1}>
                             <Grid item xs={6} md={4}>
                                 <div
-                                    style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
+                                    style={{ background: backgroundColor, minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6, padding:'2.5px 5px 0;' }}>
                                     <List>
                                         {Languages.map((element, index) => {
                                             console.log(element);
@@ -40,16 +58,19 @@ const ChannelsGrid = () => {
 
                                             return (
 
-                                                <ListItem onClick={() => { handleChange(index) }} key={index} id={index} disablePadding sx={{ padding: 0.2 }} >
-                                                    <div className={selectedIndex === index ? 'divSelected' : 'divUnselected'}>
-                                                        <ListItemButton sx={{ background: 'white', borderRadius: 2 }}>
-                                                            <ListItemText style={{ whiteSpace: 'nowrap' }} primary={temp} />
+                                                <ListItem sx={{ backgroundColor: blurredColor }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding sx={{ padding: 0.2 }} >
+                                                    <div className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
+                                                        <ListItemButton sx={{ paddingLeft: 1, paddingRight: 1 }} selected={selectedIndex === index ? 'true' : 'false'} sx={{ color: 'white', borderRadius: 2 }}>
+
                                                             {selectedIndex === index ?
-                                                                <ListItemIcon style={{ paddingLeft: '11%' }} >
-                                                                    <ArrowForwardIosRoundedIcon />
-                                                                </ListItemIcon>
+                                                                <>
+                                                                    <ListItemText style={{ whiteSpace: 'nowrap', color: backgroundColor }} primary={temp} />
+                                                                    <ListItemIcon style={{ paddingLeft: '11%' }} >
+                                                                        <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
+                                                                    </ListItemIcon>
+                                                                </>
                                                                 :
-                                                                ''
+                                                                <ListItemText style={{ whiteSpace: 'nowrap', color: 'white' }} primary={temp} />
                                                             }
                                                         </ListItemButton>
                                                     </div>
@@ -64,10 +85,10 @@ const ChannelsGrid = () => {
                                 </div>
                             </Grid>
                             <Grid item xs={6} md={8}>
-                                <div style={{ background: '#fff', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
+                                <div style={{ background: backgroundColor, minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
                                     <div class="ccc_column ccc_channelList">
                                         <div class="ccc_searchBar">
-                                            <input type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                            <input onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
                                         </div>
 
                                         <Box sx={{ flexGrow: 1 }}>
@@ -77,8 +98,8 @@ const ChannelsGrid = () => {
                                                         <List disablePadding >
                                                             {firstHalfArray.map((element, index) => {
                                                                 return (
-                                                                    <ListItem key={index} disablePadding sx={{ background: 'purple', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                        <ListItemText primary={element} />
+                                                                    <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.1)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                        <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
                                                                     </ListItem>
                                                                 )
                                                             })}
@@ -91,8 +112,8 @@ const ChannelsGrid = () => {
                                                     <List disablePadding >
                                                         {secondHalfArray.map((element, index) => {
                                                             return (
-                                                                <ListItem key={index} disablePadding sx={{ background: 'purple', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                    <ListItemText primary={element} />
+                                                                <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.1)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
                                                                 </ListItem>
                                                             )
                                                         })}
