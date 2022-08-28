@@ -5,14 +5,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/Inbox';
+import React from 'react';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 
 const ChannelsLeftSidebar = () => {
-
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
     return (
         <div class="ccc_column ccc_countryList">
             <div class="v-virtual-scroll">
@@ -23,22 +23,37 @@ const ChannelsLeftSidebar = () => {
                                 <div
                                     style={{ background: 'purple', minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6 }}>
                                     <List>
-                                        <ListItem>
-                                            <ListItemButton sx={{ background: 'pink' }}>
+                                        {['inboxs', 'drafts'].map((element, index) => {
+                                            console.log(element);
+                                            console.log(index);
+                                            return (
+                                            <ListItem key={index} id={index} disablePadding sx={{ padding: 0.3 }} >
+                                                <ListItemButton sx={{ background: 'pink', borderRadius: 2 }}>
+                                                    <ListItemText primary={element} />
+                                                    <ListItemIcon>
+                                                        <ArrowForwardIosRoundedIcon />
+                                                    </ListItemIcon>
+                                                </ListItemButton>
+                                            </ListItem>
+                                            )
+                                        })}
+                                        <ListItem disablePadding sx={{ padding: 0.3 }} >
+                                            <ListItemButton sx={{ background: 'pink', borderRadius: 2 }}>
                                                 <ListItemText primary="Inbox" />
                                                 <ListItemIcon>
-                                                    <InboxIcon />
+                                                    <ArrowForwardIosRoundedIcon />
                                                 </ListItemIcon>
                                             </ListItemButton>
                                         </ListItem>
-                                        <ListItem >
-                                            <ListItemButton sx={{ background: 'pink' }}>
+                                        <ListItem disablePadding sx={{ padding: 0.3 }}  >
+                                            <ListItemButton sx={{ background: 'pink', borderRadius: 2 }}>
                                                 <ListItemText primary="Drafts" />
                                                 <ListItemIcon>
                                                     <DraftsIcon />
                                                 </ListItemIcon>
                                             </ListItemButton>
                                         </ListItem>
+                                        
                                     </List>
                                 </div>
                             </Grid>
