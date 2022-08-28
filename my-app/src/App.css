@@ -1,12 +1,15 @@
 /* light body  */
 body {
     padding-top: 0.1px;
-    background-size: max(100vw, 100vh) auto !important;
-    background-position: top;
+    background-size: max(100vw,100vh) auto !important;
+    /* background-position: top; */
     transition-duration: .3s;
     transition-timing-function: ease;
     transition-property: transform, opacity, background-color, color;
     background: var(--bg-dark-shadow) var(--bg-dark-img) no-repeat;
+    z-index: 2;
+    position: relative;
+    min-height: 100vh;
     
   }
 
