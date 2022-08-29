@@ -6,29 +6,46 @@ import Accordion from "./Accordian";
 import "./Faq.css"
 
 const FAQ=[
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"1",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"2",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"3",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"4",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"5",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."},
-    {question:"How many channels & VOD do you provide?",
+    {FaqId:"6",
+    question:"How many channels & VOD do you provide?",
     answer:"CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."}
     
 ]
 
+
+
+
 const Faq = () => {
+
+ 
+
+
+
+
+
+
     return (
         <div id="ccc_FAQ"><p class="ccc_title">FAQ</p>
        {/* div of the accordian */}
        <div className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
 { FAQ.map((data,index)=>{
     return(<>
-    <Accordion question={data.question} answer={data.answer} key={index} ></Accordion>
+    <Accordion  question={data.question} answer={data.answer} key={index} ></Accordion>
     
     </>)
 })}

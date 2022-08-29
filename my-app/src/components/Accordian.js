@@ -20,9 +20,9 @@ export default function Accordion(props) {
 
     console.log(toggle);
     return (
-        <div className="accordion">
+        <div  className="accordion" >
 
-            <button 
+            <button style={{outline:'none'}}
             onClick={toggleState}
             className="accordion-visible">
                 <span>{props.question}</span>
@@ -32,8 +32,8 @@ export default function Accordion(props) {
             </button>
             
             <div 
-            className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
-            style={{height: toggle ? `${heightEl}` : "0px"}}
+            className={toggle   ? "accordion-toggle animated" : "accordion-toggle"}
+            style={{height:toggle   ? `${heightEl}` : "0px"}}
             ref={refHeight}
             >
                 <p  aria-hidden={toggle ? "true" : "false"}>

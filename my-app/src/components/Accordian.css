@@ -2,6 +2,7 @@
     border-radius: 7.5px;
     background: #030e2e;
     box-shadow: 0 20px 38px -2px rgb(14 31 53 / 6%), 0 16px 24px -1px rgb(14 31 53 / 12%), 0 10px 20px 0 rgb(14 31 53 / 12%), 0 5px 10px 0 rgb(14 31 53 / 6%);
+    
 }
 
 .accordion-visible {
@@ -50,7 +51,7 @@
 
 .animated {
 
-    height: 70px !important;
+    height: 100px !important;
     opacity: 1;
     transition:  
     height 0.3s ease-in-out,

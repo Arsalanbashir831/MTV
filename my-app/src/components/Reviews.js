@@ -4,7 +4,7 @@ import trustStarts from "../assets/trustStars.svg"
 import rating from "../assets/rating.svg";
 import sponsor from "../assets/sponsorLogo.svg";
 import arrow from "../assets/rightArrowImage.svg";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from 'swiper/react';
 import 'swiper/css/scrollbar';
@@ -136,16 +136,19 @@ const Reviews = () => {
 <Swiper
       // install Swiper modules
       
-      modules={[Navigation,Scrollbar]}
+      modules={[Navigation,Scrollbar,Autoplay]}
     draggable={true}
     navigation={{
         nextEl: '.review-swiper-button-next',
         prevEl: '.review-swiper-button-prev',
       }}
-      spaceBetween={50}
+      spaceBetween={30}
       slidesPerView={3}
       loop={true}
-   
+      autoplay={{
+        delay: 500,
+        disableOnInteraction: false
+    }}
    
       
       onSwiper={(swiper) => console.log(swiper)}
