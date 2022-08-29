@@ -32,12 +32,6 @@ const FAQ=[
 
 const Faq = () => {
 
- 
-
-
-
-
-
 
     return (
         <div id="ccc_FAQ"><p class="ccc_title">FAQ</p>
