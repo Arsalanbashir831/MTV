@@ -9,6 +9,7 @@ export default function Accordion(props) {
 
     const refHeight = useRef()
 
+    
     useEffect(() => {
         console.log(refHeight);
         setHeightEl(`${refHeight.current.scrollHeight}px`)
@@ -17,26 +18,27 @@ export default function Accordion(props) {
     const toggleState = () => {
         setToggle(!toggle)
     }
+    
 
     console.log(toggle);
     return (
         <div  className="accordion" >
 
-            <button style={{outline:'none', cursor:'none'}}
+            <button style={{outline:'none', cursor:'auto'}}
             onClick={toggleState}
             className="accordion-visible">
                 <span>{props.question}</span>
                 <img 
-                className={toggle && "active"}
+                className={props.activated && "active"}
                 src={Chevron} />
             </button>
             
             <div 
-            className={toggle   ? "accordion-toggle animated" : "accordion-toggle"}
-            style={{height:toggle   ? `${heightEl}` : "0px"}}
+            className={props.activated   ? "accordion-toggle animated" : "accordion-toggle"}
+            style={{height:props.activated   ? `${heightEl}` : "0px"}}
             ref={refHeight}
             >
-                <p  aria-hidden={toggle ? "true" : "false"}>
+                <p  aria-hidden={props.activated ? "true" : "false"}>
                    {props.answer}
                 </p>
             </div>
