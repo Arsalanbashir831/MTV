@@ -22,7 +22,7 @@ export default function Accordion(props) {
     return (
         <div  className="accordion" >
 
-            <button style={{outline:'none'}}
+            <button style={{outline:'none', cursor:'none'}}
             onClick={toggleState}
             className="accordion-visible">
                 <span>{props.question}</span>
