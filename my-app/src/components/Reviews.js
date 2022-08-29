@@ -4,7 +4,10 @@ import trustStarts from "../assets/trustStars.svg"
 import rating from "../assets/rating.svg";
 import sponsor from "../assets/sponsorLogo.svg";
 import arrow from "../assets/rightArrowImage.svg";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSwiper } from 'swiper/react';
+import 'swiper/css/scrollbar';
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,9 +16,103 @@ import "swiper/css/navigation";
 import "./Reviews.css";
 
 // import required modules
-import { Navigation } from "swiper";
+// import { Navigation } from "swiper";
+import ReviewCard from './ReviewCard';
+
+const ReviewsData=[{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+},
+{
+  days:'1',
+  title:"Very Nice",
+  subtitle:"“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”" ,
+  author :"Nabeel"
+}
+
+
+
+
+
+]
+
 
 const Reviews = () => {
+    const swipe = useSwiper();
   return (
     <div id='ccc_reviews'>
         <div className='ccc_container'>
@@ -34,6 +131,44 @@ const Reviews = () => {
             </h2>
             
 {/*code of container of sliders will be  here  */}
+<div id='reviewSlick'>
+<button  type="button" class=" review-swiper-button-prev ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="  v-btn__content"><img className='navigator-icon' src={arrow} alt="shape"/></span></button>
+<Swiper
+      // install Swiper modules
+      
+      modules={[Navigation,Scrollbar]}
+    draggable={true}
+    navigation={{
+        nextEl: '.review-swiper-button-next',
+        prevEl: '.review-swiper-button-prev',
+      }}
+      spaceBetween={50}
+      slidesPerView={3}
+      loop={true}
+   
+   
+      
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+   
+{ReviewsData.map((data,index)=>{
+
+  return(<>
+  
+  <SwiperSlide><ReviewCard days={data.days} author={data.author} title={data.title} subtitle={data.subtitle} ></ReviewCard></SwiperSlide>
+  
+  </>)
+})}
+   
+
+
+    
+   
+         </Swiper>
+         <button   type="button" class="review-swiper-button-next ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="v-btn__content"><img className='navigator-icon' src={arrow} alt="shape"/></span></button> 
+  
+</div>
 
 <div className='ccc_summary'>
     <p className='ccc_word'>Excellent</p>
