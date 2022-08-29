@@ -13,6 +13,8 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import { Languages } from '../Data/Languages'
 import './ChannelsGrid.css'
 import { ChannelNames } from './../Data/ChannelNames'
+import { ThemeProvider } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 const ChannelsGrid = () => {
 
     const blurredColor = 'hsla(0,0%,100%,.1)'
@@ -43,35 +45,35 @@ const ChannelsGrid = () => {
     }
     return (
         <div class="ccc_column ccc_countryList">
-            <div class="ccc_row"><select name="countries" id="countrieName"><option value="58">ESPANA -  FUTBOL</option><option value="59">ESPANA - DEPORTES</option><option value="60">ESPANA -  CINE</option><option value="62">ESPANA - ESTILO DE VIDA</option><option value="61">ESPANA -  NINOS</option><option value="65">ESPANA -  TDT</option><option value="63">ESPANA -  CULTURA</option><option value="64">ESPANA -  MUSICA</option><option value="69">PORTUGAL - DESPORTO</option><option value="67">PORTUGAL - GENERALISTAS</option><option value="68">PORTUGAL - NOTICIAS</option><option value="70">PORTUGAL - SERIE &amp; MOVIE</option><option value="73">PORTUGAL - MUSICA</option><option value="74">PORTUGAL - INTERNACIONAIS</option><option value="71">PORTUGAL - INFANTIL</option><option value="72">PORTUGAL - CULTURA</option><option value="76">UK - SPORTS</option><option value="126">UK - EPL</option><option value="77">UK - MOVIES</option><option value="78">UK - DOCUMENTARIES</option><option value="86">UK - ENTERTAINMENT</option><option value="83">UK - NEWS</option><option value="82">UK - MUSIC</option><option value="79">UK - KIDS</option><option value="81">UK - INTERNATIONAL</option><option value="84">UK - REGIONAL</option><option value="85">UK - BET</option><option value="136">DE - BASIC</option><option value="137">DE - SPORT</option><option value="138">DE - NEWS</option><option value="135">DE - MUSIK</option><option value="134">DE - KINO/SERIEN</option><option value="133">DE - KINDER</option><option value="139">AUSTRIA</option><option value="17">HOLLAND</option><option value="5">ITALIA</option><option value="7">ARABIC</option><option value="52">ARABIC - BEIN SPORTS</option><option value="4">FRANCE</option><option value="19">TURKIYE</option><option value="35">ROMANIA</option><option value="23">SCANDINAVE</option><option value="36">SWEDEN</option><option value="30">POLAND</option><option value="51">ALBANIA</option><option value="29">BALCAN</option><option value="38">BOSNA / HERSEK</option><option value="25">CZECH</option><option value="54">HUNGARIA</option><option value="53">BULGARIA</option><option value="57">SWITZERLAND</option><option value="26">GREEK</option><option value="24">BRAZIL</option><option value="28">PAKISTANI</option><option value="27">INDIA</option><option value="32">CANADA</option><option value="87">SOUTH AFRICA</option><option value="125">ARGENTINA</option><option value="116">MEXICO</option><option value="117">COLUMBIA</option><option value="124">URUGUAY</option><option value="122">ECUADOR</option><option value="121">PERU</option><option value="120">CHILE</option><option value="118">BOLIVIA</option><option value="142">LATINO - CINE</option><option value="141">LATINO - DEPORTE</option><option value="131">MLB</option><option value="130">NHL</option><option value="129">NFL</option><option value="128">NBA</option><option value="152">LATINO - INFANTILE</option><option value="153">COSTA RICA</option><option value="154">REPUBLICA DOMINICANA</option><option value="155">VENEZUELA</option><option value="156">LATINO - 24/7 SERIES</option><option value="157">PEACOCK</option><option value="151">LATINO - CULTURALE</option><option value="150">US MUSIC</option><option value="149">US News &amp; Local</option><option value="148">US KIDS</option><option value="147">US Documentaries</option><option value="146">US Entertainment</option><option value="145">US CINEMA</option><option value="144">US SPORT</option><option value="143">PPV - SPORT</option><option value="158">Scottish Premiership</option></select> <div class="ccc_arrow"><img src=""/></div></div>
+            <div class="ccc_row"><select name="countries" id="countrieName"><option value="58">ESPANA -  FUTBOL</option><option value="59">ESPANA - DEPORTES</option><option value="60">ESPANA -  CINE</option><option value="62">ESPANA - ESTILO DE VIDA</option><option value="61">ESPANA -  NINOS</option><option value="65">ESPANA -  TDT</option><option value="63">ESPANA -  CULTURA</option><option value="64">ESPANA -  MUSICA</option><option value="69">PORTUGAL - DESPORTO</option><option value="67">PORTUGAL - GENERALISTAS</option><option value="68">PORTUGAL - NOTICIAS</option><option value="70">PORTUGAL - SERIE &amp; MOVIE</option><option value="73">PORTUGAL - MUSICA</option><option value="74">PORTUGAL - INTERNACIONAIS</option><option value="71">PORTUGAL - INFANTIL</option><option value="72">PORTUGAL - CULTURA</option><option value="76">UK - SPORTS</option><option value="126">UK - EPL</option><option value="77">UK - MOVIES</option><option value="78">UK - DOCUMENTARIES</option><option value="86">UK - ENTERTAINMENT</option><option value="83">UK - NEWS</option><option value="82">UK - MUSIC</option><option value="79">UK - KIDS</option><option value="81">UK - INTERNATIONAL</option><option value="84">UK - REGIONAL</option><option value="85">UK - BET</option><option value="136">DE - BASIC</option><option value="137">DE - SPORT</option><option value="138">DE - NEWS</option><option value="135">DE - MUSIK</option><option value="134">DE - KINO/SERIEN</option><option value="133">DE - KINDER</option><option value="139">AUSTRIA</option><option value="17">HOLLAND</option><option value="5">ITALIA</option><option value="7">ARABIC</option><option value="52">ARABIC - BEIN SPORTS</option><option value="4">FRANCE</option><option value="19">TURKIYE</option><option value="35">ROMANIA</option><option value="23">SCANDINAVE</option><option value="36">SWEDEN</option><option value="30">POLAND</option><option value="51">ALBANIA</option><option value="29">BALCAN</option><option value="38">BOSNA / HERSEK</option><option value="25">CZECH</option><option value="54">HUNGARIA</option><option value="53">BULGARIA</option><option value="57">SWITZERLAND</option><option value="26">GREEK</option><option value="24">BRAZIL</option><option value="28">PAKISTANI</option><option value="27">INDIA</option><option value="32">CANADA</option><option value="87">SOUTH AFRICA</option><option value="125">ARGENTINA</option><option value="116">MEXICO</option><option value="117">COLUMBIA</option><option value="124">URUGUAY</option><option value="122">ECUADOR</option><option value="121">PERU</option><option value="120">CHILE</option><option value="118">BOLIVIA</option><option value="142">LATINO - CINE</option><option value="141">LATINO - DEPORTE</option><option value="131">MLB</option><option value="130">NHL</option><option value="129">NFL</option><option value="128">NBA</option><option value="152">LATINO - INFANTILE</option><option value="153">COSTA RICA</option><option value="154">REPUBLICA DOMINICANA</option><option value="155">VENEZUELA</option><option value="156">LATINO - 24/7 SERIES</option><option value="157">PEACOCK</option><option value="151">LATINO - CULTURALE</option><option value="150">US MUSIC</option><option value="149">US News &amp; Local</option><option value="148">US KIDS</option><option value="147">US Documentaries</option><option value="146">US Entertainment</option><option value="145">US CINEMA</option><option value="144">US SPORT</option><option value="143">PPV - SPORT</option><option value="158">Scottish Premiership</option></select> <div class="ccc_arrow"><img src="" /></div></div>
             <div class="v-virtual-scroll">
                 <div class="v-virtual-scroll__container" style={{ height: '3195px', alignContent: 'center' }}>
                     <Box sx={{ flexGrow: 1, margin: '5%' }}>
                         <Grid container spacing={1}>
                             <Grid item xs={6} md={4}>
                                 <div
-                                    style={{ background: backgroundColor, minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: 6, padding:'2.5px 5px 0;' }}>
+                                    style={{ background: backgroundColor, minHeight: '806px', maxHeight: '806px', overflow: 'hidden', borderRadius: 6, padding: '2.5px 5px 0;' }}>
                                     <List>
                                         {Languages.map((element, index) => {
                                             console.log(element);
                                             console.log(index);
-                                            let temp = element.slice(0, 25)
+                                            let temp = element.slice(0, 20)
 
                                             return (
 
-                                                <ListItem className='listItem' sx={{ backgroundColor: blurredColor , maxHeight:'3px', padding:1 ,marginTop:0.5 }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
-                                                    <div className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
-                                                        <ListItemButton sx={{ paddingLeft: 1, paddingRight: 1 }} selected={selectedIndex === index ? 'true' : 'false'} sx={{ color: 'white', borderRadius: 2 }}>
+                                                <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 1, marginTop: 0.5 }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
+                                                    <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
+                                                        <ListItemButton sx={{ backgroundColor:blurredColor,maxHeight:'40px', paddingLeft: 1, paddingRight: 1, color : 'white', borderRadius: 2 }}  >
 
                                                             {selectedIndex === index ?
                                                                 <>
-                                                                    <ListItemText style={{ whiteSpace: 'nowrap', color: backgroundColor }} primary={temp} />
+                                                                    <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight:700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight:700 }}>{temp}</Typography>} />
                                                                     <ListItemIcon style={{ paddingLeft: '11%' }} >
                                                                         <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
                                                                     </ListItemIcon>
                                                                 </>
                                                                 :
-                                                                <ListItemText className='text' style={{ whiteSpace: 'nowrap', color: 'white' }} primary={temp} />
+                                                                <ListItemText className='text' style={{ fontWeight:'', whiteSpace: 'nowrap', color: 'white' }} primary={temp} />
                                                             }
                                                         </ListItemButton>
                                                     </div>
@@ -89,9 +91,11 @@ const ChannelsGrid = () => {
                                 <div style={{ background: backgroundColor, minHeight: '806px', maxHeight: '806px', overflow: 'auto', borderRadius: '4px' }}>
                                     <div class="ccc_column ccc_channelList">
                                         <div class="ccc_searchBar">
-                                            <input onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                            <input style={{width:'100%'}} onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                            <i  class="fa-solid fa-magnifying-glass iconCss"></i>
+                                            
                                         </div>
-
+                                        
                                         <Box sx={{ flexGrow: 1 }}>
                                             <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1 }}>
                                                 <Grid container item xs={6} direction="row">

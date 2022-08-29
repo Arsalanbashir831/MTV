@@ -1,12 +1,31 @@
 #ccc_channels_list .ccc_container .ccc_column.ccc_countryList {
-    padding: 2.5px 5px 0;
+    padding: 2.5px 5px 0
+}
+.MuiListItemText-primary{
+    font-weight: 700;
+    
 }
 
+.css-10hburv-MuiTypography-root {
+    margin: 0;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    display: block;
+}
+
+.MuiTypography-root{
+    font-weight: 700;
+}
 .Mui-selected{
     background-color: white;
     text-decoration: solid;
     max-height: 40px;
     padding-top: 1;
+    width: 100%;
+    font-weight: 900;
 }
 
 .divSelected{
@@ -17,6 +36,7 @@
     padding-left: 1%;
     padding-right: 1%;
     max-height: 40px;
+    font-weight: 900;
 }
 
 .divUnselected{
@@ -28,21 +48,20 @@
 
 .divUnselectedColored{
     width: 100%;
-    background-color: hsla(0,0%,100%,.1);
+    
     border-radius: 4px;
-    padding-left: 1%;
-    padding-right: 1%;
+
     max-height: 40px;
 }
 
  .ccc_searchBar {
-    padding: 11px 59px 10px 20px;
+    padding: 11px 20px 10px 20px;
     border-radius: 4px;
     background-color: hsla(0,0%,100%,.17);;
     font-size: 17px;
     
     overflow: hidden;
-    background-image: url(./../assets/play.svg);
+    
     background-position: calc(100% - 18px) 50%;
     background-repeat: no-repeat;
     transition-duration: .3s;
@@ -105,4 +124,19 @@ textarea:focus, input:focus{
     font-size: 15px;
     font-weight: 700;
     max-height: 40px;
+}
+
+.iconCss{
+    
+        float: right;
+        
+        margin-top: -20px;
+        position: relative;
+        z-index: 2;
+        color: rgb(247, 247, 247);
+    
+}
+
+.MuiListItem-root{
+    background-color: rgba(0, 0, 0, 0);
 }
