@@ -48,18 +48,23 @@ const ChannelsGrid = () => {
     const searchResults = () => {
         let searchQuery = document.querySelector('input').value
         let results = []
-        for (let index = 0; index < ChannelNames.length; index++) {
-            const tempChannel = ChannelNames[index];
-            for (let i = 0; i < tempChannel.length; i++) {
-                const result = tempChannel[i];
-                if (result.includes(searchQuery)) {
-                    results.push(result);
+        if (searchQuery !== '') {
+            for (let index = 0; index < ChannelNames.length; index++) {
+                const tempChannel = ChannelNames[index];
+                for (let i = 0; i < tempChannel.length; i++) {
+                    const result = tempChannel[i];
+                    if (result.includes(searchQuery)) {
+                        results.push(result);
+                    }
                 }
             }
+            setFirstHalfArray(results.splice(0, Math.ceil(results.length / 2)));
+            setSecondHalfArray(results.splice(Math.ceil(results.length / 2)));
+        }else{
+            handleChange(selectedIndex);
         }
-        setFirstHalfArray(results.splice(0, Math.ceil(results.length / 2)));
-        setSecondHalfArray(results.splice(Math.ceil(results.length / 2)));
     }
+
     return (
         <div class="ccc_column ccc_countryList">
 
@@ -69,7 +74,7 @@ const ChannelsGrid = () => {
                         <Grid container spacing={1}>
                             <MediaQuery minWidth={921}>
 
-                                <Grid item xs={6} md={4} style={{paddingRight:"8px"}}>
+                                <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
                                     <div
                                         style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
                                         <List>
@@ -86,13 +91,13 @@ const ChannelsGrid = () => {
 
                                                                 {selectedIndex === index ?
                                                                     <>
-                                                                        <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: 'bolder' }}>{temp}</Typography>} />
+                                                                        <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: '900' }}>{temp}</Typography>} />
                                                                         <ListItemIcon style={{ paddingLeft: '11%' }} >
                                                                             <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
                                                                         </ListItemIcon>
                                                                     </>
                                                                     :
-                                                                    <ListItemText className='text' style={{ fontWeight: '', whiteSpace: 'nowrap', color: 'white' }} primary={temp} />
+                                                                    <ListItemText className='text' style={{ fontWeight: '', whiteSpace: 'nowrap', color: 'white' }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '200' }}>{temp}</Typography>} />
                                                                 }
                                                             </ListItemButton>
                                                         </div>
@@ -171,24 +176,24 @@ const ChannelsGrid = () => {
                                         </div>
 
                                         <MediaQuery minWidth={501}>
-                                            <Box  sx={{ flexGrow: 1 }}>
-                                                <Grid  container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
+                                            <Box sx={{ flexGrow: 1 }}>
+                                                <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
 
-                                                    <Grid container   item xs={6} direction="row">
+                                                    <Grid container item xs={6} direction="row">
 
                                                         <div className='divUnselected'  >
-                                                         
+
                                                             <List disablePadding  >
                                                                 {firstHalfArray.map((element, index) => {
                                                                     return (
                                                                         <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                            <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
+                                                                            <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                                         </ListItem>
                                                                     )
                                                                 })}
 
                                                             </List>
-                                                           
+
                                                         </div>
                                                     </Grid>
 
@@ -197,7 +202,7 @@ const ChannelsGrid = () => {
                                                             {secondHalfArray.map((element, index) => {
                                                                 return (
                                                                     <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                        <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
+                                                                        <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                                     </ListItem>
                                                                 )
                                                             })}
@@ -208,24 +213,24 @@ const ChannelsGrid = () => {
                                                 </Grid>
                                             </Box>
                                         </MediaQuery>
-                                        
-                                        <MediaQuery maxWidth={500} minWidth = {0}>
-                                        <Grid container item xs={6} direction="row" sx={{ minWidth:'100%', maxWidth: '100%' }}>
 
-                                            <div className='divUnselected'>
-                                                <List disablePadding >
-                                                    {fullArray.map((element, index) => {
-                                                        return (
-                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
-                                                            </ListItem>
-                                                        )
-                                                    })}
+                                        <MediaQuery maxWidth={500} minWidth={0}>
+                                            <Grid container item xs={6} direction="row" sx={{ minWidth: '100%', maxWidth: '100%' }}>
 
-                                                </List>
-                                            </div>
-                                        </Grid>
-                                        </MediaQuery>   
+                                                <div className='divUnselected'>
+                                                    <List disablePadding >
+                                                        {fullArray.map((element, index) => {
+                                                            return (
+                                                                <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                                </ListItem>
+                                                            )
+                                                        })}
+
+                                                    </List>
+                                                </div>
+                                            </Grid>
+                                        </MediaQuery>
                                     </div>
 
                                 </div>

@@ -10,11 +10,9 @@ const ChannelsHeading = (props) => {
                 </div>
                 <div className="ccc_container">
                 </div>
-                
-               
+
                 <ChannelsLeftSidebar></ChannelsLeftSidebar>
-             
-          
+                      
             </section>
         </div>
     )

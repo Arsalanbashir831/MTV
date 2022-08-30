@@ -6,12 +6,7 @@ import Home from './Pages/Home';
 const Layout = () => {
   return (
     <React.Fragment>
-     
-      
           <Channels></Channels>
-
-      
-
     </React.Fragment>
   )
 }
