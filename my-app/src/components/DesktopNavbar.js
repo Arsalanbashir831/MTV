@@ -64,7 +64,7 @@ const DesktopNavbar = () => {
 {mobileActive?<MobileNavbar active="true"  clickhandler={() => handleChange()}  ></MobileNavbar>:<MobileNavbar clickhandler={() => handleChange()} active='false' ></MobileNavbar>}
       {/* <CSSTransition in={mobileActive}
        
-        timeout={1000}
+        timeout={1000}0
         classNames={"slide"}
         unmountOnExit>
         <div key='zx' id='temp' onClick={() => { setMobileActive(false) }}><MobileNavbar></MobileNavbar> </div> 
