@@ -28,3 +28,12 @@
 #ccc_channels {
     padding: 107px 0 57px;
 }
+.headerContainer{
+    padding-top: 65px;
+
+}
+@media screen and (max-width:720px) {
+    .headerContainer{
+        display: none;
+    }
+}

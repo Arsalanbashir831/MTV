@@ -71,7 +71,7 @@ const ChannelsGrid = () => {
 
                                 <Grid item xs={6} md={4} style={{paddingRight:"8px"}}>
                                     <div
-                                        style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: 6, padding: '2.5px 5px 0;' }}>
+                                        style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
                                         <List>
                                             {Languages.map((element, index) => {
                                                 console.log(element);
@@ -161,7 +161,7 @@ const ChannelsGrid = () => {
                                     </div>
                                     <br></br>
                                 </MediaQuery>
-                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px' }}>
                                     <div class="ccc_column ccc_channelList">
 
                                         <div class="ccc_searchBar">
