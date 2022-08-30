@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>React App</title>
   </head>
-  <body onclick= 'closeDiv' >
+  <body onclick= 'closeDiv()' >
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" onclick="closeDiv()"></div>
+    <div id="root" class="ds" ></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -45,23 +45,51 @@
   <script>
     // When the user scrolls down 20px from the top of the document, slide down the navbar
     window.onscroll = function() {scrollFunction()};
-    
+    let count = 0;
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("navbar").style.top = "0px";
-        document.getElementById("navbar").style.transform = 'translate(0,0px)'
+        document.getElementById("navbar").style.transform = 'translate(0px,0px)'
         document.getElementById("navbar").style.transition= 'transform .5s'
+        console.log("hello")
         
       } else {
-        document.getElementById("navbar").style.top = "-70px";
-        document.getElementById("navbar").style.transform = 'translate(0,-70px)'
+        
+        
+        
+        document.getElementById("navbar").style.transform = 'translate(0px,-70px)'
+        
         document.getElementById("navbar").style.transition= 'transform .5s'
+        document.getElementById("navbar").style.top = "-70px";
+        
       }
     }
 
     function closeDiv(){
-      if (document.getElementById('temp'))
-        document.getElementById('temp').click()
+      
+      console.log(count)
+      if (document.getElementById('mob-navbar'))
+      {
+        count++;
+      }
+      if (count > 2)
+      {
+        let nav = document.getElementById('mob-navbar');
+       if(nav.className=='slide-open'){
+         nav.click();
+         count = 1;
+       }
+       else{
+        count=1;
+       }
+       
+
+     
+      }
+    
+        
+        
+
     }
     </script>
 </html>

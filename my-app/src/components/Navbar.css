@@ -185,7 +185,7 @@
 .mob-nav-links{
     grid-auto-flow: row;
     grid-gap: 23px;
-    gap: 23px;
+    gap: 33px;
     text-align: left;
     width: 100%;
 }
@@ -200,7 +200,7 @@
 }
 .mob-hr{
     display: block;
-    margin: 27px 0 23px;
+    margin: 9px 0 7px;
     border: 0;
     height: 1px;
     width: 100%;
@@ -332,14 +332,15 @@
     }
   
 }
-@media  screen and (max-height:490px) {
+/* 125 % zoom settings */
+/* @media  screen and (max-height:490px) {
     .btn-grp-mob {
         padding: 7px 10%;
     }
     .mob-nav-links{
         gap: 8px
     }
-}
+} */
 
 /* .slide-enter {
     animation: enter-active 1s ;

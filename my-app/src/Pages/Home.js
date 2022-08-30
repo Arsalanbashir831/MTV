@@ -11,7 +11,6 @@ import InfoCard2 from '../components/InfoCard2'
 import InfoCard3 from '../components/InfoCard3'
 import Reviews from '../components/Reviews'
 import Uptime from '../components/Uptime'
-
 import  './Home.css'
 
 const Home = () => {
@@ -28,6 +27,8 @@ const Home = () => {
   <Reviews></Reviews>
   <GuranteeCard></GuranteeCard>
   <Faq></Faq>
+
+
  
   
   

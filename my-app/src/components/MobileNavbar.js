@@ -14,20 +14,33 @@ const MobileNavbar = (props) => {
             <li className='nav-link mob-nav-link'>CHANNELS</li>
             <li className='nav-link mob-nav-link'>SETUP</li>
             <li className='nav-link mob-nav-link'>RESELLERS</li>
+         
+            <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
+              <Button className='order-btn  btn-mob' variant="contained">Order Now</Button>
+              <hr className='mob-hr'></hr>
+              <div className="switchMode">
+
+<i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
+</div>
+              
           </ul>
-          <hr className='mob-hr'></hr>
-          <div className='lower-container buttons'>
+          {/* <hr className='mob-hr'></hr> */}
+          {/* <div className='lower-container buttons'>
             <div className='end-nav btn-grp-mob'>
               <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
               <Button className='order-btn  btn-mob' variant="contained">Order Now</Button>
+              <div className="switchMode">
+
+<i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
+</div>
             </div>
             <div className='tool-nav mob-icon'>
               <div className="switchMode">
 
-                <i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Light Mode</p>
+                <i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
