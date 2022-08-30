@@ -47,7 +47,11 @@ const Faq = () => {
     const [expanded, setExpanded] = React.useState(-1);
 
     const handleChange = (index) => {
-        setExpanded(index);
+        if (expanded === index){
+            setExpanded(-1)
+        }
+        else
+            setExpanded(index);
     };
 
     return (
