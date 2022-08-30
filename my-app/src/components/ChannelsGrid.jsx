@@ -1,27 +1,27 @@
 
+import {React, useEffect} from 'react';
+import './ChannelsGrid.css'
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import React from 'react';
-import DraftsIcon from '@mui/icons-material/Drafts';
+
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+
 import { Languages } from '../Data/Languages'
-import './ChannelsGrid.css'
 import { ChannelNames } from './../Data/ChannelNames'
-import { ThemeProvider } from '@mui/material/styles';
 import { Typography } from '@mui/material';
-import MediaQuery from 'react-responsive'
-import InputLabel from '@mui/material/InputLabel';
+
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { ReactComponent as Dropdown } from './../assets/dropdown.svg'
-import { useEffect } from 'react';
+
+import MediaQuery from 'react-responsive'
 import Skeleton from '@mui/material/Skeleton';
 const ChannelsGrid = () => {
 
