@@ -70,7 +70,7 @@ const ChannelsGrid = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -82,16 +82,15 @@ const ChannelsGrid = () => {
                 <div class="v-virtual-scroll__container" >
                     <Box sx={{ flexGrow: 1, margin: '5%' }}>
                         <Grid container spacing={1}>
+                            {/* Side panel that will run on 921 pixels width and will be replaced by combo box below the specified width */}
                             <MediaQuery minWidth={921}>
 
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
-                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius : '4px'}}  animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
                                         <div
                                             style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
                                             <List>
                                                 {Languages.map((element, index) => {
-                                                    console.log(element);
-                                                    console.log(index);
                                                     let temp = element.slice(0, 20)
 
                                                     return (
@@ -132,38 +131,34 @@ const ChannelsGrid = () => {
 
                             </MediaQuery>
                             <Grid item xs={6} md={8}>
+
+                                {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
-                                    <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10, minHeight: '5%' }}>
-                                        <div class="ccc_searchBar" style={{ padding: 1 }} >
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
+                                        <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10, minHeight: '5%' }}>
 
-                                            <Box sx={{ minWidth: 120 }}>
-                                                <FormControl fullWidth size="small">
+                                            <div className="ccc_searchBar" style={{ padding: 1 }} >
 
-                                                    <Select
+                                                <Box sx={{ minWidth: 120 }}>
+                                                    <FormControl fullWidth size="small">
 
-                                                        id="demo-simple-select"
-                                                        value={selectedIndex}
-                                                        IconComponent={() => <Dropdown></Dropdown>}
-                                                    // onChange={handleCombo}
-                                                    // onChange={()=>{handleChange(document.getElementById('demo-simple-select') ? document.getElementById('demo-simple-select').value : selectedIndex)}}
-                                                    >
-                                                        {Languages.map((element, index) => {
-                                                            console.log(element);
-                                                            console.log(index);
-                                                            let temp = element.slice(0, 20)
-                                                            console.log(index)
-                                                            return (
+                                                        <Select
 
-                                                                <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> {element} </MenuItem>
-                                                            )
+                                                            id="demo-simple-select"
+                                                            value={selectedIndex}
+                                                            IconComponent={() => <Dropdown></Dropdown>}
+                                                        >
+                                                            {Languages.map((element, index) => {
+                                                                return (
+                                                                    <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> {element} </MenuItem>
+                                                                )
+                                                            })}
 
-                                                        })}
+                                                        </Select>
+                                                    </FormControl>
+                                                </Box>
 
-                                                    </Select>
-                                                </FormControl>
-                                            </Box>
-
-                                            {/* <select style={{ width: '100%', color: 'white' }}>
+                                                {/* <select style={{ width: '100%', color: 'white' }}>
                                                 {
 
                                                     Languages.map((element, index) => {
@@ -176,31 +171,47 @@ const ChannelsGrid = () => {
                                             </select> */}
 
 
+                                            </div>
                                         </div>
-                                    </div>
+                                    }
                                     <br></br>
                                 </MediaQuery>
-                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius : '4px'}}  animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px' }}>
-                                    <div class="ccc_column ccc_channelList">
+                                    <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px' }}>
+                                        <div class="ccc_column ccc_channelList">
 
-                                        <div class="ccc_searchBar">
-                                            <input style={{ width: '100%' }} onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
-                                            <i class="fa-solid fa-magnifying-glass iconCss"></i>
+                                            <div class="ccc_searchBar">
+                                                <input style={{ width: '100%' }} onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                                <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
-                                        </div>
+                                            </div>
 
-                                        <MediaQuery minWidth={501}>
-                                            <Box sx={{ flexGrow: 1 }}>
-                                                <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
+                                            <MediaQuery minWidth={501}>
+                                                <Box sx={{ flexGrow: 1 }}>
+                                                    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
 
-                                                    <Grid container item xs={6} direction="row">
+                                                        <Grid container item xs={6} direction="row">
 
-                                                        <div className='divUnselected'  >
+                                                            <div className='divUnselected'  >
 
-                                                            <List disablePadding  >
-                                                                {firstHalfArray.map((element, index) => {
+                                                                <List disablePadding  >
+                                                                    {firstHalfArray.map((element, index) => {
+                                                                        return (
+                                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                                            </ListItem>
+                                                                        )
+                                                                    })}
+
+                                                                </List>
+
+                                                            </div>
+                                                        </Grid>
+
+                                                        <Grid container item xs={6} direction="column">
+                                                            <List disablePadding >
+                                                                {secondHalfArray.map((element, index) => {
                                                                     return (
                                                                         <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
                                                                             <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
@@ -209,13 +220,18 @@ const ChannelsGrid = () => {
                                                                 })}
 
                                                             </List>
+                                                        </Grid>
 
-                                                        </div>
                                                     </Grid>
+                                                </Box>
+                                            </MediaQuery>
 
-                                                    <Grid container item xs={6} direction="column">
+                                            <MediaQuery maxWidth={500} minWidth={0}>
+                                                <Grid container item xs={6} direction="row" sx={{ minWidth: '100%', maxWidth: '100%' }}>
+
+                                                    <div className='divUnselected'>
                                                         <List disablePadding >
-                                                            {secondHalfArray.map((element, index) => {
+                                                            {fullArray.map((element, index) => {
                                                                 return (
                                                                     <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
                                                                         <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
@@ -224,33 +240,13 @@ const ChannelsGrid = () => {
                                                             })}
 
                                                         </List>
-                                                    </Grid>
-
+                                                    </div>
                                                 </Grid>
-                                            </Box>
-                                        </MediaQuery>
+                                            </MediaQuery>
+                                        </div>
 
-                                        <MediaQuery maxWidth={500} minWidth={0}>
-                                            <Grid container item xs={6} direction="row" sx={{ minWidth: '100%', maxWidth: '100%' }}>
-
-                                                <div className='divUnselected'>
-                                                    <List disablePadding >
-                                                        {fullArray.map((element, index) => {
-                                                            return (
-                                                                <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
-                                                                </ListItem>
-                                                            )
-                                                        })}
-
-                                                    </List>
-                                                </div>
-                                            </Grid>
-                                        </MediaQuery>
                                     </div>
-
-                                </div>
-                            }
+                                }
                             </Grid>
 
                         </Grid>
