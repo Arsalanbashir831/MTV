@@ -34,7 +34,7 @@ export default function Accordion(props) {
             </button>
             
             <div 
-            className={props.activated   ? "accordion-toggle animated" : "accordion-toggle"}
+            className={(props.activated)   ? "accordion-toggle animated" : "accordion-toggle"}
             style={{height:props.activated   ? `${heightEl}` : "0px"}}
             ref={refHeight}
             >

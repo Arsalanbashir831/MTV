@@ -69,12 +69,22 @@
       
       console.log(count)
       count++;
-      if (count >= 2)
+      if (count > 2)
       {
-        document.getElementById('mob-navbar').click()
-        count = 0;
+        let nav = document.getElementById('mob-navbar');
+       if(nav.className=='slide-open'){
+       
+         nav.click();
+         count = 1;
+       }
+       else{
+        count=1;
+       }
+       
+
+     
       }
-      
+    
         
         
 
