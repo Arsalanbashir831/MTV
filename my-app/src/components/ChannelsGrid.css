@@ -159,6 +159,9 @@ textarea:focus, input:focus{
     }
 }
 
+.css-6hp17o-MuiList-root-MuiMenu-list{
+    max-height: 50vh !important;
+}
 
 .MuiSelect-select{
     color: white !important;
