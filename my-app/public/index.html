@@ -68,7 +68,8 @@
     function closeDiv(){
       
       console.log(count)
-      count++;
+      if (document.getElementById('mob-navbar'))
+      {count++;}
       if (count > 2)
       {
         let nav = document.getElementById('mob-navbar');
