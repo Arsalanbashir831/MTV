@@ -158,3 +158,8 @@ textarea:focus, input:focus{
         min-width: 100% !important;
     }
 }
+
+
+.MuiSelect-select{
+    color: white !important;
+}

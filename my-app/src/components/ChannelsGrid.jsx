@@ -16,6 +16,12 @@ import { ChannelNames } from './../Data/ChannelNames'
 import { ThemeProvider } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import MediaQuery from 'react-responsive'
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import { ReactComponent as Dropdown } from './../assets/dropdown.svg'
+
 const ChannelsGrid = () => {
 
     const blurredColor = 'hsla(0,0%,100%,.1)'
@@ -23,12 +29,22 @@ const ChannelsGrid = () => {
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const [firstHalfArray, setFirstHalfArray] = React.useState([...ChannelNames[0]].splice(0, Math.ceil(ChannelNames[0].length / 2)))
     const [secondHalfArray, setSecondHalfArray] = React.useState([...ChannelNames[0]].splice(Math.ceil(ChannelNames[0].length / 2)))
+    const [fullArray, setFullArray] = React.useState(ChannelNames[0])
     const handleChange = (index) => {
         setSelectedIndex(index);
         setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
         setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
+        setFullArray(ChannelNames[index]);
     }
 
+    const handleCombo = (index) => {
+
+        setSelectedIndex(index);
+        console.log(index + "MEOWWWWWWWWWWWWWWWW")
+        setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
+        setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
+        setFullArray(ChannelNames[index]);
+    }
     const searchResults = () => {
         let searchQuery = document.querySelector('input').value
         let results = []
@@ -64,7 +80,7 @@ const ChannelsGrid = () => {
 
                                                 return (
 
-                                                    <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin:"6px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
+                                                    <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "6px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
                                                         <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
                                                             <ListItemButton sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
 
@@ -90,30 +106,62 @@ const ChannelsGrid = () => {
                                         </List>
                                     </div>
                                 </Grid>
+
+
+
+
+
                             </MediaQuery>
                             <Grid item xs={6} md={8}>
                                 <MediaQuery maxWidth={920}>
-                                    <div style={{  background: backgroundColor, borderRadius: '4px', padding: 10, minHeight: '5%' }}>
-                                        <div class="ccc_searchBar" style={{ padding: 1}} >
+                                    <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10, minHeight: '5%' }}>
+                                        <div class="ccc_searchBar" style={{ padding: 1 }} >
 
-                                            <select style= {{width: '100%', color: 'white'}}>
-                                            {
+                                            <Box sx={{ minWidth: 120 }}>
+                                                <FormControl fullWidth size="small">
 
-                                                Languages.map((element,index)=>{
-                                                    return(
-                                                        <option onClick={()=>{handleChange(index)}}>{element}</option>
-                                                    )
-                                                })
-                                            }
-                                            
-                                            </select>
-                                            
+                                                    <Select
+
+                                                        id="demo-simple-select"
+                                                        value={selectedIndex}
+                                                        IconComponent={() => <Dropdown></Dropdown>}
+                                                    // onChange={handleCombo}
+                                                    // onChange={()=>{handleChange(document.getElementById('demo-simple-select') ? document.getElementById('demo-simple-select').value : selectedIndex)}}
+                                                    >
+                                                        {Languages.map((element, index) => {
+                                                            console.log(element);
+                                                            console.log(index);
+                                                            let temp = element.slice(0, 20)
+                                                            console.log(index)
+                                                            return (
+
+                                                                <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> {element} </MenuItem>
+                                                            )
+
+                                                        })}
+
+                                                    </Select>
+                                                </FormControl>
+                                            </Box>
+
+                                            {/* <select style={{ width: '100%', color: 'white' }}>
+                                                {
+
+                                                    Languages.map((element, index) => {
+                                                        return (
+                                                            <option onClick={() => { handleChange(index) }}>{element}</option>
+                                                        )
+                                                    })
+                                                }
+
+                                            </select> */}
+
 
                                         </div>
                                     </div>
                                     <br></br>
                                 </MediaQuery>
-                                <div style={{ overflowY:"hidden" , background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'auto', borderRadius: '4px' }}>
+                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'auto', borderRadius: '4px' }}>
                                     <div class="ccc_column ccc_channelList">
 
                                         <div class="ccc_searchBar">
@@ -122,14 +170,29 @@ const ChannelsGrid = () => {
 
                                         </div>
 
-                                        <Box sx={{ flexGrow: 1 }}>
-                                            <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
-                                                
-                                                <Grid container item xs={6} direction="row">
-                                                   
-                                                    <div className='divUnselected'>
+                                        <MediaQuery minWidth={501}>
+                                            <Box sx={{ flexGrow: 1 }}>
+                                                <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
+
+                                                    <Grid container item xs={6} direction="row">
+
+                                                        <div className='divUnselected'>
+                                                            <List disablePadding >
+                                                                {firstHalfArray.map((element, index) => {
+                                                                    return (
+                                                                        <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                            <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
+                                                                        </ListItem>
+                                                                    )
+                                                                })}
+
+                                                            </List>
+                                                        </div>
+                                                    </Grid>
+
+                                                    <Grid container item xs={6} direction="column">
                                                         <List disablePadding >
-                                                            {firstHalfArray.map((element, index) => {
+                                                            {secondHalfArray.map((element, index) => {
                                                                 return (
                                                                     <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
                                                                         <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
@@ -138,24 +201,27 @@ const ChannelsGrid = () => {
                                                             })}
 
                                                         </List>
-                                                    </div>
+                                                    </Grid>
+
                                                 </Grid>
+                                            </Box>
+                                        </MediaQuery>
 
-                                                <Grid container item xs={6} direction="column">
-                                                    <List disablePadding >
-                                                        {secondHalfArray.map((element, index) => {
-                                                            return (
-                                                                <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
-                                                                </ListItem>
-                                                            )
-                                                        })}
+                                        <Grid container item xs={6} direction="row" sx={{ minWidth:'100%', maxWidth: '100%' }}>
 
-                                                    </List>
-                                                </Grid>
+                                            <div className='divUnselected'>
+                                                <List disablePadding >
+                                                    {fullArray.map((element, index) => {
+                                                        return (
+                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={element} />
+                                                            </ListItem>
+                                                        )
+                                                    })}
 
-                                            </Grid>
-                                        </Box>
+                                                </List>
+                                            </div>
+                                        </Grid>
                                     </div>
 
                                 </div>
