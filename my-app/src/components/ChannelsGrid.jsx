@@ -206,7 +206,8 @@ const ChannelsGrid = () => {
                                                 </Grid>
                                             </Box>
                                         </MediaQuery>
-
+                                        
+                                        <MediaQuery maxWidth={500} minWidth = {0}>
                                         <Grid container item xs={6} direction="row" sx={{ minWidth:'100%', maxWidth: '100%' }}>
 
                                             <div className='divUnselected'>
@@ -222,6 +223,7 @@ const ChannelsGrid = () => {
                                                 </List>
                                             </div>
                                         </Grid>
+                                        </MediaQuery>   
                                     </div>
 
                                 </div>
