@@ -21,7 +21,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { ReactComponent as Dropdown } from './../assets/dropdown.svg'
-
+import { useEffect } from 'react';
+import Skeleton from '@mui/material/Skeleton';
 const ChannelsGrid = () => {
 
     const blurredColor = 'hsla(0,0%,100%,.1)'
@@ -40,7 +41,6 @@ const ChannelsGrid = () => {
     const handleCombo = (index) => {
 
         setSelectedIndex(index);
-        console.log(index + "MEOWWWWWWWWWWWWWWWW")
         setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
         setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
         setFullArray(ChannelNames[index]);
@@ -60,13 +60,22 @@ const ChannelsGrid = () => {
             }
             setFirstHalfArray(results.splice(0, Math.ceil(results.length / 2)));
             setSecondHalfArray(results.splice(Math.ceil(results.length / 2)));
-        }else{
+        } else {
             handleChange(selectedIndex);
         }
     }
 
+    const [loading, setLoading] = React.useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-      
+
         <div class="ccc_column ccc_countryList">
 
             <div class="v-virtual-scroll">
@@ -76,41 +85,45 @@ const ChannelsGrid = () => {
                             <MediaQuery minWidth={921}>
 
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
-                                    <div
-                                        style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
-                                        <List>
-                                            {Languages.map((element, index) => {
-                                                console.log(element);
-                                                console.log(index);
-                                                let temp = element.slice(0, 20)
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius : '4px'}}  animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+                                        <div
+                                            style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
+                                            <List>
+                                                {Languages.map((element, index) => {
+                                                    console.log(element);
+                                                    console.log(index);
+                                                    let temp = element.slice(0, 20)
 
-                                                return (
-
-                                                    <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "6px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
-                                                        <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
-                                                            <ListItemButton sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
-
-                                                                {selectedIndex === index ?
-                                                                    <>
-                                                                        <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: '900' }}>{temp}</Typography>} />
-                                                                        <ListItemIcon style={{ paddingLeft: '11%' }} >
-                                                                            <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
-                                                                        </ListItemIcon>
-                                                                    </>
-                                                                    :
-                                                                    <ListItemText className='text' style={{ fontWeight: '', whiteSpace: 'nowrap', color: 'white' }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '200' }}>{temp}</Typography>} />
-                                                                }
-                                                            </ListItemButton>
-                                                        </div>
-                                                    </ListItem>
-
-                                                )
-
-                                            })}
+                                                    return (
 
 
-                                        </List>
-                                    </div>
+                                                        <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "6px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
+                                                            <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
+                                                                <ListItemButton sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
+
+                                                                    {selectedIndex === index ?
+                                                                        <>
+                                                                            <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: '900' }}>{temp}</Typography>} />
+                                                                            <ListItemIcon style={{ paddingLeft: '11%' }} >
+                                                                                <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
+                                                                            </ListItemIcon>
+                                                                        </>
+                                                                        :
+                                                                        <ListItemText className='text' style={{ fontWeight: '', whiteSpace: 'nowrap', color: 'white' }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '200' }}>{temp}</Typography>} />
+                                                                    }
+                                                                </ListItemButton>
+                                                            </div>
+                                                        </ListItem>
+
+
+                                                    )
+
+                                                })}
+
+
+                                            </List>
+                                        </div>
+                                    }
                                 </Grid>
 
 
@@ -167,6 +180,8 @@ const ChannelsGrid = () => {
                                     </div>
                                     <br></br>
                                 </MediaQuery>
+                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius : '4px'}}  animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+
                                 <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px' }}>
                                     <div class="ccc_column ccc_channelList">
 
@@ -235,6 +250,7 @@ const ChannelsGrid = () => {
                                     </div>
 
                                 </div>
+                            }
                             </Grid>
 
                         </Grid>
