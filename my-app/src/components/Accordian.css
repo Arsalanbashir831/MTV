@@ -88,12 +88,22 @@
             height: 100px !important;
            
         }.accordion-visible span{
-            font-size: 17px;
+            font-size: 15px;
         }
         .accordion-toggle p {
             font-size: 15px;
         }
-    
+        .accordion-visible img {
+           
+            height: 15px;
+        }
+        .accordion-visible {
+          
+            /* border: 1px solid #474d9b; */
+          
+            padding: 7px 7px;
+            justify-content: center;
+        }
     
         }
         @media screen and (max-width:325px) {
