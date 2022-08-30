@@ -69,7 +69,7 @@ const ChannelsGrid = () => {
                         <Grid container spacing={1}>
                             <MediaQuery minWidth={921}>
 
-                                <Grid item xs={6} md={4}>
+                                <Grid item xs={6} md={4} >
                                     <div
                                         style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: 6, padding: '2.5px 5px 0;' }}>
                                         <List>

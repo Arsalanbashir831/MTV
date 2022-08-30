@@ -146,15 +146,17 @@ textarea:focus, input:focus{
 
 
 .css-a5rdam-MuiGrid-root{
-    width: calc(105% + 8px) !important;
+    width: calc(100% + 8px) !important;
 }
 .css-1q9bwhc-MuiListItem-root{
+    
     max-height: 40px !important;
 }
 
+
 @media screen and (max-width:920px) {
     .css-a5rdam-MuiGrid-root>.MuiGrid-item {
-        padding-left: 8px;
+        padding-right: 8px !important;
         min-width: 100% !important;
     }
 }
