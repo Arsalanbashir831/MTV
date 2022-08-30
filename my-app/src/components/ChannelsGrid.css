@@ -17,7 +17,7 @@
 }
 
 .MuiTypography-root{
-    font-weight: 700;
+    font-weight: 900 !important;
 }
 .Mui-selected{
     background-color: white;
@@ -93,7 +93,7 @@ button, input, optgroup, select, textarea {
     padding: 19px 19px 0 16px;
     display: grid;
     grid-gap: 19px;
-    gap: 19px;
+    gap: 8px;
     align-items: flex-start;
     grid-template-rows: 42px auto;
 }
