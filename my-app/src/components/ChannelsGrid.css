@@ -152,18 +152,25 @@ textarea:focus, input:focus{
     
     max-height: 40px !important;
 }
-.css-mi3ubi-MuiGrid-root>.MuiGrid-item {
+/* .css-mi3ubi-MuiGrid-root>.MuiGrid-item {
     padding-top: 0px !important;
     margin: 24px 0px !important;
-}
+} */
 .css-1qvkgl9 {
     /* -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1; */
     flex-grow: 1;
     margin: 0px !important;
+    
 }
-
+.css-i9gxme {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
 
 @media screen and (max-width:920px) {
     .css-a5rdam-MuiGrid-root>.MuiGrid-item {

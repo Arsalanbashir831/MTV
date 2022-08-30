@@ -161,7 +161,7 @@ const ChannelsGrid = () => {
                                     </div>
                                     <br></br>
                                 </MediaQuery>
-                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'auto', borderRadius: '4px' }}>
+                                <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
                                     <div class="ccc_column ccc_channelList">
 
                                         <div class="ccc_searchBar">
