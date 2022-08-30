@@ -152,10 +152,10 @@ textarea:focus, input:focus{
     
     max-height: 40px !important;
 }
-/* .css-mi3ubi-MuiGrid-root>.MuiGrid-item {
+.css-mi3ubi-MuiGrid-root>.MuiGrid-item {
     padding-top: 0px !important;
-    margin: 24px 0px !important;
-} */
+    margin:  0px !important;
+}
 .css-1qvkgl9 {
     /* -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -164,13 +164,22 @@ textarea:focus, input:focus{
     margin: 0px !important;
     
 }
+.css-mi3ubi-MuiGrid-root{
+    margin-top: 0 !important;
+    overflow: auto;
+    height: 69vh;
+}
+.css-mi3ubi-MuiGrid-root::-webkit-scrollbar {
+    width: 0% !important;
+}
 .css-i9gxme {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    overflow-y: auto;
-    min-height: 100vh;
+    /* overflow-y: auto;
+    min-height: 20vh;
+    border: 4px solid white; */
   
 }
 .css-i9gxme::-webkit-scrollbar {
