@@ -171,13 +171,14 @@ const ChannelsGrid = () => {
                                         </div>
 
                                         <MediaQuery minWidth={501}>
-                                            <Box sx={{ flexGrow: 1 }}>
-                                                <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
+                                            <Box  sx={{ flexGrow: 1 }}>
+                                                <Grid  container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
 
-                                                    <Grid container item xs={6} direction="row">
+                                                    <Grid container   item xs={6} direction="row">
 
-                                                        <div className='divUnselected'>
-                                                            <List disablePadding >
+                                                        <div className='divUnselected'  >
+                                                         
+                                                            <List disablePadding  >
                                                                 {firstHalfArray.map((element, index) => {
                                                                     return (
                                                                         <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
@@ -187,6 +188,7 @@ const ChannelsGrid = () => {
                                                                 })}
 
                                                             </List>
+                                                           
                                                         </div>
                                                     </Grid>
 

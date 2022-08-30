@@ -200,3 +200,16 @@ textarea:focus, input:focus{
 .MuiSelect-select{
     color: white !important;
 }
+
+@media screen and (max-width:510px){
+
+
+    .css-1mk9mw3-MuiList-root {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: auto;
+        height: 84vh;
+    }
+}
