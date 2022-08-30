@@ -171,6 +171,10 @@ textarea:focus, input:focus{
     flex-grow: 1;
     overflow-y: auto;
     min-height: 100vh;
+  
+}
+.css-i9gxme::-webkit-scrollbar {
+    width: 0% !important;
 }
 
 @media screen and (max-width:920px) {
