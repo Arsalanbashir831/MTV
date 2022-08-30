@@ -206,7 +206,8 @@ textarea:focus, input:focus{
 
     .css-1mk9mw3-MuiList-root {
         overflow: auto;
-        height: 90vh;
+        height: 76vh;
+
     }
 }
 @media screen and (height:980px){

@@ -1,19 +1,24 @@
 import React from 'react'
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+
 import Channels from './Pages/Channels' 
 import Home from './Pages/Home';
-import Footer from './components/Footer';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Layout = () => {
   return (
     <React.Fragment>
-    <CssBaseline />
-    <div style={{maxWidth:"1040px" ,margin:"auto"}} className='container'>
-      <Box sx={{ height: '100vh' }}>
-        <Home></Home>
+      
+    
+    <Routes>
+    <Route path="/" element={<Home></Home>}/>
+    <Route path="/Channel" element={<Channels></Channels>}/>
+    </Routes>
+        
+   
+    
+      
        
-      </Box>
-    </div>
+    
     
   </React.Fragment>
   )

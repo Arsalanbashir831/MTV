@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import logo from "../assets/logo.svg"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
-
+import {  Link } from "react-router-dom";
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
@@ -28,8 +28,8 @@ const DesktopNavbar = () => {
           {/* menu links  */}
           <ul className='nav-links'>
 
-            <li className='nav-link' >HOME</li>
-            <li className='nav-link'>CHANNELS</li>
+            <li> <Link style={{textDecoration:'none'}} className='nav-link' to='/'> HOME </Link> </li>
+            <li><Link style={{textDecoration:'none'}} className='nav-link' to='/Channel'> CHANNEL </Link></li>
             <li className='nav-link'>SETUP</li>
             <li className='nav-link'>RESELLERS</li>
           </ul>
