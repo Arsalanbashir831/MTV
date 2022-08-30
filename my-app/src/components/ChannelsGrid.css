@@ -167,7 +167,7 @@ textarea:focus, input:focus{
 .css-mi3ubi-MuiGrid-root{
     margin-top: 0 !important;
     overflow: auto;
-    height: 84vh;
+   height: 69vh;
 }
 .css-mi3ubi-MuiGrid-root::-webkit-scrollbar {
     width: 0% !important;
@@ -205,11 +205,18 @@ textarea:focus, input:focus{
 
 
     .css-1mk9mw3-MuiList-root {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: relative;
         overflow: auto;
         height: 90vh;
     }
 }
+@media screen and (height:980px){
+
+    .css-mi3ubi-MuiGrid-root{
+       
+       height: 74vh;
+    }
+   
+}
+
+
+
