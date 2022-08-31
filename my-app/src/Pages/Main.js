@@ -1,34 +1,17 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
-export default function BasicGrid() {
+import React from 'react'
+import './Main.css';
+import logo from "../assets/logo.svg"
+import website from '../assets/websiteIcon.svg';
+import userIcon from '../assets/userIcon.svg';
+import checkout from '../assets/checkout-icon.svg';
+const Main = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-        <Grid xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-      </Grid>
-    </Box>
-  );
+    <div id="ccc_home"><div className="ccc_container"><img src={logo} alt="logo" className="ccc_logo"/> <h1 className="ccc_title">
+      Welcome to the official cccambox proxy, if our website main url is not
+      available in google you can then use one of the links below to access
+      our services. Enjoy 🎉
+    </h1> <div className="ccc_choices"><a href="#" ><button className="ccc_choice"><div className="ccc_container"><img src={website} alt="choice" className="ccc_img"/> <p className="ccc_title">Website</p></div></button></a><a href="#" ><button className="ccc_choice"><div className="ccc_container"><img src={userIcon} alt="choice" className="ccc_img"/> <p className="ccc_title">Members Area</p></div></button></a><a href="#" ><button className="ccc_choice"><div className="ccc_container"><img src={checkout} alt="choice" className="ccc_img"/> <p className="ccc_title">Checkout</p></div></button></a></div></div></div>
+  )
 }
+
+export default Main
