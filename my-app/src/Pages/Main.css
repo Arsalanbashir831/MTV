@@ -141,6 +141,7 @@
     .ccc_choice .ccc_container .ccc_title {
         text-align: left;
         font-size: 20px;
+        margin: 0;
     }
 }
 
