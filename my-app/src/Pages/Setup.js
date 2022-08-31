@@ -1,8 +1,13 @@
 import React from 'react'
-
+import SetupTabs from '../components/SetupTabs'
 const Setup = () => {
-  return (
-    <div>Setup</div>
+  return (<>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+    <SetupTabs></SetupTabs>
+  </>
   )
 }
 
