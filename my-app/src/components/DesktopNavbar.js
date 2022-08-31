@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import logo from "../assets/logo.svg"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
-
+import {  Link } from "react-router-dom";
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
@@ -28,10 +28,10 @@ const DesktopNavbar = () => {
           {/* menu links  */}
           <ul className='nav-links'>
 
-            <li className='nav-link' >HOME</li>
-            <li className='nav-link'>CHANNELS</li>
+            <li> <Link style={{textDecoration:'none'}} className='nav-link' to='/'> HOME </Link> </li>
+            <li><Link style={{textDecoration:'none'}} className='nav-link' to='/Channel'> CHANNEL </Link></li>
             <li className='nav-link'>SETUP</li>
-            <li className='nav-link'>RESELLERS</li>
+            <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/resellers'> RESELLERS </Link></li>
           </ul>
 
           {/* <Stack spacing={1} direction="row">
@@ -64,7 +64,7 @@ const DesktopNavbar = () => {
 {mobileActive?<MobileNavbar active="true"  clickhandler={() => handleChange()}  ></MobileNavbar>:<MobileNavbar clickhandler={() => handleChange()} active='false' ></MobileNavbar>}
       {/* <CSSTransition in={mobileActive}
        
-        timeout={1000}
+        timeout={1000}0
         classNames={"slide"}
         unmountOnExit>
         <div key='zx' id='temp' onClick={() => { setMobileActive(false) }}><MobileNavbar></MobileNavbar> </div> 

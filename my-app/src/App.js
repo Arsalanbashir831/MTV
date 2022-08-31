@@ -10,8 +10,6 @@ import { Button } from '@mui/material'
 import zIndex from '@mui/material/styles/zIndex'
 import Footer from './components/Footer'
 
-
-
 const App = () => {
  
 
@@ -23,7 +21,7 @@ const App = () => {
       <Layout>
       </Layout>
       <Footer></Footer>
-     
+      
     </>
   )
 }

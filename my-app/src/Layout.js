@@ -1,17 +1,28 @@
 import React from 'react'
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
 
+import Channels from './Pages/Channels' 
 import Home from './Pages/Home';
-import Footer from './components/Footer';
-import Main from './Pages/Main';
+import {  Routes, Route } from "react-router-dom";
+import Resellers from './Pages/Resellers';
 const Layout = () => {
   return (
     <React.Fragment>
-      {/* Routes will be initialized here  */}
-          {/* <Home></Home> */}
-          <Main></Main>
-    </React.Fragment>
+      
+    
+    <Routes>
+    <Route path="/" element={<Home></Home>}/>
+    <Route path="/Channel" element={<Channels></Channels>}/>
+    <Route path="/Resellers" element={<Resellers></Resellers>}/>
+    </Routes>
+        
+   
+    
+      
+       
+    
+    
+  </React.Fragment>
+
   )
 }
 

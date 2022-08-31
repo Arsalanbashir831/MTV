@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
+import {  Link } from "react-router-dom";
 const MobileNavbar = (props) => {
   return (
     <>
@@ -10,8 +11,8 @@ const MobileNavbar = (props) => {
             {/* LOGO */}
             <img className='mob-logo' src={logo} alt="logo" />
             {/* NAV LINKS */}
-            <li className='nav-link mob-nav-link' >HOME</li>
-            <li className='nav-link mob-nav-link'>CHANNELS</li>
+            <li> <Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/'> HOME </Link> </li>
+            <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/Channel'> CHANNEL </Link></li>
             <li className='nav-link mob-nav-link'>SETUP</li>
             <li className='nav-link mob-nav-link'>RESELLERS</li>
          
