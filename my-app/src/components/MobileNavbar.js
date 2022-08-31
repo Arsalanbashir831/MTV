@@ -13,8 +13,8 @@ const MobileNavbar = (props) => {
             {/* NAV LINKS */}
             <li> <Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/'> HOME </Link> </li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/Channel'> CHANNEL </Link></li>
-            <li className='nav-link mob-nav-link'>SETUP</li>
-            <li className='nav-link mob-nav-link'>RESELLERS</li>
+            <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/setup'> SETUP </Link></li>
+            <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/resellers'> RESELLERS </Link></li>
          
             <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
               <Button className='order-btn  btn-mob' variant="contained">Order Now</Button>

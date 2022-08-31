@@ -29,7 +29,7 @@ const DesktopNavbar = () => {
 
             <li> <Link style={{textDecoration:'none'}} className='nav-link' to='/'> HOME </Link> </li>
             <li><Link style={{textDecoration:'none'}} className='nav-link' to='/Channel'> CHANNEL </Link></li>
-            <li className='nav-link'>SETUP</li>
+            <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/Setup'> SETUP </Link></li>
             <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/resellers'> RESELLERS </Link></li>
           </ul>
 
