@@ -21,8 +21,7 @@ const DesktopNavbar = () => {
       <header id="navbar" >
         <div className="leftContainer">
           {/* logo */}
-          <img id='logo' src={logo} alt="" />
-
+          <Link to='/Main'><img id='logo' src={logo} alt="" /></Link>
         </div>
         <div className="centerContainer ">
           {/* menu links  */}

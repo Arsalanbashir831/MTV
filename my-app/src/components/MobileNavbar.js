@@ -9,7 +9,7 @@ const MobileNavbar = (props) => {
         <div className='upper-Container' >
           <ul className=' nav-links mob-nav-links'>
             {/* LOGO */}
-            <img className='mob-logo' src={logo} alt="logo" />
+           <Link to = '/Main'><img className='mob-logo' src={logo} alt="logo" /></Link> 
             {/* NAV LINKS */}
             <li> <Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/'> HOME </Link> </li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/Channel'> CHANNEL </Link></li>
