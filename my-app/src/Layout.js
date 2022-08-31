@@ -2,7 +2,6 @@ import React from 'react'
 
 import Channels from './Pages/Channels' 
 import Home from './Pages/Home';
-
 import {  Routes, Route } from "react-router-dom";
 import Resellers from './Pages/Resellers';
 const Layout = () => {
@@ -23,6 +22,7 @@ const Layout = () => {
     
     
   </React.Fragment>
+
   )
 }
 
