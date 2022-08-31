@@ -281,4 +281,8 @@
     #ccc_pricing .ccc_container .ccc_head .ccc_pricing .ccc_price .ccc_box {
         width: 100%;
     }
+    #ccc_pricing .ccc_container .ccc_head .ccc_pricing .ccc_price .ccc_info span {
+        font-size: 12px;
+        font-weight: 400;
+    }
 }
