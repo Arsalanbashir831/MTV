@@ -138,7 +138,7 @@ textarea:focus, input:focus{
 }
 
 .MuiListItem-root{
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 .MuiList-root{
     padding-top: 0 !important;
@@ -206,14 +206,14 @@ textarea:focus, input:focus{
 
     .css-1mk9mw3-MuiList-root {
         overflow: auto;
-        height: 76vh;
-
+        height: 90vh;
     }
 }
-@media screen and  (height:960px){
+@media screen and (height:980px){
 
-    .css-mi3ubi-MuiGrid-root {
-        min-height: 74vh !important;
+    .css-mi3ubi-MuiGrid-root{
+       
+       height: 74vh;
     }
    
 }
