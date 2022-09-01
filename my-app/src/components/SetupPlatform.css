@@ -1,0 +1,39 @@
+#ccc_plateforme {
+    width: 100%;
+    max-width: 1037px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 30px;
+    gap: 30px;
+    padding-top: 35.5px;
+    background: transparent;
+    box-shadow: none;
+    padding-bottom: 42px;
+}
+
+.v-sheet.v-card:not(.v-sheet--outlined) {
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+.theme--light.v-card {
+    /* background-color: #fff; */
+    color: rgba(0,0,0,.87);
+}
+.v-sheet:not(.v-sheet--outlined) {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%), 0 0 0 0 rgb(0 0 0 / 12%);
+}
+.theme--light.v-sheet {
+    /* background-color: #fff; */
+    border-color: #fff;
+    /* color: rgba(0,0,0,.87); */
+}
+.v-card {
+    border-width: thin;
+    /* display: block;
+    max-width: 100%; */
+    outline: none;
+    text-decoration: none;
+    transition-property: box-shadow,opacity;
+    word-wrap: break-word;
+    position: relative;
+    white-space: normal;
+}

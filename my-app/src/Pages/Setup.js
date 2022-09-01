@@ -1,12 +1,11 @@
 import React from 'react'
-import SetupTabs from '../components/SetupTabs'
+import SetupIntro from '../components/SetupIntro'
+import './Setup.css'
 const Setup = () => {
   return (<>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-    <SetupTabs></SetupTabs>
+    <div id='ccc_apps'>
+      <SetupIntro></SetupIntro>
+    </div>
   </>
   )
 }
