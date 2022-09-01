@@ -191,6 +191,13 @@ textarea:focus, input:focus{
         padding-right: 0px !important;
         min-width: 100% !important;
     }
+    .css-1v63c58 {
+        flex-basis: 66.6667%;
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+        max-width: 66.6667%;
+        min-width: 100%;
+    }
 }
 
 .css-6hp17o-MuiList-root-MuiMenu-list{
