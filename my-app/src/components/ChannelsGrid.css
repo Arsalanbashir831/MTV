@@ -184,6 +184,9 @@ textarea:focus, input:focus{
 .css-uuw6t0::-webkit-scrollbar {
     width: 0% !important;
 }
+.css-1ontqvh::-webkit-scrollbar{
+    width: 0% !important;
+}
 .css-i9gxme {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -197,6 +200,16 @@ textarea:focus, input:focus{
 .css-i9gxme::-webkit-scrollbar {
     width: 0% !important;
 }
+.css-tuxzvu > .MuiGrid-item {
+    padding-left: 24px !important;
+    padding-right: 24px;
+}
+.css-1ontqvh {
+   
+    height: 85.5vh!important;
+    overflow: auto!important;
+}
+
 
 @media screen and (max-width:920px) {
     .css-a5rdam-MuiGrid-root>.MuiGrid-item {
@@ -246,15 +259,22 @@ textarea:focus, input:focus{
     }
    
 } */
-@media screen  and (height:960px) {
+@media screen  and (min-height:960px) {
     .css-uuw6t0{
        
-        min-height: 74vh !important ;
+        min-height: 85vh !important;
     }
+    .css-1ontqvh {
+   
+        height: 85vh !important;
+      
+    }
+
     .css-mi3ubi-MuiGrid-root{
        
-        min-height: 74vh;
+        height: 85vh !important;
     }
+
 
    
 }
