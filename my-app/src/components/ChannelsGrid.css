@@ -210,11 +210,10 @@ textarea:focus, input:focus{
 
     }
 }
-@media screen  and (height:960px) {
+@media screen and  (height:960px){
 
-    .css-mi3ubi-MuiGrid-root{
-       
-       height: 74vh;
+    .css-mi3ubi-MuiGrid-root {
+        min-height: 74vh !important;
     }
    
 }
