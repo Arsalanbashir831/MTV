@@ -45,7 +45,7 @@ const ChannelsGrid = () => {
         setFullArray(ChannelNames[index]);
     }
     const searchResults = () => {
-        let searchQuery = document.querySelector('input').value
+        let searchQuery = document.getElementById('search').value
         let results = []
         if (searchQuery !== '') {
             for (let index = 0; index < ChannelNames.length; index++) {
@@ -57,8 +57,9 @@ const ChannelsGrid = () => {
                     }
                 }
             }
-            setFirstHalfArray(results.splice(0, Math.ceil(results.length / 2)));
-            setSecondHalfArray(results.splice(Math.ceil(results.length / 2)));
+            setFullArray(results);
+            setFirstHalfArray([...results].splice(0, Math.ceil(results.length / 2)));
+            setSecondHalfArray([...results].splice(Math.ceil(results.length / 2)));
         } else {
             handleChange(selectedIndex);
         }
@@ -181,7 +182,7 @@ const ChannelsGrid = () => {
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">
-                                                <input style={{ width: '100%' }} onInput={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                                <input style={{ width: '100%' }} id="search"  onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
                                                 <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
                                             </div>
