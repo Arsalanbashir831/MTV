@@ -80,7 +80,7 @@ const ChannelsGrid = () => {
 
             <div class="v-virtual-scroll">
                 <div class="v-virtual-scroll__container" >
-                    <Box sx={{ flexGrow: 1, margin: '5%' }}>
+                    <Box sx={{ flexGrow: 1, margin: '2%' }}>
                         <Grid container spacing={1}>
                             {/* Side panel that will run on 921 pixels width and will be replaced by combo box below the specified width */}
                             <MediaQuery minWidth={921}>
@@ -88,7 +88,7 @@ const ChannelsGrid = () => {
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
                                         <div
-                                            style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px', padding: '2.5px 5px 0;' }}>
+                                            style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px', padding: '2.5px 5px 0;' }}>
                                             <List>
                                                 {Languages.map((element, index) => {
                                                     let temp = element.slice(0, 20)
@@ -178,7 +178,7 @@ const ChannelsGrid = () => {
                                 </MediaQuery>
                                 {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '7.5px' }}>
+                                    <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">
@@ -198,7 +198,7 @@ const ChannelsGrid = () => {
                                                                 <List disablePadding  >
                                                                     {firstHalfArray.map((element, index) => {
                                                                         return (
-                                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7, marginTop: 1 }}>
                                                                                 <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                                             </ListItem>
                                                                         )
@@ -213,7 +213,7 @@ const ChannelsGrid = () => {
                                                             <List disablePadding >
                                                                 {secondHalfArray.map((element, index) => {
                                                                     return (
-                                                                        <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                        <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7, marginTop: 1 }}>
                                                                             <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                                         </ListItem>
                                                                     )
@@ -233,7 +233,7 @@ const ChannelsGrid = () => {
                                                         <List disablePadding >
                                                             {fullArray.map((element, index) => {
                                                                 return (
-                                                                    <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: 2, padding: 0.7, marginTop: 1 }}>
+                                                                    <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7, marginTop: 1 }}>
                                                                         <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                                     </ListItem>
                                                                 )
