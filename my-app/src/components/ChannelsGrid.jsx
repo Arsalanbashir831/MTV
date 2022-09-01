@@ -187,7 +187,7 @@ const ChannelsGrid = () => {
 
                                             </div>
 
-                                            <MediaQuery minWidth={501}>
+                                            <MediaQuery minWidth={541}>
                                                 <Box sx={{ flexGrow: 1 }}>
                                                     <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
 
@@ -226,7 +226,7 @@ const ChannelsGrid = () => {
                                                 </Box>
                                             </MediaQuery>
 
-                                            <MediaQuery maxWidth={500} minWidth={0}>
+                                            <MediaQuery maxWidth={540} minWidth={0}>
                                                 <Grid container item xs={6} direction="row" sx={{ minWidth: '100%', maxWidth: '100%' }}>
 
                                                     <div className='divUnselected'>
