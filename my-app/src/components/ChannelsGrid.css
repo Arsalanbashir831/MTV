@@ -177,10 +177,11 @@ textarea:focus, input:focus{
     overflow: auto;
    height: 69vh;
 }
-.css-uuw6t0 ::-webkit-scrollbar {
+
+.css-mi3ubi-MuiGrid-root::-webkit-scrollbar {
     width: 0% !important;
 }
-.css-mi3ubi-MuiGrid-root::-webkit-scrollbar {
+.css-uuw6t0::-webkit-scrollbar {
     width: 0% !important;
 }
 .css-i9gxme {
@@ -233,7 +234,7 @@ textarea:focus, input:focus{
     }
     
 }
-@media screen  and(height:960px) {
+/* @media screen  and(height:980px) {
 
     .css-mi3ubi-MuiGrid-root{
        
@@ -244,7 +245,18 @@ textarea:focus, input:focus{
         height: 74vh !important;
     }
    
-}
+} */
+@media screen  and (height:960px) {
+    .css-uuw6t0{
+       
+        min-height: 74vh !important ;
+    }
+    .css-mi3ubi-MuiGrid-root{
+       
+        min-height: 74vh;
+    }
 
+   
+}
 
 
