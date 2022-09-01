@@ -4,10 +4,10 @@ import PriceColumn from './PriceColumn'
 import './Pricing.css'
 // import downIcon from '../assets/chevronDown.svg'
 const PricingData=[
-  {price:'100₤',credit:'100',info:'1€ per credit'},
-  {price:'100₤',credit:'100',info:'1€ per credit'},
-  {price:'100₤',credit:'100',info:'1€ per credit'},
-  {price:'100₤',credit:'100',info:'1€ per credit'}
+  {price:'₤100',credit:'100',info:'₤1 per credit'},
+  {price:'₤100',credit:'100',info:'₤1 per credit'},
+  {price:'₤100',credit:'100',info:'₤1 per credit'},
+  {price:'₤100',credit:'100',info:'₤1 per credit'}
 
 ]
 const CostingData=[
