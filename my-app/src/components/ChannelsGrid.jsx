@@ -88,7 +88,7 @@ const ChannelsGrid = () => {
                             <MediaQuery minWidth={921}>
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
 
-                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '9px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
                                         <div className='leftPanel'>
                                             <List>
                                                 {Languages.map((element, index) => {
@@ -135,8 +135,8 @@ const ChannelsGrid = () => {
                                 {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
 
-                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
-                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '4px', padding: 10 }}>
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '9px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
+                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '9px', padding: 10 }}>
 
                                             <div className="ccc_searchBar" style={{ padding: 1 }} >
 
@@ -177,9 +177,9 @@ const ChannelsGrid = () => {
                                     }
                                     <br></br>
                                 </MediaQuery>
-                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '9px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '9px' }}>
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">

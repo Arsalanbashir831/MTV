@@ -155,7 +155,7 @@ textarea:focus, input:focus{
     min-height: 84vh;
     max-height: 84vh;
     overflow: auto;
-    border-radius: 4px;
+    border-radius: 9px;
     
 }
 .leftPanel::-webkit-scrollbar{
