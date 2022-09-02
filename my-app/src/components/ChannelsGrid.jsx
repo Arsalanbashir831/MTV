@@ -195,7 +195,7 @@ const ChannelsGrid = () => {
                                                         columnGap: '12px',
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
-                                                        maxHeight: 'calc(84vh - 4%)',
+                                                        maxHeight: 'calc(84vh - 4.2%)',
                                                         minWidth: '100%',
                                                     }}
                                                     style={{ overflow: 'auto', marginTop: '10px' }}
@@ -258,7 +258,7 @@ const ChannelsGrid = () => {
 
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(1, 1fr)',
-                                                        maxHeight: 'calc(84vh - 2%)',
+                                                        maxHeight: 'calc(84vh - 5%)',
 
 
                                                     }}
@@ -350,7 +350,7 @@ const ChannelsGrid = () => {
                                                         columnGap: '12px',
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
-                                                        maxHeight: 'calc(84vh - 4.5%)',
+                                                        maxHeight: 'calc(84vh - 3.4%)',
                                                         minWidth: '100%',
                                                     }}
                                                     style={{ overflow: 'auto', marginTop: '10px' }}
@@ -413,7 +413,7 @@ const ChannelsGrid = () => {
 
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(1, 1fr)',
-                                                        maxHeight: 'calc(84vh - 2%)',
+                                                        maxHeight: 'calc(84vh - 1.7%)',
 
 
                                                     }}
