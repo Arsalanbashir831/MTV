@@ -138,7 +138,7 @@ const ChannelsGrid = () => {
                                 <MediaQuery maxWidth={920}>
                                     
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
-                                        <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10 }}>
+                                        <div style={{ minWidth:'100%', background: backgroundColor, borderRadius: '4px', padding: 10 }}>
 
                                             <div className="ccc_searchBar" style={{ padding: 1 }} >
 
@@ -181,7 +181,7 @@ const ChannelsGrid = () => {
                                 </MediaQuery>
                                 {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ width:'100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                    <div style={{  minWidth:'100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">
@@ -197,9 +197,10 @@ const ChannelsGrid = () => {
                                                         columnGap: 2,
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
-                                                        maxHeight: 'calc(84vh - 4%)'
+                                                        maxHeight: 'calc(84vh - 4%)',
+                                                        minWidth:'100%',
                                                     }}
-                                                    style={{ overflow: 'auto' , marginTop:'10px'}}
+                                                    style={{  minWidth:'100%', overflow: 'auto' , marginTop:'10px'}}
                                                 >
 
                                                   
@@ -263,7 +264,7 @@ const ChannelsGrid = () => {
                                                         
                                                         
                                                     }}
-                                                    style={{ overflow: 'auto', marginTop:'10px' }}
+                                                    style={{  minWidth:'100%', overflow: 'auto', marginTop:'10px' }}
                                                 >
 
 
