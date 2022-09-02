@@ -286,7 +286,7 @@ const ChannelsGrid = () => {
 
                             <Grid id='rightPanel' item sx={{width: '100%'}}>
 
-                                <h1> HELLLLLLLLLLLLLLLLLLLLLLLL </h1>
+                                
                                 {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
 
