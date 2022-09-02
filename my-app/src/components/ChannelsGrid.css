@@ -90,7 +90,7 @@ button, input, optgroup, select, textarea {
 
 
 .ccc_column.ccc_channelList {
-    padding: 19px 19px 0 16px;
+    padding: 19px 19px 0 19px;
     display: grid;
     grid-gap: 19px;
     gap: 8px;

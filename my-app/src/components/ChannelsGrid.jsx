@@ -179,7 +179,7 @@ const ChannelsGrid = () => {
                                 </MediaQuery>
                                 {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                    <div style={{ width:'100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">
