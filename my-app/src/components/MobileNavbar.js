@@ -21,7 +21,7 @@ const MobileNavbar = (props) => {
               <hr className='mob-hr'></hr>
               <div className="switchMode">
 
-<i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
+<i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Light Mode</p>
 </div>
               
           </ul>
