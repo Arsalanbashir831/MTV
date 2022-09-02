@@ -80,12 +80,13 @@ const ChannelsGrid = () => {
 
             <div class="v-virtual-scroll">
                 <div class="v-virtual-scroll__container" >
-                    <Box sx={{ flexGrow: 1, margin: '2%' }}>
+                    <Box sx={{ margin: '2%' }}>
                         <Grid container spacing={1}>
                             {/* Side panel that will run on 921 pixels width and will be replaced by combo box below the specified width */}
-                            <MediaQuery minWidth={921}>
+                            
 
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
+                                <MediaQuery minWidth={921}>
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
                                         <div className = 'leftPanel'>
                                             <List>
@@ -122,13 +123,14 @@ const ChannelsGrid = () => {
                                             </List>
                                         </div>
                                     }
+                                    </MediaQuery>
                                 </Grid>
 
 
 
 
 
-                            </MediaQuery>
+                            
                             
                             <Grid item xs={6} md={8}>
                                 
