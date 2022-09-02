@@ -27,21 +27,21 @@ const ChannelsGrid = () => {
     const blurredColor = 'hsla(0,0%,100%,.1)'
     const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--components-dark-theme')
     const [selectedIndex, setSelectedIndex] = React.useState(0);
-    const [firstHalfArray, setFirstHalfArray] = React.useState([...ChannelNames[0]].splice(0, Math.ceil(ChannelNames[0].length / 2)))
-    const [secondHalfArray, setSecondHalfArray] = React.useState([...ChannelNames[0]].splice(Math.ceil(ChannelNames[0].length / 2)))
+    // const [firstHalfArray, setFirstHalfArray] = React.useState([...ChannelNames[0]].splice(0, Math.ceil(ChannelNames[0].length / 2)))
+    // const [secondHalfArray, setSecondHalfArray] = React.useState([...ChannelNames[0]].splice(Math.ceil(ChannelNames[0].length / 2)))
     const [fullArray, setFullArray] = React.useState(ChannelNames[0])
     const handleChange = (index) => {
         setSelectedIndex(index);
-        setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
-        setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
+        // setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
+        // setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
         setFullArray(ChannelNames[index]);
     }
 
     const handleCombo = (index) => {
 
         setSelectedIndex(index);
-        setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
-        setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
+        // setFirstHalfArray([...ChannelNames[index]].splice(0, Math.ceil(ChannelNames[index].length / 2)))
+        // setSecondHalfArray([...ChannelNames[index]].splice(Math.ceil(ChannelNames[index].length / 2)))
         setFullArray(ChannelNames[index]);
     }
     const searchResults = () => {
@@ -58,8 +58,8 @@ const ChannelsGrid = () => {
                 }
             }
             setFullArray(results);
-            setFirstHalfArray([...results].splice(0, Math.ceil(results.length / 2)));
-            setSecondHalfArray([...results].splice(Math.ceil(results.length / 2)));
+            // setFirstHalfArray([...results].splice(0, Math.ceil(results.length / 2)));
+            // setSecondHalfArray([...results].splice(Math.ceil(results.length / 2)));
         } else {
             handleChange(selectedIndex);
         }
@@ -186,7 +186,7 @@ const ChannelsGrid = () => {
                                                 <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
                                             </div>
-
+                                            
                                             <MediaQuery minWidth={541}>
                                                 <Box
                                                     sx={{
@@ -196,7 +196,7 @@ const ChannelsGrid = () => {
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
                                                         maxHeight: 'calc(84vh - 4%)'
                                                     }}
-                                                    style={{ overflow: 'auto' }}
+                                                    style={{ overflow: 'auto' , marginTop:'10px'}}
                                                 >
 
 
@@ -259,7 +259,7 @@ const ChannelsGrid = () => {
                                                         minHeight: 'calc(84vh - 2%',
                                                         
                                                     }}
-                                                    style={{ overflow: 'auto' }}
+                                                    style={{ overflow: 'auto', marginTop:'10px' }}
                                                 >
 
 
