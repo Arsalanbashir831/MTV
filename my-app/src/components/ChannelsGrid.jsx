@@ -76,18 +76,20 @@ const ChannelsGrid = () => {
 
     return (
 
-        <div class="ccc_column ccc_countryList">
+        <div class="ccc_column ccc_countryList" style={{ width: '100%' }}>
 
             <div class="v-virtual-scroll">
                 <div class="v-virtual-scroll__container" >
-                    <Box sx={{ flexGrow: 1, margin: '2%' }}>
+                    <Box sx={{ margin: '2%' }}>
                         <Grid container spacing={1}>
                             {/* Side panel that will run on 921 pixels width and will be replaced by combo box below the specified width */}
-                            <MediaQuery minWidth={921}>
 
+
+                            <MediaQuery minWidth={921}>
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
+
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
-                                        <div className = 'leftPanel'>
+                                        <div className='leftPanel'>
                                             <List>
                                                 {Languages.map((element, index) => {
                                                     let temp = element.slice(0, 20)
@@ -122,19 +124,23 @@ const ChannelsGrid = () => {
                                             </List>
                                         </div>
                                     }
+
                                 </Grid>
-
-
-
-
-
                             </MediaQuery>
-                            <Grid item xs={6} md={8}>
+
+
+
+
+
+
+
+                            <Grid item style={window.screen.width === 901 ? {minWidth:'100%'} : {minWidth: '66.667%'}}>
 
                                 {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
+
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
-                                        <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10 }}>
+                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '4px', padding: 10 }}>
 
                                             <div className="ccc_searchBar" style={{ padding: 1 }} >
 
@@ -177,7 +183,7 @@ const ChannelsGrid = () => {
                                 </MediaQuery>
                                 {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
                                         <div class="ccc_column ccc_channelList">
 
                                             <div class="ccc_searchBar">
@@ -185,7 +191,7 @@ const ChannelsGrid = () => {
                                                 <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
                                             </div>
-                                            
+
                                             <MediaQuery minWidth={541}>
                                                 <Box
                                                     sx={{
@@ -193,9 +199,10 @@ const ChannelsGrid = () => {
                                                         columnGap: 2,
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
-                                                        maxHeight: 'calc(84vh - 4%)'
+                                                        maxHeight: 'calc(84vh - 4%)',
+                                                        minWidth: '100%',
                                                     }}
-                                                    style={{ overflow: 'auto' , marginTop:'10px'}}
+                                                    style={{ overflow: 'auto', marginTop: '10px' }}
                                                 >
 
 
@@ -206,6 +213,7 @@ const ChannelsGrid = () => {
                                                             </ListItem>
                                                         )
                                                     })}
+
 
 
 
@@ -248,17 +256,17 @@ const ChannelsGrid = () => {
 
                                             <MediaQuery maxWidth={540} minWidth={0}>
 
-                                            <Box
+                                                <Box
                                                     sx={{
                                                         display: 'grid',
-                                                        
+
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(1, 1fr)',
                                                         maxHeight: 'calc(84vh - 2%)',
-                                                        minHeight: 'calc(84vh - 2%)',
-                                                        
+
+
                                                     }}
-                                                    style={{ overflow: 'auto', marginTop:'10px' }}
+                                                    style={{ minWidth: '100%', overflow: 'auto', marginTop: '10px' }}
                                                 >
 
 
