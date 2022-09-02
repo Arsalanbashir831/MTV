@@ -255,7 +255,7 @@ const ChannelsGrid = () => {
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(1, 1fr)',
                                                         maxHeight: 'calc(84vh - 2%)',
-                                                        minHeight: 'calc(84vh - 2%',
+                                                        minHeight: 'calc(84vh - 2%)',
                                                         
                                                     }}
                                                     style={{ overflow: 'auto', marginTop:'10px' }}
