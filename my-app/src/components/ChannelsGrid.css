@@ -150,6 +150,14 @@ textarea:focus, input:focus{
     width: 0% !important;
 }
 
+.leftPanel{
+    background-color: var(--components-dark-theme);
+    min-height: 84vh;
+    max-height: 84vh;
+    overflow: auto;
+    border-radius: 4px;
+    padding: 2.5px 5px 0;
+}
 .leftPanel::-webkit-scrollbar{
     width: 0%;
 }
