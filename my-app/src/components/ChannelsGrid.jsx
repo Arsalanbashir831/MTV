@@ -22,8 +22,17 @@ import Select from '@mui/material/Select';
 import { ReactComponent as Dropdown } from './../assets/dropdown.svg'
 import { useEffect } from 'react';
 import Skeleton from '@mui/material/Skeleton';
+
+import { createTheme, ThemeProvider } from '@mui/material';
 const ChannelsGrid = () => {
 
+    const theme = createTheme({
+        palette: {
+          primary: {
+            main: 'rgba(255,255,255,0)',
+          },
+        },
+      });
     const blurredColor = 'hsla(0,0%,100%,.1)'
     const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--components-dark-theme')
     const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -143,11 +152,12 @@ const ChannelsGrid = () => {
                                                 <Box sx={{ minWidth: 120 }}>
                                                     <FormControl fullWidth size="small">
 
-                                                        <Select
+                                                        <select
 
                                                             id="demo-simple-select"
                                                             value={selectedIndex}
                                                             IconComponent={() => <Dropdown></Dropdown>}
+                                                           
                                                         >
                                                             {Languages.map((element, index) => {
                                                                 return (
@@ -155,7 +165,7 @@ const ChannelsGrid = () => {
                                                                 )
                                                             })}
 
-                                                        </Select>
+                                                        </select>
                                                     </FormControl>
                                                 </Box>
 
@@ -297,12 +307,13 @@ const ChannelsGrid = () => {
 
                                                 <Box sx={{ minWidth: 120}}>
                                                     <FormControl fullWidth size="small">
-
+                                                    <ThemeProvider theme={theme}>
                                                         <Select
-
+                
                                                             id="demo-simple-select"
                                                             value={selectedIndex}
                                                             IconComponent={() => <Dropdown></Dropdown>}
+                                                            
                                                         >
                                                             {Languages.map((element, index) => {
                                                                 return (
@@ -311,6 +322,7 @@ const ChannelsGrid = () => {
                                                             })}
 
                                                         </Select>
+                                                        </ThemeProvider>
                                                     </FormControl>
                                                 </Box>
 
