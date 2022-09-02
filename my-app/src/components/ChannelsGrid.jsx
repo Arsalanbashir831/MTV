@@ -192,7 +192,7 @@ const ChannelsGrid = () => {
                                                 <Box
                                                     sx={{
                                                         display: 'grid',
-                                                        columnGap: 2,
+                                                        columnGap: '12px',
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
                                                         maxHeight: 'calc(84vh - 4%)',
@@ -347,10 +347,10 @@ const ChannelsGrid = () => {
                                                 <Box
                                                     sx={{
                                                         display: 'grid',
-                                                        columnGap: 2,
+                                                        columnGap: '12px',
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(2, 1fr)',
-                                                        maxHeight: 'calc(84vh - 4%)',
+                                                        maxHeight: 'calc(84vh - 4.5%)',
                                                         minWidth: '100%',
                                                     }}
                                                     style={{ overflow: 'auto', marginTop: '10px' }}
