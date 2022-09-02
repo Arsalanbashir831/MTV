@@ -118,11 +118,8 @@ textarea:focus, input:focus{
     font-weight: 900;
 }
 
-.listItem{
-    min-height: 40px;
-    font-size: 15px;
-    font-weight: 700;
-    max-height: 40px;
+.Mui-listItem{
+   
 }
 
 
@@ -163,9 +160,7 @@ textarea:focus, input:focus{
 }
 
 
-.MuiListItem-root{
-    background-color: none;
-}
+
 .MuiList-root{
     padding-top: 0 !important;
 }
@@ -174,9 +169,12 @@ textarea:focus, input:focus{
 .css-a5rdam-MuiGrid-root{
     width: calc(100% + 8px) !important;
 }
-.css-1q9bwhc-MuiListItem-root{
+.MuiListItem-root{
     
-    max-height: 40px !important;
+    min-height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    max-height: 40px;
 }
 .css-mi3ubi-MuiGrid-root>.MuiGrid-item {
     padding-top: 0px !important;

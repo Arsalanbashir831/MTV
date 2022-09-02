@@ -76,7 +76,7 @@ const ChannelsGrid = () => {
 
     return (
 
-        <div class="ccc_column ccc_countryList">
+        <div class="ccc_column ccc_countryList"  style={{width : '100%'}}>
 
             <div class="v-virtual-scroll">
                 <div class="v-virtual-scroll__container" >
@@ -129,10 +129,12 @@ const ChannelsGrid = () => {
 
 
                             </MediaQuery>
+                            
                             <Grid item xs={6} md={8}>
-
+                                
                                 {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
+                                    
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
                                         <div style={{ background: backgroundColor, borderRadius: '4px', padding: 10 }}>
 
@@ -198,7 +200,7 @@ const ChannelsGrid = () => {
                                                     style={{ overflow: 'auto' , marginTop:'10px'}}
                                                 >
 
-
+                                                  
                                                     {fullArray.map((element, index) => {
                                                         return (
                                                             <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
@@ -206,6 +208,7 @@ const ChannelsGrid = () => {
                                                             </ListItem>
                                                         )
                                                     })}
+                                                
 
 
 
@@ -255,7 +258,7 @@ const ChannelsGrid = () => {
                                                         rowGap: 1,
                                                         gridTemplateColumns: 'repeat(1, 1fr)',
                                                         maxHeight: 'calc(84vh - 2%)',
-                                                        minHeight: 'calc(84vh - 2%)',
+                                                        
                                                         
                                                     }}
                                                     style={{ overflow: 'auto', marginTop:'10px' }}
