@@ -137,6 +137,16 @@ textarea:focus, input:focus{
     
 }
 
+.MuiList-root {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+
 .MuiListItem-root{
     background-color: none;
 }

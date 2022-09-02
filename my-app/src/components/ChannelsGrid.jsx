@@ -88,7 +88,7 @@ const ChannelsGrid = () => {
                                 <Grid item xs={6} md={4} style={{ paddingRight: "8px" }}>
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
                                         <div
-                                            style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px', padding: '2.5px 5px 0;' }}>
+                                            style={{ background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'auto', borderRadius: '4px', padding: '2.5px 5px 0;' }}>
                                             <List>
                                                 {Languages.map((element, index) => {
                                                     let temp = element.slice(0, 20)
