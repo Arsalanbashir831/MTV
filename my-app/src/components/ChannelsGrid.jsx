@@ -97,7 +97,7 @@ const ChannelsGrid = () => {
                                                     return (
 
 
-                                                        <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "6px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
+                                                        <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "3px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
                                                             <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
                                                                 <ListItemButton sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
 
@@ -204,7 +204,7 @@ const ChannelsGrid = () => {
 
                                                     {fullArray.map((element, index) => {
                                                         return (
-                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
+                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.1 }}>
                                                                 <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
                                                             </ListItem>
                                                         )
@@ -291,11 +291,11 @@ const ChannelsGrid = () => {
                                 <MediaQuery maxWidth={920}>
 
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
-                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '4px', padding: 10 }}>
+                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '4px', padding: 6 }}>
 
-                                            <div className="ccc_searchBar" style={{ padding: 1 }} >
+                                            <div className="ccc_searchBar" style={{ padding: 0 }} >
 
-                                                <Box sx={{ minWidth: 120 }}>
+                                                <Box sx={{ minWidth: 120}}>
                                                     <FormControl fullWidth size="small">
 
                                                         <Select
@@ -334,8 +334,8 @@ const ChannelsGrid = () => {
                                 </MediaQuery>
                                 {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
 
-                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
-                                        <div class="ccc_column ccc_channelList">
+                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px'}}>
+                                        <div class="ccc_column ccc_channelList" style={{padding: 6}}>
 
                                             <div class="ccc_searchBar">
                                                 <input style={{ width: '100%' }} id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
