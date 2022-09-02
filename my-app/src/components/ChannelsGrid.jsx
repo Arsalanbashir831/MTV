@@ -128,8 +128,8 @@ const ChannelsGrid = () => {
                                 </Grid>
                             </MediaQuery>
 
-
-                            <Grid id='rightPanel' item sx={window.screen.width < 921 ? {minWidth:'100%'} : {minWidth: '66.667%', maxWidth: '100%'}}>
+                            <MediaQuery minWidth={921}>
+                            <Grid id='rightPanel' item sx={{width: '66.667%'}}>
 
 
                                 {/* COMBO BOX that will run below 920Width */}
@@ -280,7 +280,162 @@ const ChannelsGrid = () => {
                                     </div>
                                 }
                             </Grid>
+                            </MediaQuery>
+                            
+                            <MediaQuery maxWidth={920}>
 
+                            <Grid id='rightPanel' item sx={{width: '100%'}}>
+
+
+                                {/* COMBO BOX that will run below 920Width */}
+                                <MediaQuery maxWidth={920}>
+
+                                    {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
+                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '4px', padding: 10 }}>
+
+                                            <div className="ccc_searchBar" style={{ padding: 1 }} >
+
+                                                <Box sx={{ minWidth: 120 }}>
+                                                    <FormControl fullWidth size="small">
+
+                                                        <Select
+
+                                                            id="demo-simple-select"
+                                                            value={selectedIndex}
+                                                            IconComponent={() => <Dropdown></Dropdown>}
+                                                        >
+                                                            {Languages.map((element, index) => {
+                                                                return (
+                                                                    <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> {element} </MenuItem>
+                                                                )
+                                                            })}
+
+                                                        </Select>
+                                                    </FormControl>
+                                                </Box>
+
+                                                {/* <select style={{ width: '100%', color: 'white' }}>
+                                                {
+
+                                                    Languages.map((element, index) => {
+                                                        return (
+                                                            <option onClick={() => { handleChange(index) }}>{element}</option>
+                                                        )
+                                                    })
+                                                }
+
+                                            </select> */}
+
+
+                                            </div>
+                                        </div>
+                                    }
+                                    <br></br>
+                                </MediaQuery>
+                                {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '4px' }} animation="wave" variant="rectangular" width={'100%'} height={'84vh'} /> :
+
+                                    <div style={{ minWidth: '100%', overflowY: "hidden", background: backgroundColor, minHeight: '84vh', maxHeight: '84vh', overflow: 'hidden', borderRadius: '4px' }}>
+                                        <div class="ccc_column ccc_channelList">
+
+                                            <div class="ccc_searchBar">
+                                                <input style={{ width: '100%' }} id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                                <i class="fa-solid fa-magnifying-glass iconCss"></i>
+
+                                            </div>
+
+                                            <MediaQuery minWidth={541}>
+                                                <Box
+                                                    sx={{
+                                                        display: 'grid',
+                                                        columnGap: 2,
+                                                        rowGap: 1,
+                                                        gridTemplateColumns: 'repeat(2, 1fr)',
+                                                        maxHeight: 'calc(84vh - 4%)',
+                                                        minWidth: '100%',
+                                                    }}
+                                                    style={{ overflow: 'auto', marginTop: '10px' }}
+                                                >
+
+
+                                                    {fullArray.map((element, index) => {
+                                                        return (
+                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
+                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                            </ListItem>
+                                                        )
+                                                    })}
+
+
+
+
+                                                    {/* <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 1, md: 1.5 }}>
+
+                                                        <Grid container item xs={6} direction="row">
+
+                                                            <div className='divUnselected'  >
+
+                                                                <List disablePadding  >
+                                                                    {firstHalfArray.map((element, index) => {
+                                                                        return (
+                                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7, marginTop: 1 }}>
+                                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                                            </ListItem>
+                                                                        )
+                                                                    })}
+
+                                                                </List>
+
+                                                            </div>
+                                                        </Grid>
+
+                                                        <Grid container item xs={6} direction="column">
+                                                            <List disablePadding >
+                                                                {secondHalfArray.map((element, index) => {
+                                                                    return (
+                                                                        <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7, marginTop: 1 }}>
+                                                                            <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                                        </ListItem>
+                                                                    )
+                                                                })}
+
+                                                            </List>
+                                                        </Grid>
+
+                                                    </Grid> */}
+                                                </Box>
+                                            </MediaQuery>
+
+                                            <MediaQuery maxWidth={540} minWidth={0}>
+
+                                                <Box
+                                                    sx={{
+                                                        display: 'grid',
+
+                                                        rowGap: 1,
+                                                        gridTemplateColumns: 'repeat(1, 1fr)',
+                                                        maxHeight: 'calc(84vh - 2%)',
+
+
+                                                    }}
+                                                    style={{ minWidth: '100%', overflow: 'auto', marginTop: '10px' }}
+                                                >
+
+
+                                                    {fullArray.map((element, index) => {
+                                                        return (
+                                                            <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
+                                                                <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                            </ListItem>
+                                                        )
+                                                    })}
+                                                </Box>
+                                            </MediaQuery>
+                                        </div>
+
+                                    </div>
+                                }
+                            </Grid>
+                            </MediaQuery>
                         </Grid>
                     </Box>
 
