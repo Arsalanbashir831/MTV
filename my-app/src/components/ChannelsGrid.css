@@ -146,6 +146,14 @@ textarea:focus, input:focus{
     padding-bottom: 0px !important;
 }
 
+.MuiList-root::-webkit-scrollbar{
+    width: 0% !important;
+}
+
+.leftPanel::-webkit-scrollbar{
+    width: 0%;
+}
+
 
 .MuiListItem-root{
     background-color: none;
@@ -179,7 +187,7 @@ textarea:focus, input:focus{
     overflow: auto;
    height: 69vh;
 }
-.css-mi3ubi-MuiGrid-root::-webkit-scrollbar {
+.MuiGrid-root::-webkit-scrollbar {
     width: 0% !important;
 }
 .css-i9gxme {
