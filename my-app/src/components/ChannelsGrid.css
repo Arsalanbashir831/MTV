@@ -121,6 +121,9 @@ textarea:focus, input:focus{
 .Mui-listItem{
    
 }
+.MuiBox-root::-webkit-scrollbar{
+    width: 0% !important;
+}
 
 
 .iconCss{
@@ -245,6 +248,5 @@ textarea:focus, input:focus{
     }
    
 }
-
 
 
