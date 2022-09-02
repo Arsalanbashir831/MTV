@@ -134,7 +134,7 @@ const ChannelsGrid = () => {
 
 
 
-                            <Grid item sx={{minWidth:'100%'}}>
+                            <Grid item sx={window.screen.width > 920 ? {minWidth:'66.667%'} : {minWidth: '100%'}}>
 
                                 {/* COMBO BOX that will run below 920Width */}
                                 <MediaQuery maxWidth={920}>
