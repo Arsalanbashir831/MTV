@@ -117,7 +117,7 @@ const SetupPlateform = () => {
             </CardActionArea>
           </Card>
         </Box>
-          <br/>
+  
           
           
           <div className= 'bottomContainer'>
