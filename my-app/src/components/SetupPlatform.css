@@ -84,5 +84,6 @@
     background-color: var(--components-dark-theme);
     min-height: 10%;
     padding: 48px 55px 56px 30px;
+    border-radius: 9px;
 }
 
