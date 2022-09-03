@@ -8,6 +8,7 @@ const Setup = () => {
   return (<>
     <div id='ccc_apps'>
       <SetupIntro></SetupIntro>
+      <br></br>
       <SetupPlatform></SetupPlatform>
       
       
