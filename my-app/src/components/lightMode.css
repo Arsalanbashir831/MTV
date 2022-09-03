@@ -163,6 +163,29 @@ body.light-mode .leftPanel {
     transition: all 0.3s ease; 
    
 }
+body.light-mode .rightPanelDesktop {
+    background-color: white !important;
+    transition: all 0.3s ease; 
+}
+
+body.light-mode .typographyChannels {
+    color: black !important;
+    transition: all 0.3s ease; 
+   
+}
+
+body.light-mode .typographyCombo {
+    color: black !important;
+    transition: all 0.3s ease; 
+   
+}
+
+body.light-mode .comboBox {
+    background-color: white;
+    transition: all 0.3s ease; 
+   
+}
+
 body.light-mode .divSelected {
     background-color: #112b79;
     transition: all 0.3s ease; 
