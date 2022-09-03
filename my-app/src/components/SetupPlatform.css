@@ -37,3 +37,46 @@
     position: relative;
     white-space: normal;
 }
+
+.mainContainerDesktop {
+    width: 95%;
+    max-width: 1037px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 30px;
+    gap: 30px;
+    padding-top: 35.5px;
+    background: transparent;
+    box-shadow: none;
+    padding-bottom: 42px;
+}
+.unSelectedCard{
+    background-color: var(--components-dark-theme) !important;
+}
+
+/* .MuiCard-root :hover {
+    background-color: white;
+}
+
+.MuiCard-root :hover .centerContent {
+    color: var(--components-dark-theme) !important;
+} */
+
+.centerContent{
+    display: flex;
+    justify-content: center;
+}
+
+
+.selectedWhite{
+    color: white;
+}
+
+/* .selectedWhite :hover{
+    color: var(--components-dark-theme);
+} */
+
+.MuiCardContent-root:last-child {
+    padding-bottom: 0px !important;
+}
+
