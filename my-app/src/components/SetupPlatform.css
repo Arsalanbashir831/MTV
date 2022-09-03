@@ -53,6 +53,7 @@
 }
 .unSelectedCard{
     background-color: var(--components-dark-theme) !important;
+   
 }
 
 /* .MuiCard-root :hover {
@@ -66,11 +67,15 @@
 .centerContent{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
 
 
 .selectedWhite{
     color: white;
+  
 }
 
 /* .selectedWhite :hover{
