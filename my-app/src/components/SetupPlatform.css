@@ -49,6 +49,7 @@
     background: transparent;
     box-shadow: none;
     padding-bottom: 42px;
+    ;
 }
 .unSelectedCard{
     background-color: var(--components-dark-theme) !important;
@@ -87,3 +88,40 @@
     border-radius: 9px;
 }
 
+.bottomContainerResponsive{
+    background-color: var(--components-dark-theme);
+    min-height: 10%;
+    padding: 0;
+    border-radius: 9px;
+}
+
+.responsiveStyle{
+    padding: 4;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.respnsiveSlides{
+    min-width: auto;
+    max-width: unset;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+    grid-gap: 8px;
+    gap: 8px;
+    padding: 20px 20px 18px 0;
+    grid-template-columns: 35.62vw auto;
+    height: 85px;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-property: transform,opacity,background-color,color;
+}
+
+.responsive{
+    max-width: unset;
+    min-width: 100%;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+}
