@@ -9,17 +9,15 @@ import { MdAccessibilityNew } from "react-icons/md";
 import SwipeableViews from 'react-swipeable-views';
 import WebSetup from './WebSetup';
 import Casting from './Casting';
+// import MobSetup from './MobSetup';
+// import Tv from './Tv';
+import BoxStick from './BoxStick';
 import MobSetup from './MobSetup';
 import Tv from './Tv';
-import BoxStick from './BoxStick';
+// import BoxStick from './BoxStick';
 
-<<<<<<< HEAD
-import MobSetup from './MobSetup';
-import Tv from './Tv';
-import BoxStick from './BoxStick';
-=======
-import Casting from './Casting';
->>>>>>> 2bd7e11a673a55436b41522adf534da7ba7cec01
+// import Casting from './Casting';
+
 
 const SetupPlateform = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
