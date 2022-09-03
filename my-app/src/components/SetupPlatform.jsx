@@ -27,7 +27,6 @@ const SetupPlateform = () => {
     console.log(document.getElementsByClassName('bottomContainer'))
     setSelectedIndex(index);
     document.getElementsByClassName('mainContainerDesktop')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
-    window.scrollBy(0,-60)
   }
   return (
 
