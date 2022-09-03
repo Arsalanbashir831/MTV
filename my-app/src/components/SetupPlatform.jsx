@@ -180,12 +180,12 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <div className='responsiveStyle'>
                   <div >
-                    <MdAccessibilityNew className={0 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <BsWindow className={0 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </div>
                   <div >
                     <CardContent sx={{ padding: 0 }}>
                       <Typography sx={{ padding: 0, marginLeft: '50%' }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? '' : 'selectedWhite'}>
-                        Lizard
+                        Web
                       </Typography>
                     </CardContent>
                   </div>
@@ -197,12 +197,12 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <div className='responsiveStyle'>
                   <div >
-                    <MdAccessibilityNew size={iconSizeResponsive} className={1 === selectedIndex ? '' : 'selectedWhite'} />
+                    <BiDevices size={iconSizeResponsive} className={1 === selectedIndex ? '' : 'selectedWhite'} />
                   </div>
                   <div >
                     <CardContent sx={{ padding: 0, marginLeft: '50%'  }}>
                       <Typography className={1 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
-                        Lizard
+                        Mobile & Tablet
                       </Typography>
                     </CardContent>
                   </div>
@@ -214,12 +214,12 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <div className='responsiveStyle'>
                   <div >
-                    <MdAccessibilityNew className={2 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <IoTvSharp className={2 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </div>
                   <div >
                     <CardContent sx={{ padding: 0, marginLeft: '50%'  }}>
                       <Typography className={2 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
-                        Lizard
+                        TV
                       </Typography>
                     </CardContent>
                   </div>
@@ -231,12 +231,12 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <div className='responsiveStyle'>
                   <div >
-                    <MdAccessibilityNew className={3 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <DiHtml5DeviceAccess className={3 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </div>
                   <div >
                     <CardContent sx={{ padding: 0, marginLeft: '50%'  }}>
                       <Typography className={3 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
-                        Lizard
+                        box & stick
                       </Typography>
                     </CardContent>
                   </div>
@@ -248,12 +248,12 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <div className='responsiveStyle'>
                   <div >
-                    <MdAccessibilityNew className={4 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <MdCast className={4 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </div>
                   <div >
                     <CardContent sx={{ padding: 0, marginLeft: '50%'  }}>
                       <Typography className={4 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
-                        Lizard
+                        Casting
                       </Typography>
                     </CardContent>
                   </div>
