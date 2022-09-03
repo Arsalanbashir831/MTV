@@ -17,6 +17,7 @@
     grid-gap: 14px;
     gap: 14px;
     -webkit-border-radius: 7.2px;
+    transition: all 0.3s ease; 
    
   
 }

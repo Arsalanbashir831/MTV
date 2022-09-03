@@ -145,7 +145,7 @@ const ChannelsGrid = () => {
                                 <MediaQuery maxWidth={920}>
 
                                     {loading ? <Skeleton sx={{ bgcolor: 'RGB(255,255,255,0.4)' }} style={{ borderRadius: '9px' }} animation="wave" variant="rectangular" width={'100%'} height={'5vh'} /> :
-                                        <div style={{ minWidth: '100%', background: backgroundColor, borderRadius: '9px', padding: 10 }}>
+                                        <div className='rp' style={{ minWidth: '100%', background: backgroundColor, borderRadius: '9px', padding: 10 }}>
 
                                             <div className="ccc_searchBar" style={{ padding: 1 }} >
 

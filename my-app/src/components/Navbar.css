@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Clicker+Script&family=Great+Vibes&family=Lato&display=swap');
-#navbar{
+#navbar {
     min-width: 100%;
     padding: 20px 9.3% 15px 12.8%;
 
@@ -74,7 +74,7 @@
 }
 
 
-.fa-sun{
+.fa-sun,.fa-moon{
     color: white;
     font-size: 1.2rem;
     margin-left: 0px !important;
@@ -83,6 +83,7 @@
     padding: 0px 2px;
     cursor: pointer;
 }
+
 
 .buttons{
     display: grid;
@@ -311,7 +312,7 @@
     #navbar .nav-links{
         display: none;
     }
-    #navbar .login-btn,.order-btn,.fa-sun{
+    #navbar .login-btn,.order-btn,.fa-sun,.fa-moon{
         display: none !important;
     }
     .hamburger-menu{

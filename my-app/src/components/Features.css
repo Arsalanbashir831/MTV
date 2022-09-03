@@ -9,6 +9,7 @@
 #features_Section .ccc_container {
     background-color: #030e2e ;
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
+    transition: all 0.2s ease-in-out;
 }
 #features_Section .ccc_container .ccc_column {
     display: grid;

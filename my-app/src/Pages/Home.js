@@ -3,7 +3,7 @@ import Discover from '../components/Discover'
 import Faq from '../components/Faq'
 import Features from '../components/Features'
 //import Footer from '../components/Footer'
-import Footer from '../components/Footer'
+//import Footer from '../components/Footer'
 import GuranteeCard from '../components/GuranteeCard'
 import {History} from '../components/History'
 import InfoCard1 from '../components/InfoCard1'
@@ -14,10 +14,11 @@ import Uptime from '../components/Uptime'
 import  './Home.css'
 
 const Home = () => {
+
   return (
    <>
    <div className='Home_Section'>  
-  <Discover></Discover>
+  <Discover ></Discover>
   <Features></Features>
   <History></History>
   <Uptime></Uptime>

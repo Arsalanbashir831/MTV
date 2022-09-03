@@ -59,6 +59,9 @@
     width: max-content;
     text-transform: uppercase;
 }
+#reseller_light_head{
+display: none;
+}
 #ccc_head .ccc_container .ccc_column .ccc_row .ccc_btn span {
     opacity: .6;
     font-size: 10px;

@@ -20,6 +20,7 @@
    
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
     background-color: #030e2e;
+    transition: all 0.3s ease; 
 }
 #info3_Section .ccc_container .ccc_column .ccc_title {
     font-size: 40px;

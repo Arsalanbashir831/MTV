@@ -8,6 +8,7 @@ import logo from "../assets/logo.svg"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
 import {  Link } from "react-router-dom";
+import {ThemeSwitcher} from './ThemeSwitcher';
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
 const DesktopNavbar = () => {
@@ -50,11 +51,12 @@ const DesktopNavbar = () => {
                 <i class="fa-solid fa-bars"></i>
               </div>
             </div>
-            <div className="tool-nav">
+            {/* <div className="tool-nav">
 
               <i class="fa-solid fa-sun"></i>
 
-            </div>
+            </div> */}
+            <ThemeSwitcher></ThemeSwitcher>
           </div>
         </div>
 

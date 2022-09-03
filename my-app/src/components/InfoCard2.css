@@ -19,6 +19,7 @@
   
     border-radius: 7.2px;
     -webkit-border-radius: 7.2px;
+    transition: all 0.3s ease; 
     
 }
 #info2_Section .ccc_container .ccc_column .ccc_title {

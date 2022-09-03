@@ -3,6 +3,7 @@
     background: #030e2e;
     box-shadow: 0 20px 38px -2px rgb(14 31 53 / 6%), 0 16px 24px -1px rgb(14 31 53 / 12%), 0 10px 20px 0 rgb(14 31 53 / 12%), 0 5px 10px 0 rgb(14 31 53 / 6%);
     outline: none;
+    transition: all 0.3s ease; 
    
 }
 
@@ -27,6 +28,7 @@
     border: none;
     font-weight: bolder;
     outline: none;
+    transition: all 0.3s ease; 
     
 }
 

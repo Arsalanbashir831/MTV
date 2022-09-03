@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
 import {  Link } from "react-router-dom";
+import ThemeSwitcher, { MobThemeSwitcher } from './ThemeSwitcher';
 const MobileNavbar = (props) => {
   return (
     <>
@@ -19,10 +20,13 @@ const MobileNavbar = (props) => {
             <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
               <Button className='order-btn  btn-mob' variant="contained">Order Now</Button>
               <hr className='mob-hr'></hr>
-              <div className="switchMode">
-
-<i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
-</div>
+              {/* <div className="switchMode">
+            <i className="fa-solid fa-sun switch-icon "></i> <p className='mode-text'>Dark Mode</p>
+          
+            </div> */}
+            <MobThemeSwitcher></MobThemeSwitcher>
+           
+            
               
           </ul>
           {/* <hr className='mob-hr'></hr> */}
