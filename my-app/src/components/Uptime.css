@@ -30,6 +30,7 @@
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
     background-color: #030e2e;
     -webkit-border-radius: 7.2px;
+    transition: all 0.3s ease; 
 }
 #uptime_Section .ccc_container .ccc_rows {
     display: grid;

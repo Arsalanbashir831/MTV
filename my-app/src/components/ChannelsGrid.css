@@ -162,8 +162,33 @@ textarea:focus, input:focus{
     width: 0%;
 }
 
+.rightPanelDesktop{
+    min-width: 100% !important;
+    background-color : var(--components-dark-theme) !important;
+    border-radius: 9px !important;
+    padding: 10 !important;
+    overflow: hidden !important;
+    min-height: 84vh !important;
+    max-height: 84vh !important;
 
+}
 
+.typographyChannels{
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.typographyCombo{
+    color: white !important;
+    font-weight: 400 !important;
+}
+
+.comboBox{
+    min-width: 100%;
+    background: var(--components-dark-theme);
+    border-radius: 4px;
+    padding: 0.7% !important;
+}
 .MuiList-root{
     padding-top: 0 !important;
 }

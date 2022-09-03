@@ -16,7 +16,7 @@
     -webkit-border-radius: 7.2px;
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
     background-color: #030e2e;
-
+    transition: all 0.3s ease; 
    
 }
 #ccc_reason .ccc_container .ccc_header {

@@ -3,14 +3,14 @@ body {
     padding-top: 0.1px;
     background-size:max(1440px,100vw) auto!important;
     background-position: top;
-    transition-duration: .3s;
+    /* transition-duration: .3s;
     transition-timing-function: ease;
-    transition-property: transform, opacity, background-color, color;
+    transition-property: transform, opacity, background-color, color; */
     background: var(--bg-dark-shadow) var(--bg-dark-img) no-repeat;
     z-index: 2;
     position: relative;
     min-height: 100vh;
-  
+    transition: all 0.2s ease-in-out;
     
     
   }

@@ -18,6 +18,7 @@
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
     background-color: #030e2e;
     -webkit-border-radius: 7.2px;
+    transition: all 0.3s ease; 
 
 }
 
@@ -25,6 +26,7 @@
     display: grid;
     grid-gap: 23px;
     gap: 23px;
+    
 }
 
 #ccc_guarantee .ccc_container .ccc_column {
@@ -48,7 +50,9 @@
     color: #fff;
     font-weight: 400;
 }
-
+#lightGurantee{
+    display: none;
+}
 @media screen and (max-width:1080px) {
     #ccc_guarantee {
         width: 90vw;
