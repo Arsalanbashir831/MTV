@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { MdAccessibilityNew } from "react-icons/md";
 import SwipeableViews from 'react-swipeable-views';
 import WebSetup from './WebSetup';
+import Casting from './Casting';
 
 const SetupPlateform = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -126,7 +127,7 @@ const SetupPlateform = () => {
           <div> <h1 style={{color: 'blue'}}>world</h1> </div>
           <div> <h1 style={{color: 'orange'}}>hel</h1> </div>
           <div> <h1 style={{color: 'pink'}}>heel</h1> </div>
-          <div> <h1 style={{color: 'yellow'}}>heel</h1> </div>
+          <div> <Casting> </Casting> </div>
 
 
           </SwipeableViews>
