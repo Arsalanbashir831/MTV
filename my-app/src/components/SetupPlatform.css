@@ -80,3 +80,9 @@
     padding-bottom: 0px !important;
 }
 
+.bottomContainer{
+    background-color: var(--components-dark-theme);
+    min-height: 10%;
+    padding: 48px 55px 56px 30px;
+}
+
