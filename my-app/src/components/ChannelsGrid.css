@@ -118,9 +118,7 @@ textarea:focus, input:focus{
     font-weight: 900;
 }
 
-.Mui-listItem{
-   
-}
+
 .MuiBox-root::-webkit-scrollbar{
     width: 0 !important;
 }
@@ -133,7 +131,7 @@ textarea:focus, input:focus{
         margin-top: -20px;
         position: relative;
         /* z-index: 2; */
-        color: rgb(247, 247, 247);
+        color: rgb(255, 255, 255) !important;
     
 }
 
@@ -162,14 +160,19 @@ textarea:focus, input:focus{
     width: 0%;
 }
 
+.iconDrop{
+    background-color: white;
+    border-radius: 24px;
+    margin-right: 16px;
+}
 .rightPanelDesktop{
     min-width: 100% !important;
-    background-color : var(--components-dark-theme) !important;
-    border-radius: 9px !important;
-    padding: 10 !important;
-    overflow: hidden !important;
-    min-height: 84vh !important;
-    max-height: 84vh !important;
+    background-color : var(--components-dark-theme);
+    border-radius: 9px;
+    padding: 10;
+    overflow: hidden;
+    min-height: 84vh;
+    max-height: 84vh;
 
 }
 
@@ -177,10 +180,13 @@ textarea:focus, input:focus{
     color: white !important;
     font-weight: 700 !important;
 }
-
 .typographyCombo{
     color: white !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
+}
+
+.MuiMenuItem-root{
+    background-color: #556794 !important;
 }
 
 .comboBox{
@@ -191,6 +197,7 @@ textarea:focus, input:focus{
 }
 .MuiList-root{
     padding-top: 0 !important;
+    background-color: aqua;
 }
 
 

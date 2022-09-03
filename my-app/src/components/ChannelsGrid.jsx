@@ -20,6 +20,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { ReactComponent as Dropdown } from './../assets/dropdown.svg'
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 import { useEffect } from 'react';
 import Skeleton from '@mui/material/Skeleton';
 
@@ -29,7 +30,7 @@ const ChannelsGrid = () => {
     const theme = createTheme({
         palette: {
             primary: {
-                main: 'rgba(255,255,255,0)',
+                main: 'hsla(0,0%,100%,.1)',
             },
         },
     });
@@ -262,22 +263,23 @@ const ChannelsGrid = () => {
 
                                                     <Box sx={{ minWidth: 120 }}>
                                                         <FormControl fullWidth size="small">
-                                                            <ThemeProvider theme={theme}>
+                                                            
                                                                 <Select
 
                                                                     id="demo-simple-select"
                                                                     value={selectedIndex}
-                                                                    IconComponent={() => <Dropdown></Dropdown>}
+                                                                    IconComponent={() => <ArrowDropDownCircleIcon className='iconDrop' /> }
+                                                                    
 
                                                                 >
                                                                     {Languages.map((element, index) => {
                                                                         return (
-                                                                            <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo' style={{fontWeight: '300'}}> {element} </Typography> </MenuItem>
+                                                                            <MenuItem  key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo'> {element} </Typography> </MenuItem>
                                                                         )
                                                                     })}
 
                                                                 </Select>
-                                                            </ThemeProvider>
+                                                          
                                                         </FormControl>
                                                     </Box>
 
