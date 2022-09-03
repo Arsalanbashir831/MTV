@@ -138,7 +138,7 @@ const SetupPlateform = () => {
             <div> {1 === selectedIndex ? <MobSetup></MobSetup> : ''} </div>
             <div>  {2 === selectedIndex ? <Tv></Tv> : ''} </div>
             <div>  {3 === selectedIndex ? <BoxStick></BoxStick> : ''} </div>
-            <div> <h1 style={{ color: 'yellow' }}>heel</h1> </div>
+            <div>{4 === selectedIndex ? <Casting></Casting> : ''} </div>
 
 
           </SwipeableViews>
