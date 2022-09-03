@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import Typography from '@mui/material/Typography';
 import { MdAccessibilityNew } from "react-icons/md";
+import SwipeableViews from 'react-swipeable-views';
 
 const SetupPlateform = () => {
   const [selectedIndex, setSelectedIndex] = React.useState('1');
@@ -116,13 +117,17 @@ const SetupPlateform = () => {
         </Box>
           <br/>
           
+          
           <div className= 'bottomContainer'>
+          <SwipeableViews index={1} >
+          <div> <h1>hello</h1> </div>
+          <div> <h1>world</h1> </div>
+          <div> <h1>hel</h1> </div>
 
-              
 
-
+          </SwipeableViews>
           </div>
-
+          
       </div>
     </>
   )
