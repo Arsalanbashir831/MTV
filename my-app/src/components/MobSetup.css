@@ -58,3 +58,7 @@
     align-items: center;
     justify-content: space-between;
 }
+.ccc_download img {
+    max-width: 57px;
+  
+}
