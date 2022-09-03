@@ -6,6 +6,7 @@
     align-items: flex-start;
     grid-gap: 39px;
     gap: 39px;
+   overflow: hidden;
 }
 #ccc_mobile .ccc_box:first-child {
     grid-column: 1/3;
@@ -61,4 +62,29 @@
 .ccc_download img {
     max-width: 57px;
   
+}
+#ccc_mobile .ccc_box .ccc_name {
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    display: grid;
+    grid-gap: 12px;
+    gap: 12px;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0 0 16px;
+    padding: 0 0 0 8px;
+    text-transform: uppercase;
+}
+#ccc_mobile .ccc_box:last-child {
+    align-self: flex-start;
+    grid-row: 2/4;
+}
+#ccc_mobile .ccc_box .ccc_app {
+    width: 100%;
+    max-width: 49.5%;
+    margin-left: auto;
+    display: block;
+    margin-right: 21%;
 }

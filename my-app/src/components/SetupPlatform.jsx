@@ -8,6 +8,9 @@ import Typography from '@mui/material/Typography';
 import { MdAccessibilityNew } from "react-icons/md";
 import SwipeableViews from 'react-swipeable-views';
 import WebSetup from './WebSetup';
+import MobSetup from './MobSetup';
+import Tv from './Tv';
+import BoxStick from './BoxStick';
 
 const SetupPlateform = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -123,9 +126,9 @@ const SetupPlateform = () => {
           <div className= 'bottomContainer'>
           <SwipeableViews index={selectedIndex} >
           <div> <WebSetup></WebSetup> </div>
-          <div> <h1 style={{color: 'blue'}}>world</h1> </div>
-          <div> <h1 style={{color: 'orange'}}>hel</h1> </div>
-          <div> <h1 style={{color: 'pink'}}>heel</h1> </div>
+          <div> {1===selectedIndex?<MobSetup></MobSetup>:''} </div>
+          <div>  {2===selectedIndex?<Tv></Tv> :''} </div>
+          <div>  {3===selectedIndex?<BoxStick></BoxStick> :''} </div>
           <div> <h1 style={{color: 'yellow'}}>heel</h1> </div>
 
 

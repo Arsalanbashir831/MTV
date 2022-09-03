@@ -4,7 +4,7 @@ import iptv from '../assets/iptv.svg';
 import download from '../assets/download.svg';
 import android from '../assets/android.svg';
 import apple from '../assets/apple.svg';
-
+import './MobSetup.css';
 const MobSetup = () => {
     return (
         <div id="ccc_mobile">
