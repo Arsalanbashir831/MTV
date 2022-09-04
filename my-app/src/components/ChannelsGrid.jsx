@@ -62,7 +62,7 @@ const ChannelsGrid = () => {
                 for (let i = 0; i < tempChannel.length; i++) {
                     const result = tempChannel[i].toLowerCase();
                     if (result.includes(searchQuery)) {
-                        results.push(result);
+                        results.push(tempChannel[i]);
                     }
                 }
             }
