@@ -101,7 +101,7 @@ const ChannelsGrid = () => {
                                         <div className='leftPanel'>
                                             <List>
                                                 {Languages.map((element, index) => {
-                                                    let temp = element.slice(0, 20)
+                                                    let temp = element.slice(0, 25)
 
                                                     return (
 
@@ -173,7 +173,7 @@ const ChannelsGrid = () => {
                                                         {fullArray.map((element, index) => {
                                                             return (
                                                                 <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.1 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography className='typographyChannels' type="body2" >{element}</Typography>} />
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography noWrap className='typographyChannels' type="body2" >{element.slice(0,25)}</Typography>} />
                                                                 </ListItem>
                                                             )
                                                         })}
@@ -238,7 +238,7 @@ const ChannelsGrid = () => {
                                                         {fullArray.map((element, index) => {
                                                             return (
                                                                 <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element}</Typography>} />
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" style={{ color: 'white', fontWeight: '900' }}>{element.slice(0,25)}</Typography>} />
                                                                 </ListItem>
                                                             )
                                                         })}
@@ -280,7 +280,7 @@ const ChannelsGrid = () => {
                                                                 >
                                                                     {Languages.map((element, index) => {
                                                                         return (
-                                                                            <MenuItem className='combo' key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo' style={{fontWeight: '300'}}> {element} </Typography> </MenuItem>
+                                                                            <MenuItem className='combo' key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo' style={{fontWeight: '300'}}> {element.slice(0,25)} </Typography> </MenuItem>
                                                                         )
                                                                     })}
 
@@ -336,7 +336,7 @@ const ChannelsGrid = () => {
                                                         {fullArray.map((element, index) => {
                                                             return (
                                                                 <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" className='typographyChannels'>{element}</Typography>} />
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" className='typographyChannels'>{element.slice(0,25)}</Typography>} />
                                                                 </ListItem>
                                                             )
                                                         })}
@@ -401,7 +401,7 @@ const ChannelsGrid = () => {
                                                         {fullArray.map((element, index) => {
                                                             return (
                                                                 <ListItem key={index} disablePadding sx={{ background: 'hsla(0,0%,100%,.17)', borderRadius: '4px', padding: 0.7 }}>
-                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" className='typographyChannels'>{element}</Typography>} />
+                                                                    <ListItemText sx={{ color: 'white', paddingLeft: 1 }} primary={<Typography type="body2" className='typographyChannels'>{element.slice(0,25)}</Typography>} />
                                                                 </ListItem>
                                                             )
                                                         })}

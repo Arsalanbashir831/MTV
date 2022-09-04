@@ -1,6 +1,6 @@
 export const ChannelNames = [
     [
-        "xyz",
+        "xyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyz",
         "abc",
         "lunatic",
         "temp",
