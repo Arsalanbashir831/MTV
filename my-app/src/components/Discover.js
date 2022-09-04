@@ -17,7 +17,7 @@ const Discover = () => {
       <span>Instant Access</span></button>
       <div>
         <img src={dollar} alt="moneyback"/> <p class="">
-      30-Days Money-Back Guarantee
+      7-Days Money-Back Guarantee
     </p>
     </div>
     <div>
