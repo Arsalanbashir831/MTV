@@ -373,8 +373,11 @@ body.light-mode #ccc_intro .ccc_subtitle{
     color: white !important;
 }
 
+body.light-mode .ccc_choice .ccc_container .ccc_img{
 
-body.light-mode .ccc_choice{
+}
+
+/* body.light-mode .ccc_choice{
     background-color:white ;
 }
 body.light-mode .ccc_choice .ccc_container .ccc_title{
@@ -389,7 +392,7 @@ body.light-mode .ccc_choices .ccc_choice :hover .ccc_img{
 }
 body.light-mode .ccc_choice :hover  .ccc_title{
     color: white;
-}
+} */
 body.light-mode .iconStyle svg{
     color: var(--components-light-theme);
 }

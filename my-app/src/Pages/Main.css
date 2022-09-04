@@ -85,10 +85,11 @@
     height: 77px;
 }
 
+
 .ccc_choice .ccc_container .ccc_title {
     font-size: 22px;
     font-weight: 700;
-    color: black;
+    color: var(--components-dark-theme);
     line-height: 1.22172;
     transition-duration: .3s;
     transition-timing-function: ease;
@@ -96,7 +97,7 @@
 }
 .ccc_choice :hover .ccc_title{
     color: white;
-    
+
 }
 .ccc_choice :hover  .ccc_img{
     filter:invert(100%) sepia(0%) saturate( 90%) hue-rotate(125deg) brightness(130%) contrast(100%);
