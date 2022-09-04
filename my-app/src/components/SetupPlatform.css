@@ -134,3 +134,47 @@
     align-items: center;
     justify-content: left;
 }
+
+@media screen and (max-width :1080px){
+    #ccc_web {
+        grid-template-columns: 308px auto;
+    }
+    #ccc_web .ccc_box .ccc_app {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mainContainerDesktop {
+        padding: 21px 3.75vw 26px !important;
+    }
+    #ccc_web {
+        grid-gap: 0 !important;
+        gap: 0 !important;
+        grid-auto-flow: row !important;
+        grid-template-columns: 100% !important;
+    }
+    .mainContainerDesktop .ccc_title {
+        margin: 0 0 22px !important;
+    }
+    .mainContainerDesktop .ccc_subtitle {
+        margin: 0 0 29px !important;
+    }
+    .mainContainerDesktop .ccc_btn_open {
+        margin: 0 0 47px !important;
+    }
+    #ccc_web .ccc_box:last-child {
+        grid-row: 2/3 !important;
+    }
+    #ccc_web .ccc_box .ccc_app {
+        max-width: 320px !important;
+        margin: 0 auto 47px !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:420px){
+    .mainContainerDesktop .ccc_btn_open, .mainContainerDesktop .ccc_img {
+        width: 100%;
+    }
+}
