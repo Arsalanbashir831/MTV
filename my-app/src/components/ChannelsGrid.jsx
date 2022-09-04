@@ -138,6 +138,7 @@ const ChannelsGrid = () => {
                             </MediaQuery>
 
                             <MediaQuery minWidth={921}>
+                                
                                 <Grid id='rightPanel' item sx={{ width: '66.667%' }}>
 
 
@@ -162,6 +163,8 @@ const ChannelsGrid = () => {
                                                             gridTemplateColumns: 'repeat(2, 1fr)',
                                                             maxHeight: 'calc(84vh - 4.2%)',
                                                             minWidth: '100%',
+                                                            height:'95%',
+                                                            alignContent: 'flex-start'
                                                         }}
                                                         style={{ overflow: 'auto', marginTop: '10px' }}
                                                     >
@@ -223,7 +226,8 @@ const ChannelsGrid = () => {
 
                                                             rowGap: 1,
                                                             gridTemplateColumns: 'repeat(1, 1fr)',
-                                                            maxHeight: 'calc(84vh - 5%)',
+                                                            height: '98.5%',
+                                                            alignContent: 'flex-start'
 
 
                                                         }}
@@ -321,8 +325,9 @@ const ChannelsGrid = () => {
                                                             columnGap: '12px',
                                                             rowGap: 1,
                                                             gridTemplateColumns: 'repeat(2, 1fr)',
-                                                            maxHeight: 'calc(84vh - 3.4%)',
+                                                            height: '98%',
                                                             minWidth: '100%',
+                                                            alignContent: 'flex-start'
                                                         }}
                                                         style={{ overflow: 'auto', marginTop: '10px' }}
                                                     >
@@ -384,7 +389,8 @@ const ChannelsGrid = () => {
 
                                                             rowGap: 1,
                                                             gridTemplateColumns: 'repeat(1, 1fr)',
-                                                            maxHeight: 'calc(84vh - 1.7%)',
+                                                            height : '98.5%',
+                                                            alignContent: 'flex-start'
 
 
                                                         }}

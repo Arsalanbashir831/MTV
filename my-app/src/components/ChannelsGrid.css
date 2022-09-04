@@ -104,6 +104,7 @@ button, input, optgroup, select, textarea {
     gap: 8px;
     align-items: flex-start;
     grid-template-rows: 42px auto;
+    width: 100%;
 }
 
 textarea:focus, input:focus{
@@ -186,6 +187,7 @@ textarea:focus, input:focus{
     overflow: hidden !important;
     min-height: 84vh !important;
     max-height: 84vh !important;
+    display: flex;
 
 }
 
