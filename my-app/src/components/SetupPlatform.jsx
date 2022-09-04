@@ -61,11 +61,11 @@ const SetupPlateform = () => {
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
-                    <BsWindow style={{ padding: '10px' }} className={0 === selectedIndex ? '' : 'selectedWhite'} size={iconSize} />
+                    <BsWindow style={{ padding: '10px' }} className={0 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
-                        <Typography sx={{ padding: 0, marginBottom: 0, fontSize: '17px' }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? '' : 'selectedWhite'}>
-                          Website
+                        <Typography sx={{ padding: 0, marginBottom: 0, fontSize: '17px' }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? 'selectedIcon' : 'selectedWhite'}>
+                          Web
                         </Typography>
                       </CardContent>
                     </div>
@@ -82,7 +82,7 @@ const SetupPlateform = () => {
                     <BiDevices style={{ padding: '10px' }} size={iconSize} className={1 === selectedIndex ? '' : 'selectedWhite'} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
-                        <Typography className={1 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
+                        <Typography className={1 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
                           Mobiles & Tablets
                         </Typography>
                       </CardContent>
@@ -93,14 +93,14 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={2} className={2 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={2} className={2 === selectedIndex ? 'selectedIcon' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4, zIndex: 10 }}>
                   <div className='centerContent'>
-                    <IoTvSharp style={{ padding: '10px' }} className={2 === selectedIndex ? '' : 'selectedWhite'} size={iconSize} />
+                    <IoTvSharp style={{ padding: '10px' }} className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
-                        <Typography className={2 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
+                        <Typography className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
                           TV
                         </Typography>
                       </CardContent>
@@ -115,10 +115,10 @@ const SetupPlateform = () => {
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
-                    <DiHtml5DeviceAccess style={{ padding: '10px' }} className={3 === selectedIndex ? '' : 'selectedWhite'} size={iconSize} />
+                    <DiHtml5DeviceAccess style={{ padding: '10px' }} className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
-                        <Typography className={3 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
+                        <Typography className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
                           Box & Stick
                         </Typography>
                       </CardContent>
@@ -133,10 +133,10 @@ const SetupPlateform = () => {
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
-                    <MdCast style={{ padding: '10px' }} className={4 === selectedIndex ? '' : 'selectedWhite'} size={iconSize} />
+                    <MdCast style={{ padding: '10px' }} className={4 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
-                        <Typography className={4 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
+                        <Typography className={4 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
                           Casting
                         </Typography>
                       </CardContent>
@@ -182,11 +182,11 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <BsWindow className={0 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <BsWindow className={0 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                      <Typography sx={{ padding: 0 }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? '' : 'selectedWhite'}>
+                      <Typography sx={{ padding: 0 }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? 'selectedIcon' : 'selectedWhite'}>
                         Web
                       </Typography>
                     </CardContent>
@@ -211,11 +211,11 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <BiDevices size={iconSizeResponsive} className={1 === selectedIndex ? '' : 'selectedWhite'} />
+                    <BiDevices size={iconSizeResponsive} className={1 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                      <Typography className={1 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
+                      <Typography className={1 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
                         Mobile & Tablet
                       </Typography>
                     </CardContent>
@@ -240,11 +240,11 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <IoTvSharp className={2 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <IoTvSharp className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                      <Typography className={2 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
+                      <Typography className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
                         TV
                       </Typography>
                     </CardContent>
@@ -270,12 +270,12 @@ const SetupPlateform = () => {
 
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <DiHtml5DeviceAccess className={3 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <DiHtml5DeviceAccess className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                      <Typography className={3 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
-                        box & stick
+                      <Typography className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
+                        Box & Stick
                       </Typography>
                     </CardContent>
                   </Grid>
@@ -302,11 +302,11 @@ const SetupPlateform = () => {
 
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <MdCast className={4 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <MdCast className={4 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                    <Typography className={4 === selectedIndex ? '' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
+                    <Typography className={4 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0 }} gutterBottom variant="h6" component="div">
                         Casting
                       </Typography>
                     </CardContent>

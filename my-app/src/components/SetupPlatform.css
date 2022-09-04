@@ -55,14 +55,20 @@
     background-color: var(--components-dark-theme) !important;
    
 }
-
-/* .MuiCard-root :hover {
+.unSelectedCard :hover {
     background-color: white;
+    transition: all .2s ease-in-out;
+    /* color: var(--components-dark-theme);
+     */
+}
+.unSelectedCard :hover  .MuiTypography-root{
+    color: var(--components-dark-theme) !important;
+}
+.unSelectedCard :hover .centerContent svg{
+    color: var(--components-dark-theme);
 }
 
-.MuiCard-root :hover .centerContent {
-    color: var(--components-dark-theme) !important;
-} */
+
 
 .centerContent{
     display: flex;
@@ -76,6 +82,9 @@
 .selectedWhite{
     color: white;
   
+}
+.selectedIcon{
+    color : var(--components-dark-theme);
 }
 
 /* .selectedWhite :hover{
