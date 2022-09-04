@@ -94,7 +94,7 @@
 }
 @media screen and (max-width:460px) {
     .swiper-slide{
-        width: 70% !important;
+        width: 100% !important;
     }
 }
 @media screen and (max-width:317px) {

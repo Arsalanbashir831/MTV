@@ -115,6 +115,13 @@ const ReviewsData = [{
 
 
 const Reviews = () => {
+
+const minSwiper=()=>{
+  const element = document.getElementById('min-swipe').swiper;
+  element.slideNext();
+  console.log(element);
+}
+
   const swipe = useSwiper();
   return (
     <div id='ccc_reviews'>
@@ -138,7 +145,7 @@ const Reviews = () => {
           <button type="button" class=" review-swiper-button-prev ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="  v-btn__content"><img className='navigator-icon' src={arrow} alt="shape" /></span></button>
 
 
-          <MediaQuery minWidth={318}>
+          <MediaQuery minWidth={500}>
             <Swiper
               // install Swiper modules
 
@@ -149,7 +156,7 @@ const Reviews = () => {
                 prevEl: '.review-swiper-button-prev',
               }}
               spaceBetween={10}
-              slidesPerView={'auto'}
+              slidesPerView={3}
               centeredSlides={true}
               loop={true}
               // dragSize= {500}
@@ -181,9 +188,8 @@ const Reviews = () => {
 
             </Swiper>
           </MediaQuery>
-
-          <MediaQuery maxWidth={317}>
-            <Swiper
+          <MediaQuery maxWidth={499}>
+            <Swiper id='min-swipe'
               // install Swiper modules
 
               modules={[Navigation, Scrollbar, Autoplay, FreeMode]}
@@ -193,8 +199,8 @@ const Reviews = () => {
                 prevEl: '.review-swiper-button-prev',
               }}
               spaceBetween={10}
-              slidesPerView={1}
-              centeredSlides={true}
+              slidesPerView={'auto'}
+              // centeredSlides={true}
               loop={true}
               // dragSize= {500}
               //   autoplay={{
@@ -205,8 +211,8 @@ const Reviews = () => {
                 enabled: false
               }}
 
-
-              onSwiper={(swiper) => console.log(swiper)}
+              
+              onSwiper={(swiper) => console.log('meow')}
               onSlideChange={() => console.log('slide change')}
             >
 
