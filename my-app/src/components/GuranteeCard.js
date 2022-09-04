@@ -1,6 +1,6 @@
 import React from 'react'
 import "./GuranteeCard.css"
-import guranteeDark from '../assets/guranteeDark.svg'
+import guranteeDark from '../assets/guranteeDark.svg';
 import guranteeLight from "../assets/guranteeLight.svg";
 const GuranteeCard = () => {
 

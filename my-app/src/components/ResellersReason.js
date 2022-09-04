@@ -9,12 +9,12 @@ import ReasonColumn from './ReasonColumn';
 import './ResellersReason.css';
 
 const ReasonData=[
-  {img: dashboard ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
-  {img: api ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
-  {img: dns ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
-  {img: vip ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
-  {img: trial ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
-  {img: privacy ,title:'Resellers Dashboard',subtitle:"Automate accounts creation and management by using our API and connect it to your website"}
+  {img: dashboard ,title:'Resellers Dashboard',subtitle:"An easy and simple interface designed to offer the best experiences for our resellers"},
+  {img: api ,title:'API Access',subtitle:"Automate accounts creation and management by using our API and connect it to your website"},
+  {img: dns ,title:'Custom DNS',subtitle:"Customize your DNS URL to match your brand name to have full control over your accounts"},
+  {img: vip ,title:'24/7 VIP Support',subtitle:"Word class 24/7 VIP support available by emails & WhatsApp"},
+  {img: trial ,title:'Free Trials Accounts',subtitle:"Unlimited Free IPTV trials generation for your potential customers"},
+  {img: privacy ,title:'DATA Privacy',subtitle:"We take our customer's privacy very seriously, we do not store any of your personal information including connections log and IP."}
 ]
 
 const ResellersReason = () => {
