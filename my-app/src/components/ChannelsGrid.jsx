@@ -148,7 +148,7 @@ const ChannelsGrid = () => {
                                             <div class="ccc_column ccc_channelList">
 
                                                 <div class="ccc_searchBar">
-                                                    <input style={{ width: '100%' }} id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                                    <input className='inputText' id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
                                                     <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
                                                 </div>
@@ -309,7 +309,7 @@ const ChannelsGrid = () => {
                                             <div class="ccc_column ccc_channelList" style={{ padding: 6 }}>
 
                                                 <div class="ccc_searchBar">
-                                                    <input style={{ width: '100%' }} id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
+                                                    <input className='inputText' id="search" onKeyUp={searchResults} type="text" name="searchbar" placeholder="Search your favorite channel here …" />
                                                     <i class="fa-solid fa-magnifying-glass iconCss"></i>
 
                                                 </div>

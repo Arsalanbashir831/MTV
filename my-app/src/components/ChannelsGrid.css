@@ -287,3 +287,7 @@ textarea:focus, input:focus{
 }
 
 
+.inputText{
+    color: white;
+    width: 100%
+}
