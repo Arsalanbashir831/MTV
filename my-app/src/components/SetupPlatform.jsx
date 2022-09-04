@@ -57,7 +57,7 @@ const SetupPlateform = () => {
             }}
 
           >
-            <Card id={0} className={0 == selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(0) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={0} className={0 == selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(0) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
@@ -75,11 +75,11 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={1} className={1 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(1) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={1} className={1 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(1) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
-                    <BiDevices style={{ padding: '10px' }} size={iconSize} className={1 === selectedIndex ? '' : 'selectedWhite'} />
+                    <BiDevices style={{ padding: '10px' }} size={iconSize} className={1 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
                         <Typography className={1 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
@@ -93,7 +93,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={2} className={2 === selectedIndex ? 'selectedIcon' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={2} className={2 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4, zIndex: 10 }}>
                   <div className='centerContent'>
@@ -111,7 +111,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={3} className={3 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(3) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={3} className={3 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(3) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
@@ -129,7 +129,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={4} className={4 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(4) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
+            <Card id={4} className={4 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(4) }} sx={{ maxWidth: 400, maxHeight: '170px' }} >
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
@@ -178,7 +178,7 @@ const SetupPlateform = () => {
             className='responsive'
 
           >
-            <Card id={0} className={0 == selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(0) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
+            <Card id={0} className={0 == selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(0) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
@@ -207,7 +207,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={1} className={1 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(1) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
+            <Card id={1} className={1 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(1) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
@@ -236,7 +236,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={2} className={2 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
+            <Card id={2} className={2 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
@@ -265,7 +265,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={3} className={3 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(3) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
+            <Card id={3} className={3 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(3) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
 
                 <Grid style={{padding:'10px'}} container spacing={2}>
@@ -297,7 +297,7 @@ const SetupPlateform = () => {
               </CardActionArea>
             </Card>
 
-            <Card id={4} className={4 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(4) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
+            <Card id={4} className={4 === selectedIndex ? 'selectedCard' : 'unSelectedCard'} onClick={() => { handleChangeIndex(4) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
 
                 <Grid style={{padding:'10px'}} container spacing={2}>

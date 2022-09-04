@@ -22,7 +22,7 @@
 #ccc_home>.ccc_container h1.ccc_title {
     font-size: 22px;
     line-height: 1.22727;
-    color: #fff;
+    color: #fff ;
     max-width: 794px;
     margin: 0 auto 5rem;
     text-align: center;
@@ -38,7 +38,7 @@
  .ccc_choice {
     width: 221px;
     height: 221px;
-    background-color: white;
+    background-color: var(--components-dark-theme);
     border-style: none;
     border-radius: 9.4px;
     box-shadow: 0 3px 18px 0 rgb(0 0 0 / 22%);
@@ -63,7 +63,7 @@
 }
 .ccc_choice:hover{
 
-    background-color: #112b79;
+    background-color: #fff;
 
 }
 
@@ -88,14 +88,14 @@
 .ccc_choice .ccc_container .ccc_title {
     font-size: 22px;
     font-weight: 700;
-    color: #030e2e;
+    color: #fff;
     line-height: 1.22172;
     transition-duration: .3s;
     transition-timing-function: ease;
     transition-property: transform,opacity,filter,color;
 }
 .ccc_choice :hover .ccc_title{
-    color: #fff;
+    color: black
 }
 .ccc_choice :hover  .ccc_img{
     filter:invert(100%) sepia(0%) saturate( 90%) hue-rotate(125deg) brightness(130%) contrast(100%);

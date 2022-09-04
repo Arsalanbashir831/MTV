@@ -339,20 +339,49 @@ body.light-mode .ccc_box  .ccc_title{
     color: var(--components-light-theme);
 }
 body.light-mode .unSelectedCard{
-    background-color: var(--components-light-theme) !important;
+    background-color:white !important;
    
 }
-
-
+body.light-mode .unSelectedCard :hover{
+    background-color: var(--components-light-theme);
+}
 body.light-mode .unSelectedCard :hover  .MuiTypography-root{
-    color: var(--components-light-theme) !important;
+    color: white !important;
 }
 body.light-mode .unSelectedCard :hover .centerContent svg{
+    color: white !important;
+}
+body.light-mode .MuiTypography-root{
+    color: var(--components-light-theme) !important;
+}
+body.light-mode .centerContent svg{
     color: var(--components-light-theme);
 }
+
+body.light-mode .selectedCard{
+    background-color: rgba(32,43,71,.5);
+}
 body.light-mode .selectedIcon{
-    color : var(--components-light-theme);
+    color : white !important;
 }
 body.light-mode #ccc_intro .ccc_subtitle{
     color: white !important;
+}
+
+
+body.light-mode .ccc_choice{
+    background-color:var(--components-light-theme) ;
+}
+body.light-mode .ccc_choice .ccc_container .ccc_title{
+    color: white;
+}
+body.light-mode .ccc_choices .ccc_choice :hover{
+    background-color: white;
+    transition: all .2s ease-in;
+}
+body.light-mode .ccc_choices .ccc_choice :hover .ccc_img{
+    background-color: transparent;
+}
+body.light-mode .ccc_choice :hover  .ccc_title{
+    color: black;
 }
