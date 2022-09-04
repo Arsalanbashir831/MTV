@@ -10,7 +10,7 @@ const InfoCard2 = () => {
                     JOIN US NOW
                     <span>Instant Access</span></button> <div>
                         <img className='dolimg' src={dollar} alt="moneyback" /> <p className="black">
-                            30-Days Money-Back Guarantee
+                            7-Days Money-Back Guarantee
                         </p></div></div></div> <div className="ccc_column"><div><img  src={mainImg2} className="ccc_app" lazy="loaded" /></div></div></div>
         </section>
     )

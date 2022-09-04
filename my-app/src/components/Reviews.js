@@ -218,7 +218,7 @@ const Reviews = () => {
             Get My Instant Access Now
             <img src={arrow}></img>
           </button>
-          <p class="ccc_notice">30-Days Money-Back Guarantee</p>
+          <p class="ccc_notice">7-Days Money-Back Guarantee</p>
         </div>
 
 

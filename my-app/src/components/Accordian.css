@@ -65,11 +65,13 @@
 
 .animated {
 
-    height: 100px !important;
+    max-height: fit-content !important;
+    padding-bottom: 25px;
     opacity: 1;
-    transition:  
-    height 0.3s ease-in-out,
-    opacity 0.3s 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .accordion-toggle p {
@@ -81,14 +83,14 @@
 }
 @media screen and (max-width:680px) {
     .animated{
-        height: 100px !important;
+        height: fit-content !important;
     }
 
 
     }
     @media screen and (max-width:500px) {
         .animated{
-            height: 100px !important;
+            height: fit-content !important;
            
         }.accordion-visible span{
             font-size: 15px;
@@ -105,13 +107,13 @@
             /* border: 1px solid #474d9b; */
           
             padding: 7px 7px;
-            justify-content: center;
+            justify-content: space-between;
         }
     
         }
         @media screen and (max-width:325px) {
             .animated{
-                height: 160px !important;
+                height: fit-content !important;
             }
         
         

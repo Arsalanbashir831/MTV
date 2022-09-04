@@ -9,7 +9,7 @@ const GuranteeCard = () => {
     <img id='darkGurantee' src={guranteeDark}/>
     <img  id='lightGurantee' src={guranteeLight}/>
       
-      </div> <div class="ccc_column"><p class="ccc_title">30-Days Money-Back Guarantee</p> <h2 class="ccc_subtitle">You've got nothing to lose and everything to gain with our intuitive IPTV service and 30-day money-back guarantee. For the fastest and most sophisticated IPTV provider, look no further than Cccambox TV.</h2></div></div></div>
+      </div> <div class="ccc_column"><p class="ccc_title">7-Days Money-Back Guarantee</p> <h2 class="ccc_subtitle">You've got nothing to lose and everything to gain with our intuitive IPTV service and 30-day money-back guarantee. For the fastest and most sophisticated IPTV provider, look no further than Cccambox TV.</h2></div></div></div>
   )
 }
 
