@@ -108,11 +108,11 @@ const ChannelsGrid = () => {
 
                                                         <ListItem className='listItem' sx={{ maxHeight: '3px', padding: 0.5, margin: "3px 0px" }} onClick={() => { handleChange(index) }} key={index} id={index} disablePadding >
                                                             <div id='selection' className={selectedIndex === index ? 'divSelected' : 'divUnselectedColored'}>
-                                                                <ListItemButton sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
+                                                                <ListItemButton  sx={{ backgroundColor: blurredColor, maxHeight: '40px', paddingLeft: 1, paddingRight: 1, color: 'white', borderRadius: "4px" }}  >
 
                                                                     {selectedIndex === index ?
                                                                         <>
-                                                                            <ListItemText disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: '900' }}>{temp}</Typography>} />
+                                                                            <ListItemText  disableTypography style={{ whiteSpace: 'nowrap', color: backgroundColor, fontWeight: 700 }} primary={<Typography type="body2" style={{ color: backgroundColor, fontWeight: '900' }}>{temp}</Typography>} />
                                                                             <ListItemIcon style={{ paddingLeft: '11%' }} >
                                                                                 <ArrowForwardIosRoundedIcon style={{ color: backgroundColor }} />
                                                                             </ListItemIcon>
