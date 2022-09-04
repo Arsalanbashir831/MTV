@@ -14,27 +14,27 @@ const FAQ = [
     {
         FaqId: "2",
         question: "How many channels & VOD do you provide?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "CCCAMBOX TV offers you a wide variety of channels and VOD, as for today you will get access to more than 8000 TV Channels and thousands of VOD"
     },
     {
         FaqId: "3",
         question: "Do I receive my access instantly?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "Yes, your IPTV access will be available almost instantly after your payment, on our thank you page and they will also be emailed to you. You can also find them in your member's area."
     },
     {
         FaqId: "4",
         question: " Can I share this IPTV access with my friend?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "Yes, you can share it with your friends, however, if you want to watch it you and your friend at the same time you gonna need to order the extra connection option"
     },
     {
         FaqId: "5",
         question: "How can I trust your website?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "CCCAMBOX is one of the oldest TV service providers. We have been selling IPTV since 2010. You can check this by checking our whois domain. From the beginning, our main goal has been to build a good relationship with our customers so that they can trust us and subscribe to our services and then renew for the next years. Of course, we would never have made it if we were not serious"
     },
     {
         FaqId: "6",
         question: " Do you offer any guarantee?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "Before buying a product, everyone wants to be sure that there is some way to change their mind. This is another thing that traditional TV providers don't offer. If you sign the contract there is no going back, you're stuck with them. With CCCAMBOX TV, we don't want this to happen to our customers. That's why we offer you up to 30 days to test our IPTV and ensure that it meets your requirements. Otherwise, we will refund the full payment to your bank."
     }
 
 ]
