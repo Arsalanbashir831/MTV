@@ -180,7 +180,7 @@ const SetupPlateform = () => {
           >
             <Card id={0} className={0 == selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(0) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
-                <Grid container spacing={2}>
+                <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
                     <BsWindow className={0 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
@@ -209,7 +209,7 @@ const SetupPlateform = () => {
 
             <Card id={1} className={1 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(1) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
-                <Grid container spacing={2}>
+                <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
                     <BiDevices size={iconSizeResponsive} className={1 === selectedIndex ? '' : 'selectedWhite'} />
                   </Grid>
@@ -238,7 +238,7 @@ const SetupPlateform = () => {
 
             <Card id={2} className={2 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(2) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
-                <Grid container spacing={2}>
+                <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
                     <IoTvSharp className={2 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
@@ -268,7 +268,7 @@ const SetupPlateform = () => {
             <Card id={3} className={3 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(3) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
 
-                <Grid container spacing={2}>
+                <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
                     <DiHtml5DeviceAccess className={3 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
@@ -300,7 +300,7 @@ const SetupPlateform = () => {
             <Card id={4} className={4 === selectedIndex ? '' : 'unSelectedCard'} onClick={() => { handleChangeIndex(4) }} sx={{ minWidth: '90%', maxHeight: '85px' }} >
               <CardActionArea>
 
-                <Grid container spacing={2}>
+                <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
                     <MdCast className={4 === selectedIndex ? '' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
