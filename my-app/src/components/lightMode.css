@@ -323,10 +323,10 @@ body.light-mode .bottomContainerResponsive{
 body.light-mode .ccc_box .ccc_subtitle{
     color: var(--components-light-theme) !important ;
 }
-body.light-mode .ccc_info{
+body.light-mode .ccc_box .ccc_info{
     color: var(--components-light-theme) !important ;
 }
-body.light-mode .ccc_notice{
+body.light-mode .ccc_box .ccc_notice{
     color: var(--components-light-theme) !important ;
 }
 body.light-mode .ccc_name{

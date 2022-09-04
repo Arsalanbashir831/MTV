@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import "./Accordian.css"
-import Chevron from '../assets/chevron.svg'
+import Chevron from '../assets/accArrow.svg'
 
 export default function Accordion(props) {
 
