@@ -33,7 +33,7 @@ import MediaQuery from 'react-responsive'
 const SetupPlateform = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const iconSize = 122;
-  const iconSizeResponsive = 74;
+  const iconSizeResponsive = 64;
 
   const handleChangeIndex = (index) => {
     console.log(document.getElementsByClassName('bottomContainer'))
