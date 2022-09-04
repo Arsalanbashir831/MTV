@@ -147,7 +147,7 @@
 
 @media screen and (max-width:768px) {
     .mainContainerDesktop {
-        padding: 21px 3.75vw 26px !important;
+        padding: 21px 0.75vw 26px !important;
     }
     #ccc_web {
         grid-gap: 0 !important;
