@@ -186,7 +186,7 @@ const SetupPlateform = () => {
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
-                      <Typography sx={{ padding: 0, marginLeft: '50%' }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? '' : 'selectedWhite'}>
+                      <Typography sx={{ padding: 0 }} gutterBottom variant="h6" component="div" className={0 === selectedIndex ? '' : 'selectedWhite'}>
                         Web
                       </Typography>
                     </CardContent>
