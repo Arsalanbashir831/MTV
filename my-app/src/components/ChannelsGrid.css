@@ -21,7 +21,7 @@
 }
 
 .combo{
-    background-color: black !important;
+    background-color: var(--components-dark-theme) !important;
 }
 .Mui-selected{
     background-color: white;
