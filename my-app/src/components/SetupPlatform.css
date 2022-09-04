@@ -100,10 +100,14 @@
     border-radius: 9px;
 }
 
+.iconStyle{
+    text-align: center;
+}
+
 .responsiveStyle{
     padding: 4;
     display: flex;
-    margin-left: 5%;
+    justify-content: flex-start;
     align-items: center;
 }
 
