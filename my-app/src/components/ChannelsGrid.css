@@ -19,6 +19,10 @@
 .MuiTypography-root{
     font-weight: 700 ;
 }
+
+.combo{
+    background-color: black !important;
+}
 .Mui-selected{
     background-color: white;
     text-decoration: solid;

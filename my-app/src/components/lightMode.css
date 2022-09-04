@@ -163,6 +163,10 @@ body.light-mode .leftPanel {
     transition: all 0.3s ease; 
    
 }
+
+body.light-mode .combo{
+    background-color: white !important;
+}
 body.light-mode .rightPanelDesktop {
     background-color: white !important;
     transition: all 0.3s ease; 

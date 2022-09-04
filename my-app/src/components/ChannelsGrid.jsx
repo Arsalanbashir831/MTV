@@ -262,7 +262,7 @@ const ChannelsGrid = () => {
 
                                                     <Box sx={{ minWidth: 120 }}>
                                                         <FormControl fullWidth size="small">
-                                                            <ThemeProvider theme={theme}>
+                                                            
                                                                 <Select
 
                                                                     id="demo-simple-select"
@@ -272,12 +272,12 @@ const ChannelsGrid = () => {
                                                                 >
                                                                     {Languages.map((element, index) => {
                                                                         return (
-                                                                            <MenuItem key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo' style={{fontWeight: '300'}}> {element} </Typography> </MenuItem>
+                                                                            <MenuItem className='combo' key={index} onClick={() => { handleCombo(index) }} id={index} value={index}> <Typography className ='typographyCombo' style={{fontWeight: '300'}}> {element} </Typography> </MenuItem>
                                                                         )
                                                                     })}
 
                                                                 </Select>
-                                                            </ThemeProvider>
+                                                            
                                                         </FormControl>
                                                     </Box>
 
