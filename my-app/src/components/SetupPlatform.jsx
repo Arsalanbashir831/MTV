@@ -9,11 +9,12 @@ import { MdAccessibilityNew, MdCast } from "react-icons/md";
 import { TbWorld } from 'react-icons/tb'
 import { FaMobile } from 'react-icons/fa'
 import { FiMonitor } from 'react-icons/fi'
-import { TbDevices } from 'react-icons/tb'
+import { TbDevices,TbDevices2 } from 'react-icons/tb'
 import { IoTvSharp } from 'react-icons/io5'
 import { BsWindow, BsInboxesFill } from 'react-icons/bs';
-import { BiDevices } from 'react-icons/bi'
+import { BiDevices,BiWorld } from 'react-icons/bi'
 import { DiHtml5DeviceAccess } from 'react-icons/di';
+
 import SwipeableViews from 'react-swipeable-views';
 import WebSetup from './WebSetup';
 import Casting from './Casting';
@@ -97,7 +98,7 @@ const SetupPlateform = () => {
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4, zIndex: 10 }}>
                   <div className='centerContent'>
-                    <IoTvSharp style={{ padding: '10px' }} className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
+                    <FiMonitor style={{ padding: '10px' }} className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
                         <Typography className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
@@ -115,7 +116,7 @@ const SetupPlateform = () => {
               <CardActionArea style={{ height: '100%', padding: '7px' }}>
                 <div style={{ padding: 4 }}>
                   <div className='centerContent'>
-                    <DiHtml5DeviceAccess style={{ padding: '10px' }} className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
+                    <TbDevices2 style={{ padding: '10px' }} className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSize} />
                     <div >
                       <CardContent sx={{ padding: 0 }}>
                         <Typography className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} sx={{ padding: 0, fontSize: '17px', marginBottom: 0 }} gutterBottom variant="h6" component="div">
@@ -240,7 +241,7 @@ const SetupPlateform = () => {
               <CardActionArea>
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <IoTvSharp className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <FiMonitor className={2 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
@@ -270,7 +271,7 @@ const SetupPlateform = () => {
 
                 <Grid style={{padding:'10px'}} container spacing={2}>
                   <Grid className='iconStyle' item xs={4}>
-                    <DiHtml5DeviceAccess className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
+                    <TbDevices2 className={3 === selectedIndex ? 'selectedIcon' : 'selectedWhite'} size={iconSizeResponsive} />
                   </Grid>
                   <Grid className='responsiveStyle' item xs={8}>
                     <CardContent sx={{ padding: 0 }}>
