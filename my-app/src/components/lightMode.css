@@ -312,7 +312,7 @@ body.light-mode #mob-navbar{
 body.light-mode .bottomContainer{
     background-color: white;
 }
-body.light-mode .ccc_subtitle{
+body.light-mode .ccc_box .ccc_subtitle{
     color: var(--components-light-theme) !important ;
 }
 body.light-mode .ccc_info{
@@ -327,7 +327,7 @@ body.light-mode .ccc_name{
 body.light-mode .bottomContainer .ccc_box .ccc_name img{
    filter: brightness(0.6) ;
 }
-body.light-mode  .ccc_title{
+body.light-mode .ccc_box  .ccc_title{
     color: var(--components-light-theme);
 }
 body.light-mode .unSelectedCard{
