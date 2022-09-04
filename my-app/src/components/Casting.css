@@ -101,3 +101,11 @@
     padding-top: 18px;
     margin: 0!important;
 }
+
+@media (max-width: 768px){
+#ccc_cast {
+    grid-gap: 30px;
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+}}
