@@ -385,3 +385,6 @@ body.light-mode .ccc_choices .ccc_choice :hover .ccc_img{
 body.light-mode .ccc_choice :hover  .ccc_title{
     color: black;
 }
+body.light-mode .iconStyle svg{
+    color: var(--components-light-theme);
+}
