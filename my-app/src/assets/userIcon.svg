@@ -11,7 +11,7 @@
                     <mask id="mask-2" fill="white">
                         <use xlink:href="#path-1"></use>
                     </mask>
-                    <use id="Combined-Shape" fill="white" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <use id="Combined-Shape" fill="black" fill-rule="nonzero" xlink:href="#path-1"></use>
                 </g>
             </g>
         </g>

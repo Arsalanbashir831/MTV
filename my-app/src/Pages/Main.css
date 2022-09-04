@@ -38,7 +38,7 @@
  .ccc_choice {
     width: 221px;
     height: 221px;
-    background-color: var(--components-dark-theme);
+    background-color: white;
     border-style: none;
     border-radius: 9.4px;
     box-shadow: 0 3px 18px 0 rgb(0 0 0 / 22%);
@@ -63,7 +63,7 @@
 }
 .ccc_choice:hover{
 
-    background-color: #fff;
+    background-color: var(--components-dark-theme);
 
 }
 
@@ -88,14 +88,15 @@
 .ccc_choice .ccc_container .ccc_title {
     font-size: 22px;
     font-weight: 700;
-    color: #fff;
+    color: black;
     line-height: 1.22172;
     transition-duration: .3s;
     transition-timing-function: ease;
     transition-property: transform,opacity,filter,color;
 }
 .ccc_choice :hover .ccc_title{
-    color: black
+    color: white;
+    
 }
 .ccc_choice :hover  .ccc_img{
     filter:invert(100%) sepia(0%) saturate( 90%) hue-rotate(125deg) brightness(130%) contrast(100%);

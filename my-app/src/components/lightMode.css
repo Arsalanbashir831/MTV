@@ -359,7 +359,7 @@ body.light-mode .centerContent svg{
 }
 
 body.light-mode .selectedCard{
-    background-color: rgba(32,43,71,.5);
+    background-color: var(--components-light-theme);
 }
 body.light-mode .selectedIcon{
     color : white !important;
@@ -370,20 +370,20 @@ body.light-mode #ccc_intro .ccc_subtitle{
 
 
 body.light-mode .ccc_choice{
-    background-color:var(--components-light-theme) ;
+    background-color:white ;
 }
 body.light-mode .ccc_choice .ccc_container .ccc_title{
-    color: white;
+    color: black;
 }
 body.light-mode .ccc_choices .ccc_choice :hover{
-    background-color: white;
+    background-color: var(--components-light-theme);
     transition: all .2s ease-in;
 }
 body.light-mode .ccc_choices .ccc_choice :hover .ccc_img{
     background-color: transparent;
 }
 body.light-mode .ccc_choice :hover  .ccc_title{
-    color: black;
+    color: white;
 }
 body.light-mode .iconStyle svg{
     color: var(--components-light-theme);
