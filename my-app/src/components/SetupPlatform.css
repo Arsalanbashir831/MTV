@@ -98,6 +98,7 @@
     min-height: 10%;
     padding: 0;
     border-radius: 9px;
+    padding: 21px 3.75vw 26px;
 }
 
 .iconStyle{
@@ -178,3 +179,15 @@
         width: 100%;
     }
 }
+
+@media (max-width: 768px){
+#ccc_cast .ccc_box {
+    grid-column: unset!important;
+    grid-row: unset!important;
+}}
+
+@media (max-width: 768px){
+#ccc_cast .ccc_box img.ccc_img {
+    height: auto;
+    max-width: 78%;
+}}
