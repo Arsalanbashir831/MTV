@@ -351,7 +351,7 @@ body.light-mode .unSelectedCard :hover  .MuiTypography-root{
 body.light-mode .unSelectedCard :hover .centerContent svg{
     color: white !important;
 }
-body.light-mode .MuiTypography-root{
+body.light-mode .unSelectedCard .MuiTypography-root{
     color: var(--components-light-theme) !important;
 }
 body.light-mode .centerContent svg{
