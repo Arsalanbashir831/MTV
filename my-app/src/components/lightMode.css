@@ -312,6 +312,10 @@ body.light-mode #mob-navbar{
 body.light-mode .bottomContainer{
     background-color: white;
 }
+body.light-mode .bottomContainerResponsive{
+    background-color: white;
+}
+
 body.light-mode .ccc_box .ccc_subtitle{
     color: var(--components-light-theme) !important ;
 }
