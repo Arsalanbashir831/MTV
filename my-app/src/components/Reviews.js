@@ -149,7 +149,7 @@ const Reviews = () => {
                 prevEl: '.review-swiper-button-prev',
               }}
               spaceBetween={10}
-              slidesPerView={3}
+              slidesPerView={'auto'}
               centeredSlides={true}
               loop={true}
               // dragSize= {500}
@@ -160,8 +160,8 @@ const Reviews = () => {
               freeMode={{
                 enabled: false
               }}
-
-
+            
+            
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log('slide change')}
             >
