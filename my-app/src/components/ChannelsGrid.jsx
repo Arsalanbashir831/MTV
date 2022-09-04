@@ -13,7 +13,7 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import { Languages } from '../Data/Languages'
 import './ChannelsGrid.css'
 import { ChannelNames } from './../Data/ChannelNames'
-
+import IoIosArrowDropdownCircle from 'react-icons/io'
 import { Typography } from '@mui/material';
 import MediaQuery from 'react-responsive'
 import MenuItem from '@mui/material/MenuItem';
@@ -267,8 +267,12 @@ const ChannelsGrid = () => {
 
                                                                     id="demo-simple-select"
                                                                     value={selectedIndex}
-                                                                    IconComponent={() => <Dropdown></Dropdown>}
+                                                                    IconComponent={() =>
+                                                                        <div className='comboDropdown' >
 
+                                                                            <Dropdown></Dropdown>
+                                                                        </div>
+                                                                    }
                                                                 >
                                                                     {Languages.map((element, index) => {
                                                                         return (

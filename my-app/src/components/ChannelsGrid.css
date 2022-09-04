@@ -162,6 +162,14 @@ textarea:focus, input:focus{
     border-radius: 9px;
     
 }
+.comboDropdown{
+    background: rgb(63, 63, 255);
+    border-radius: 20px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 12px;
+}
 .leftPanel::-webkit-scrollbar{
     width: 0%;
 }
