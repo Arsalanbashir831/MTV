@@ -23,104 +23,69 @@ import ReviewCard from './ReviewCard';
 import MediaQuery from 'react-responsive'
 
 const ReviewsData = [{
-  days: '1',
-  title: "Very Nice1",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '200',
+  title: "GOOD QUALITY",
+  subtitle: "I bought reseller plan from maxco 3 months ago. I’m pretty much happy to be with them",
+  author: "Paul"
 },
 {
-  days: '1',
-  title: "Very Nice2",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '500',
+  title: "THE BEST OF THE BEST",
+  subtitle: "I've been with them from last 2 months, Everything is great. Definitely recommended",
+  author: "Saba"
 },
 {
-  days: '1',
-  title: "Very Nice3",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '240',
+  title: "VERY NICE",
+  subtitle: "I had few issues when I started with them 6 months ago but now it's the best.",
+  author: "Jay"
 },
 {
-  days: '1',
-  title: "Very Nice4",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '260',
+  title: "EXCELLENT SERVICE",
+  subtitle: "Quick set up. Sometimes buffering but nothing major and far from the worst I’ve used",
+  author: "Zebec"
 },
 {
-  days: '1',
-  title: "Very Nice5",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '620',
+  title: "BEST IPTV EVER",
+  subtitle: "Cannot complain the service is excellent all the streams I've watched are very good",
+  author: "May"
 },
 {
-  days: '1',
-  title: "Very Nice6",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '451',
+  title: "PROFESSIONAL",
+  subtitle: "Brilliant service. Cannot recommend enough. Keep up the good work guys!!👍👍👍",
+  author: "Keith"
 },
 {
-  days: '1',
-  title: "Very Nice7",
+  days: '202',
+  title: "KEEP GOING",
   subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  author: "Mark"
 },
 {
-  days: '1',
-  title: "Very Nice8",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '206',
+  title: "GREAT QUALITY PRICE",
+  subtitle: "Recently moved to this service never had any problem",
+  author: "Pkin"
 },
 {
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
-},
-{
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
-},
-{
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
-},
-{
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
-},
-{
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
-},
-{
-  days: '1',
-  title: "Very Nice",
-  subtitle: "“I give them 1000 stars. Excellent service. Fast and reliable. Recommended without hesitation.”",
-  author: "Nabeel"
+  days: '310',
+  title: "5 STARS",
+  subtitle: "Or 1 day ago ki jagah 200 - 700 days ago",
+  author: "Jack"
 }
-
-
-
-
-
 ]
 
 
 const Reviews = () => {
 
-const minSwiper=()=>{
-  const element = document.getElementById('min-swipe').swiper;
-  element.slideNext();
-  console.log(element);
-}
+  const minSwiper = () => {
+    const element = document.getElementById('min-swipe').swiper;
+    element.slideNext();
+    console.log(element);
+  }
 
   const swipe = useSwiper();
   return (
@@ -167,8 +132,8 @@ const minSwiper=()=>{
               freeMode={{
                 enabled: false
               }}
-            
-            
+
+
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log('slide change')}
             >
@@ -200,7 +165,7 @@ const minSwiper=()=>{
               }}
               spaceBetween={10}
               slidesPerView={'auto'}
-               centeredSlides={true}
+              centeredSlides={true}
               loop={true}
               // dragSize= {500}
               //   autoplay={{
@@ -211,7 +176,7 @@ const minSwiper=()=>{
                 enabled: false
               }}
 
-              
+
               onSwiper={(swiper) => console.log('meow')}
               onSlideChange={() => console.log('slide change')}
             >
