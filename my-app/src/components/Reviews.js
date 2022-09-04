@@ -145,7 +145,7 @@ const minSwiper=()=>{
           <button type="button" class=" review-swiper-button-prev ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="  v-btn__content"><img className='navigator-icon' src={arrow} alt="shape" /></span></button>
 
 
-          <MediaQuery minWidth={500}>
+          <MediaQuery minWidth={781}>
             <Swiper
               // install Swiper modules
 
@@ -156,7 +156,7 @@ const minSwiper=()=>{
                 prevEl: '.review-swiper-button-prev',
               }}
               spaceBetween={10}
-              slidesPerView={3}
+              slidesPerView={'3'}
               centeredSlides={true}
               loop={true}
               // dragSize= {500}
@@ -188,7 +188,7 @@ const minSwiper=()=>{
 
             </Swiper>
           </MediaQuery>
-          <MediaQuery maxWidth={499}>
+          <MediaQuery maxWidth={780}>
             <Swiper id='min-swipe'
               // install Swiper modules
 
@@ -200,7 +200,7 @@ const minSwiper=()=>{
               }}
               spaceBetween={10}
               slidesPerView={'auto'}
-              // centeredSlides={true}
+               centeredSlides={true}
               loop={true}
               // dragSize= {500}
               //   autoplay={{
