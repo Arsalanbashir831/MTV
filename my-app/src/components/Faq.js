@@ -9,12 +9,12 @@ const FAQ = [
     {
         FaqId: "1",
         question: "Can I stream on multiple devices?",
-        answer: "CCCAMBOX TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
+        answer: "MAXCO TV can be actively streamed on one device at the same time. If you need an additional connection, just login in your members to add it."
     },
     {
         FaqId: "2",
         question: "How many channels & VOD do you provide?",
-        answer: "CCCAMBOX TV offers you a wide variety of channels and VOD, as for today you will get access to more than 8000 TV Channels and thousands of VOD"
+        answer: "MAXCO TV offers you a wide variety of channels and VOD, as for today you will get access to more than 8000 TV Channels and thousands of VOD"
     },
     {
         FaqId: "3",
@@ -29,12 +29,12 @@ const FAQ = [
     {
         FaqId: "5",
         question: "How can I trust your website?",
-        answer: "CCCAMBOX is one of the oldest TV service providers. We have been selling IPTV since 2010. You can check this by checking our whois domain. From the beginning, our main goal has been to build a good relationship with our customers so that they can trust us and subscribe to our services and then renew for the next years. Of course, we would never have made it if we were not serious"
+        answer: "MAXCO is one of the oldest TV service providers. We have been selling IPTV since 2010. You can check this by checking our whois domain. From the beginning, our main goal has been to build a good relationship with our customers so that they can trust us and subscribe to our services and then renew for the next years. Of course, we would never have made it if we were not serious"
     },
     {
         FaqId: "6",
         question: " Do you offer any guarantee?",
-        answer: "Before buying a product, everyone wants to be sure that there is some way to change their mind. This is another thing that traditional TV providers don't offer. If you sign the contract there is no going back, you're stuck with them. With CCCAMBOX TV, we don't want this to happen to our customers. That's why we offer you up to 30 days to test our IPTV and ensure that it meets your requirements. Otherwise, we will refund the full payment to your bank."
+        answer: "Before buying a product, everyone wants to be sure that there is some way to change their mind. This is another thing that traditional TV providers don't offer. If you sign the contract there is no going back, you're stuck with them. With MAXCOTV, we don't want this to happen to our customers. That's why we offer you up to 30 days to test our IPTV and ensure that it meets your requirements. Otherwise, we will refund the full payment to your bank."
     }
 
 ]
@@ -57,7 +57,7 @@ const Faq = () => {
     return (
         <div id="ccc_FAQ"><p class="ccc_title">FAQ</p>
             {/* div of the accordian */}
-            <div className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
+            <div style={{padding:'20px 0px'}} className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
                 {FAQ.map((data, index) => {
                     return (<div onClick={()=>{handleChange(index)}}>
                         <Accordion id={index} activated={index===expanded} question={data.question} answer={data.answer} key={index} ></Accordion>

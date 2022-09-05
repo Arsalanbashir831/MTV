@@ -61,7 +61,7 @@ const ResellerFAQ = () => {
     <p className='ccc_title'>FAQ</p>
     {/* Accordian */}
 
-    <div className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
+    <div style={{padding:'20px 0px'}} className="v-item-group theme--light v-expansion-panels v-expansion-panels--accordion" >
                 {FAQ.map((data, index) => {
                     return (<div onClick={()=>{handleChange(index)}}>
                         <Accordion id={index} activated={index===expanded} question={data.question} answer={data.answer} key={index} ></Accordion>

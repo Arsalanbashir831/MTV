@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css';
-import logo from "../assets/logo.svg"
+import logo from "../assets/maxco.png"
 import website from '../assets/websiteIcon.svg';
 import userIcon from '../assets/userIcon.svg';
 import checkout from '../assets/checkout-icon.svg';
