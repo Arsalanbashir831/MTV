@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from 'swiper/react';
 import 'swiper/css/scrollbar';
 import 'swiper/css/free-mode'
+// import url from '../Data/URLs'
 
 // Import Swiper styles
 import "swiper/css";
@@ -198,7 +199,7 @@ const Reviews = () => {
 
             </Swiper>
           </MediaQuery>
-          <button type="button" class="review-swiper-button-next ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="v-btn__content"><img className='navigator-icon' src={arrow} alt="shape" /></span></button>
+          <button onClick={()=>window.location.href= url.maxcotv} type="button" class="review-swiper-button-next ccc_arrow v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="v-btn__content"><img className='navigator-icon' src={arrow} alt="shape" /></span></button>
 
         </div>
 
