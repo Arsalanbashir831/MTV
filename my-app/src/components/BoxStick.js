@@ -4,7 +4,7 @@ import './BoxStick.css';
 import download from '../assets/download.svg';
 import iptv from '../assets/iptv.svg';
 import android from '../assets/android.svg';
-import BoxSetup from '../assets/BoxSetup.webp'
+import BoxSetup from '../assets/BoxSetup.png'
 
 import MediaQuery from 'react-responsive'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Discover.css"
 import dollar from "../assets/dollar.svg";
 
-import tv from "../assets/Tv.webp"
+import tv from "../assets/Tv.png"
 const Discover = () => {
   return (
     <>

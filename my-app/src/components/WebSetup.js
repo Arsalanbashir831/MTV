@@ -1,7 +1,7 @@
 import React from 'react'
 import './WebSetup.css';
 import monitor from '../assets/webSetupMain.webp';
-import browser from '../assets/browserWeb.webp'
+import browser from '../assets/browserWeb.png'
 const WebSetup = () => {
   return (
     <div id="ccc_web"><div class="ccc_box"><h1 class="ccc_title">Get IPTV on your browser</h1> <h2 class="ccc_subtitle">Indulge in great TV on all your devices.</h2> <button class="ccc_btn_open">

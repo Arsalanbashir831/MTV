@@ -1,5 +1,5 @@
 import React from 'react';
-import tv from '../assets/TvSetup.webp';
+import tv from '../assets/TvSetup.png';
 // import lg from '../assets/LG.svg';
 import samsung from '../assets/samsungIcon.svg';
 import download from '../assets/download.svg';

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./InfoCard1.css";
-import  mainImg from "../assets/infoCard1.webp";
+import  mainImg from "../assets/infoCard1.png";
 import listIcon from "../assets/listImage.svg";
 import arrow from "../assets/rightArrowImage.svg";
 import {Routes, Route, useNavigate} from 'react-router-dom';

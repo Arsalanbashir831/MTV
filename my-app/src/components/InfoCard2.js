@@ -1,6 +1,6 @@
 import React from 'react'
 import dollar from "../assets/dollar.svg";
-import mainImg2 from "../assets/infoCard2.webp"
+import mainImg2 from "../assets/infoCard2.png"
 import "./InfoCard2.css"
 const InfoCard2 = () => {
     return (
