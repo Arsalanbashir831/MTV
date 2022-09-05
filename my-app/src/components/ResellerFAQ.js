@@ -72,7 +72,7 @@ const ResellerFAQ = () => {
             </div>
 
     <div className='ccc_row'>
-    <button class="ccc_btn">
+    <button onClick={()=>window.location.href=''} class="ccc_btn">
         BECOME A RESELLER
         <span>Instant Access</span></button>
     </div>
