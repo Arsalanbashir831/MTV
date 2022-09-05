@@ -12,10 +12,10 @@ const PricingData=[
 
 ]
 const CostingData=[
-  {month:'1',credit:'5'},
-  {month:'1',credit:'5'},
-  {month:'1',credit:'5'},
-  {month:'1',credit:'5'}
+  {month:`1 ${" "+'Month'}`,credit:'5'},
+  {month:`2 ${" "+'Months'}`,credit:'5'},
+  {month:`3 ${" "+'Months'}`,credit:'5'},
+  {month:`4 ${" "+'Months'}`,credit:'5'}
 ]
 const Pricing = () => {
   return (

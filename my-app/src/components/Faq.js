@@ -69,7 +69,7 @@ const Faq = () => {
             {/* <Accordion></Accordion> */}
             <div class="ccc_getAccess">
 
-                <button class="ccc_btn"> onClick={()=>window.location.href='https://maxcotv.com/'} Get My Instant Access Now<img src={arrow} alt="arrow" /></button> <p class="ccc_notice">7-Days Money-Back Guarantee</p></div>
+                <button onClick={()=>window.location.href='https://maxcotv.com/'} class="ccc_btn">  Get My Instant Access Now<img src={arrow} alt="arrow" /></button> <p class="ccc_notice">7-Days Money-Back Guarantee</p></div>
 
 
 

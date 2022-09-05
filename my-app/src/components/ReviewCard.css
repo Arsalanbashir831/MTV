@@ -72,7 +72,7 @@
 
 @media screen and (max-width:1200px) {
     #reviewSlick {
-        width: 100vw;
+        width: 95vw;
         max-width: unset;
         right: 0;
     }

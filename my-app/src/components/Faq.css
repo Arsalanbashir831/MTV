@@ -68,10 +68,13 @@ img {
 @media screen and (max-width:720px) {
     #ccc_FAQ {
         padding-top: 38.5px;
-        padding-bottom: 0;
+        padding-bottom: 62px;
     }
     #ccc_FAQ .ccc_title {
         margin: 0 0 32px;
+    }
+    #ccc_FAQ .ccc_getAccess{
+        display: none;
     }
    
 }
