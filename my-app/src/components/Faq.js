@@ -5,6 +5,7 @@ import arrow from "../assets/rightArrowImage.svg";
 import Accordion from "./Accordian";
 import "./Faq.css"
 
+import url from './../Data/URLs'
 const FAQ = [
     {
         FaqId: "1",
@@ -69,7 +70,7 @@ const Faq = () => {
             {/* <Accordion></Accordion> */}
             <div class="ccc_getAccess">
 
-                <button onClick={()=>window.location.href='https://maxcotv.com/'} class="ccc_btn">  Get My Instant Access Now<img src={arrow} alt="arrow" /></button> <p class="ccc_notice">7-Days Money-Back Guarantee</p></div>
+                <button onClick={()=>window.location.href=url.maxcotv} class="ccc_btn">  Get My Instant Access Now<img src={arrow} alt="arrow" /></button> <p class="ccc_notice">7-Days Money-Back Guarantee</p></div>
 
 
 

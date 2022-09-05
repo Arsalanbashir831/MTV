@@ -3,6 +3,8 @@ import logo from '../assets/logo.svg'
 import Button from '@mui/material/Button';
 import {  Link } from "react-router-dom";
 import ThemeSwitcher, { MobThemeSwitcher } from './ThemeSwitcher';
+
+import url from './../Data/URLs'
 const MobileNavbar = (props) => {
   return (
     <>
@@ -18,7 +20,7 @@ const MobileNavbar = (props) => {
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/resellers'> RESELLERS </Link></li>
          
             <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
-              <Button className='order-btn  btn-mob' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/'}>Order Now</Button>
+              <Button className='order-btn  btn-mob' variant="contained" onClick={()=>window.location.href=url.maxcotv}>Order Now</Button>
               <hr className='mob-hr'></hr>
 
               {/* <div className="switchMode">

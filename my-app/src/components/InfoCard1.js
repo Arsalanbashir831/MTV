@@ -4,7 +4,7 @@ import  mainImg from "../assets/infoCard1.png";
 import listIcon from "../assets/listImage.svg";
 import arrow from "../assets/rightArrowImage.svg";
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
+import url from './../Data/URLs'
 const InfoCard1 = () => {
   
   return (
@@ -17,7 +17,7 @@ const InfoCard1 = () => {
         <h2 class="ccc_info">With CCCAMBOX TV we can offer you access to more than 8000 IPTV channels of all countries around the world, we want to make sure that you won't be disappointed</h2>
 
         
-            <button onClick={()=>window.location.href='/channel'} class="ccc_discover"><img src={listIcon}  alt="list" />
+            <button onClick={()=>window.location.href= url.channel} class="ccc_discover"><img src={listIcon}  alt="list" />
           Discover the channels list
           <img src={arrow} alt="arrow"/>
           <a></a>
