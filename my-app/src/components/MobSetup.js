@@ -1,5 +1,5 @@
 import React from 'react';
-import mobile from '../assets/mobileSetup.webp';
+import mobile from '../assets/mobileSetup.png';
 import iptv from '../assets/iptv.svg';
 import download from '../assets/download.svg';
 import android from '../assets/android.svg';

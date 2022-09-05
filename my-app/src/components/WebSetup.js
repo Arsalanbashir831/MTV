@@ -1,6 +1,6 @@
 import React from 'react'
 import './WebSetup.css';
-import monitor from '../assets/webSetupMain.webp';
+import monitor from '../assets/webSetupMain.png';
 import browser from '../assets/browserWeb.png'
 const WebSetup = () => {
   return (
