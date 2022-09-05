@@ -44,7 +44,7 @@ function MobThemeSwitcher() {
                 {mode==='dark'?
               
                  
-               <span style={{display:'contents'}} ><i className="fa-solid fa-sun switch-icon "></i> <p  className='mode-text'>light Modee</p></span> :
+               <span style={{display:'contents'}} ><i className="fa-solid fa-sun switch-icon "></i> <p  className='mode-text'>light Mode</p></span> :
                <span style={{display:'contents'}}> <i className="fa-solid fa-moon switch-icon "></i> <p  className='mode-text'>Dark Mode</p></span>
                 }
             
