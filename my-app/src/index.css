@@ -12,8 +12,8 @@
   /* General Settings */
   --bg-light-shadow: #203c91;
   --bg-dark-shadow: #0f276c;
-  --bg-light-img: url('./assets/background.webp');
-  --bg-dark-img: url('./assets/darkbackground.webp');
+  --bg-light-img: url('./assets/background.png');
+  --bg-dark-img: url('./assets/darkbackground.png');
 
   /* Dark theme  component sets  */
   --components-dark-theme: #030e2e;
