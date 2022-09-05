@@ -22,6 +22,8 @@ import ReviewCard from './ReviewCard';
 
 import MediaQuery from 'react-responsive'
 
+import url from './../Data/URLs'
+
 const ReviewsData = [{
   days: '200',
   title: "GOOD QUALITY",
@@ -214,7 +216,7 @@ const Reviews = () => {
         </div>
 
         <div className='ccc_getAccess'>
-          <button className='ccc_btn' onClick={()=>window.location.href='https://maxcotv.com/'}>
+          <button className='ccc_btn' onClick={()=>window.location.href=url.maxcotv}>
             Get My Instant Access Now
             <img src={arrow}></img>
           </button>

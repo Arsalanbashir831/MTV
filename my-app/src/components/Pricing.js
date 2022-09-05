@@ -2,6 +2,7 @@ import React from 'react'
 import CostingColumn from './CostingColumn'
 import PriceColumn from './PriceColumn'
 import './Pricing.css'
+import url from './../Data/URLs'
 // import downIcon from '../assets/chevronDown.svg'
 // 100 300 500 1000
 const PricingData=[
@@ -53,7 +54,7 @@ return(<>
    })}
     </div>
   </div>
-  <button id='ccc_btn' className="ccc_btn" onClick={()=>window.location.href='https://maxcotv.com/'}>
+  <button id='ccc_btn' className="ccc_btn" onClick={()=>window.location.href= url.maxcotv}>
           SUBSCRIBE TO PAY-AS-YOU-GO
           <span>Instant Access</span></button>
 </div>

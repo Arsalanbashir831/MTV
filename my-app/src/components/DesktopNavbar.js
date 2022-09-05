@@ -11,6 +11,7 @@ import {  Link } from "react-router-dom";
 import {ThemeSwitcher} from './ThemeSwitcher';
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
+import url from './../Data/URLs'
 const DesktopNavbar = () => {
   const [mobileActive, setMobileActive] = useState(false)
 
@@ -44,7 +45,7 @@ const DesktopNavbar = () => {
           <div className="buttons">
             <div className="end-nav">
               <Button className=' login-btn' variant="contained">Log in</Button>
-              <Button className='order-btn' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/'}>Order Now</Button>
+              <Button className='order-btn' variant="contained" onClick={()=>window.location.href= url.maxcotv}>Order Now</Button>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
               <div id='click' onClick={() => handleChange()} className='hamburger-menu'>
