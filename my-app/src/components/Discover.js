@@ -12,7 +12,7 @@ const Discover = () => {
     Today, we are revolutionizing the way you access IPTV. With +8000 channels and thousands of VOD, you'll be watching IPTV in a radically new, intelligent, and intuitive way.
   </h2>
   <div className='ccc_joinus ccc_center'>
-    <button class="join">
+    <button onClick={()=>window.location.href='https://maxcotv.com/'} class="join">
       JOIN US NOW
       <span>Instant Access</span></button>
       <div>

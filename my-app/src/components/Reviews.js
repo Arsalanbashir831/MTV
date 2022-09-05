@@ -214,7 +214,7 @@ const Reviews = () => {
         </div>
 
         <div className='ccc_getAccess'>
-          <button className='ccc_btn'>
+          <button className='ccc_btn' onClick={()=>window.location.href='https://maxcotv.com/'}>
             Get My Instant Access Now
             <img src={arrow}></img>
           </button>

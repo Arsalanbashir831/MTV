@@ -3,7 +3,10 @@ import "./InfoCard1.css";
 import  mainImg from "../assets/infoCard1.webp";
 import listIcon from "../assets/listImage.svg";
 import arrow from "../assets/rightArrowImage.svg";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
 const InfoCard1 = () => {
+  
   return (
    <>
    <section id='info1_Section'>
@@ -12,9 +15,13 @@ const InfoCard1 = () => {
         <p class="ccc_title">
         8000+<span>Live TV Channels</span></p>
         <h2 class="ccc_info">With CCCAMBOX TV we can offer you access to more than 8000 IPTV channels of all countries around the world, we want to make sure that you won't be disappointed</h2>
-            <button class="ccc_discover"><img src={listIcon}  alt="list"/>
+
+        
+            <button onClick={()=>window.location.href='/channel'} class="ccc_discover"><img src={listIcon}  alt="list" />
           Discover the channels list
-          <img src={arrow} alt="arrow"/></button>
+          <img src={arrow} alt="arrow"/>
+          <a></a>
+          </button>
         </div>
 
         <div class="ccc_column">

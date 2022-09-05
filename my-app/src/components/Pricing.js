@@ -53,7 +53,7 @@ return(<>
    })}
     </div>
   </div>
-  <button id='ccc_btn' className="ccc_btn">
+  <button id='ccc_btn' className="ccc_btn" onClick={()=>window.location.href='https://maxcotv.com/'}>
           SUBSCRIBE TO PAY-AS-YOU-GO
           <span>Instant Access</span></button>
 </div>

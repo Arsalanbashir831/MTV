@@ -6,7 +6,7 @@ const InfoCard2 = () => {
     return (
         <section id='info2_Section'>
             <div className="ccc_container"><div className="ccc_column"><p className="ccc_title">
-                EPG<span>in Most Channels</span></p> <h2 className="ccc_info">EPG is one of our most requested features and providing a full and updated EPG has been our priority since day one. We can proudly say that we have been able to cover the majority of our IPTV channels.</h2> <div className="ccc_joinus ccc_info2"><button className="join">
+                EPG<span>in Most Channels</span></p> <h2 className="ccc_info">EPG is one of our most requested features and providing a full and updated EPG has been our priority since day one. We can proudly say that we have been able to cover the majority of our IPTV channels.</h2> <div className="ccc_joinus ccc_info2"><button onClick={()=>window.location.href='https://maxcotv.com/'} className="join">
                     JOIN US NOW
                     <span>Instant Access</span></button> <div>
                         <img className='dolimg' src={dollar} alt="moneyback" /> <p className="black">
