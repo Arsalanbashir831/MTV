@@ -119,6 +119,7 @@ display: none;
         line-height: 1.25;
     }
     #ccc_head .ccc_container .ccc_column img {
-        display: none;
+        /* display: none; */
+        width: 90%;
     }
 }

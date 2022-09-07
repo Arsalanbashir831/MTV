@@ -4,7 +4,7 @@ const CostingColumn = (props) => {
   return (
    <>
     <div className='ccc_duration'>
-        {props.month+" "}
+        {props.month+" "}   
         <span>{props.credit+" "}Credits</span>
       </div>
    </>

@@ -2,7 +2,6 @@ import React from 'react'
 import Accordion from './Accordian';
 import './Faq.css';
 import './ResellerFAQ.css'
-import url from '../Data/URLs'
 const FAQ = [
     {
         FaqId: "1",
@@ -73,7 +72,7 @@ const ResellerFAQ = () => {
             </div>
 
     <div className='ccc_row'>
-    <button onClick={()=>window.location.href=url.maxcotv} class="ccc_btn">
+    <button class="ccc_btn" onClick={()=>window.location.href='https://maxcotv.com/store/resellers'}>
         BECOME A RESELLER
         <span>Instant Access</span></button>
     </div>

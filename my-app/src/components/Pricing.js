@@ -2,7 +2,6 @@ import React from 'react'
 import CostingColumn from './CostingColumn'
 import PriceColumn from './PriceColumn'
 import './Pricing.css'
-import url from './../Data/URLs'
 // import downIcon from '../assets/chevronDown.svg'
 // 100 300 500 1000
 const PricingData=[
@@ -14,9 +13,9 @@ const PricingData=[
 ]
 const CostingData=[
   {month:`1 ${" "+'Month'}`,credit:'5'},
-  {month:`2 ${" "+'Months'}`,credit:'5'},
-  {month:`3 ${" "+'Months'}`,credit:'5'},
-  {month:`4 ${" "+'Months'}`,credit:'5'}
+  {month:`3 ${" "+'Months'}`,credit:'10'},
+  {month:`6 ${" "+'Months'}`,credit:'15'},
+  {month:`12 ${" "+'Months'}`,credit:'20'}
 ]
 const Pricing = () => {
   return (
@@ -54,7 +53,7 @@ return(<>
    })}
     </div>
   </div>
-  <button id='ccc_btn' className="ccc_btn" onClick={()=>window.location.href= url.maxcotv}>
+  <button id='ccc_btn' className="ccc_btn" onClick={()=>window.location.href='https://maxcotv.com/store/resellers'}>
           SUBSCRIBE TO PAY-AS-YOU-GO
           <span>Instant Access</span></button>
 </div>

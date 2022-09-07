@@ -62,4 +62,5 @@ export const Languages = [
 "TR | Turkey",
 "ZA | SOUTH AFRICA",
 "ZA | DSTV SA - BACKUP",
+"XXX | ADULTS",
 ]

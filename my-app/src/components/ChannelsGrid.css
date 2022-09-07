@@ -18,7 +18,6 @@
 
 .MuiTypography-root{
     font-weight: 700 ;
-    font-size: 17px !important;
 }
 
 .combo{
@@ -195,7 +194,6 @@ textarea:focus, input:focus{
 .typographyChannels{
     color: white !important;
     font-weight: 700 !important;
-    
 }
 
 .typographyCombo{
@@ -270,7 +268,6 @@ textarea:focus, input:focus{
 
 .css-6hp17o-MuiList-root-MuiMenu-list{
     max-height: 50vh !important;
-   
 }
 
 .MuiSelect-select{

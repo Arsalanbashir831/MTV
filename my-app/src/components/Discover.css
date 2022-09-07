@@ -81,7 +81,8 @@
         width: 95vw;
     }
     #ccc_discover .ccc_tv{
-        display: none;
+        /* display: none; */
+        width: 90%;
     }
     #ccc_discover h1.ccc_title {
         text-align: left;

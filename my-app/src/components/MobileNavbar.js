@@ -1,10 +1,8 @@
 import React from 'react'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logoNav.png'
 import Button from '@mui/material/Button';
 import {  Link } from "react-router-dom";
 import ThemeSwitcher, { MobThemeSwitcher } from './ThemeSwitcher';
-
-import url from './../Data/URLs'
 const MobileNavbar = (props) => {
   return (
     <>
@@ -12,15 +10,15 @@ const MobileNavbar = (props) => {
         <div className='upper-Container' >
           <ul className=' nav-links mob-nav-links'>
             {/* LOGO */}
-           <Link to = '/Main'><img className='mob-logo' src={logo} alt="logo" /></Link> 
+           <Link to = '/'><img className='mob-logo' src={logo} alt="logo" /></Link> 
             {/* NAV LINKS */}
             <li> <Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/'> HOME </Link> </li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/Channel'> CHANNEL </Link></li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/setup'> SETUP </Link></li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/resellers'> RESELLERS </Link></li>
          
-            <Button className=' login-btn btn-mob' variant="contained">Log in</Button>
-              <Button className='order-btn  btn-mob' variant="contained" onClick={()=>window.location.href=url.maxcotv}>Order Now</Button>
+            <Button className=' login-btn btn-mob' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/login.php'}>Log in</Button>
+              <Button className='order-btn  btn-mob' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/store/subscriptions'}>Order Now</Button>
               <hr className='mob-hr'></hr>
 
               {/* <div className="switchMode">

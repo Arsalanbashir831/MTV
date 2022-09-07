@@ -4,14 +4,13 @@ import "./Navbar.css";
 import Button from '@mui/material/Button';
 
 // you can change the logo 
-import logo from "../assets/logo.svg"
+import logo from "../assets/logoNav.png"
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
 import {  Link } from "react-router-dom";
 import {ThemeSwitcher} from './ThemeSwitcher';
 //let greenBtnbg=getComputedStyle(document.documentElement).getPropertyValue('--green-button-bg');
 
-import url from './../Data/URLs'
 const DesktopNavbar = () => {
   const [mobileActive, setMobileActive] = useState(false)
 
@@ -23,7 +22,7 @@ const DesktopNavbar = () => {
       <header id="navbar" >
         <div className="leftContainer">
           {/* logo */}
-          <Link to='/Main'><img id='logo'   src={logo} alt="" /></Link>
+          <Link to='/'><img id='logo'   src={logo} alt="" /></Link>
         </div>
         <div className="centerContainer ">
           {/* menu links  */}
@@ -31,7 +30,7 @@ const DesktopNavbar = () => {
 
             <li> <Link style={{textDecoration:'none'}} className='nav-link' to='/'> HOME </Link> </li>
             <li><Link style={{textDecoration:'none'}} className='nav-link' to='/Channel'> CHANNEL </Link></li>
-            <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/Setup'> SETUP </Link></li>
+             <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/Setup'> SETUP </Link></li>
             <li ><Link style={{textDecoration:'none'}} className='nav-link' to='/resellers'> RESELLERS </Link></li>
           </ul>
 
@@ -44,8 +43,8 @@ const DesktopNavbar = () => {
         <div className='rightContainer'>
           <div className="buttons">
             <div className="end-nav">
-              <Button className=' login-btn' variant="contained">Log in</Button>
-              <Button className='order-btn' variant="contained" onClick={()=>window.location.href= url.maxcotv}>Order Now</Button>
+              <Button className=' login-btn' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/login.php'}>Log in</Button>
+              <Button className='order-btn' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/store/subscriptions'}>Order Now</Button>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
               <div id='click' onClick={() => handleChange()} className='hamburger-menu'>
