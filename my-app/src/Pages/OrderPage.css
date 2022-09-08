@@ -1,0 +1,420 @@
+#OrderSection{
+    padding: 165px 0 0;
+    padding-bottom: 47.5px;
+    width: 100%;
+    max-width: 1037px;
+    margin: 0 auto;
+}
+.tabPanel{
+    color: white;
+  }
+  
+  .Packages-Container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    width: 99%;
+  }
+  
+  .product {
+   
+    background-color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    min-height: 250px;
+      min-width: 23.9%;
+      max-width: 24%;
+      max-height: 250px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    position: relative;
+   
+    box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
+    background-color: #061133;
+  }
+  /* .product:hover {
+    border: 1px solid var(--packageActive);
+  }
+  .product:hover .sold p{
+    background-color: var(--packageActive);
+    color: white;
+    border: 2px solid var(--packageActive);
+  }
+  .product:hover .name {
+    opacity: 1;
+  }
+  .product:hover .price{
+    opacity: 1;
+  }
+  .product:hover .billingcycle{
+    opacity: 1;
+  }
+  .product:hover .guarantee{
+    opacity: 1;
+  }
+   */
+  
+  .product .sold {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0 0 18px;
+  }
+  .sold-text {
+    padding: 4px 9px 6px 8px;
+    background-color: #acacac;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 0 13px 0 0;
+    -webkit-border-radius: 0 13px 0 0;
+    -moz-border-radius: 0 13px 0 0;
+    -ms-border-radius: 0 13px 0 0;
+    -o-border-radius: 0 13px 0 0;
+    text-transform: uppercase;
+    background-color: hsla(0,0%,100%,.7);
+      color: #11255d;
+      
+  }
+  .sold-text span {
+    font-size: 13px;
+    line-height: 1.38462;
+    text-transform: none;
+  }
+  .product p.name, .product p.price {
+    font-weight: 700;
+    text-align: center;
+    opacity: .4;
+    color: #252525;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+  }
+  p.price{
+    font-size: 3rem;
+  }
+  p.price span{
+    font-size: 1.5rem;
+  }
+  .product p.name,  .product p.price {
+    color: #fff;
+  }
+  .product .save, .product p.billingcycle {
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+  }
+  .product p.billingcycle {
+    font-size: 15px;
+    opacity: .4;
+    color: #252525;
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 16px;
+    color: #fff;
+  }
+  
+  .product .save {
+  
+    padding: 4px 16px;
+    display: block;
+    margin: 0 auto 17px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 13.5px;
+    background-color: rgb(255, 255, 255);
+  }
+  .product .save, .product p.billingcycle {
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+  }
+  .product .save p {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--panelbgColor);
+    line-height: 1.1875;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .product p.guarantee {
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.23077;
+    opacity: .4;
+    color: #252525;
+    margin: 0;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+  color: white;
+  }
+  .Packages-Container-Mobile{
+    display: none;
+   
+  }
+  .Packages-Container-SmallMobile{
+    display: none;
+  
+   }
+  .mobileProduct{
+    max-width: 100%;
+  
+  }
+  
+  /* Desktop responsive */
+  /* @media screen and (width: 2480px), 
+         screen and (height: 980px) {
+    .Packages-Container{
+      gap: 8%;
+    }
+    .product{
+      max-width: 30%;
+    }
+  
+  } */
+  /* @media screen and (width: 1100px), 
+         screen and (height: 980px) {
+    .Packages-Container{
+      gap: 5%;
+    }
+    
+  } */
+  
+  @media screen and (max-width: 900px){
+    
+    #OrderSection{
+        width: 95%;
+    }
+    .Packages-Container{
+    display: none;
+    }.Packages-Container-Mobile{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    
+    }.css-19kzrtu {
+      padding: 20px;
+      /* height: 75vh; */
+  }
+  .mobileProduct{
+    max-width: 100%;
+  
+  }
+  
+  }
+  /* @media screen and (max-width: 665px){
+    .title,.description,.checkbox{
+    font-size: .9rem;
+    }
+    .pricing{
+      width: 30%;
+    }
+    .pricing .price{
+      font-size: 0.9rem!important;
+    }.price span{
+      font-size: 0.9rem!important;
+    }
+    .content{
+      gap: 1rem !important;
+     
+    }
+    .info{
+      width: 60%!important;
+    }
+  } */
+  @media screen and (max-width: 665px){
+    .Packages-Container-Mobile{
+      display: none;
+    }
+    .Packages-Container-SmallMobile{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2.5rem;
+     }
+    .devCheck{
+      width: 12% !important;
+    }
+    .info{
+      width: 60%!important;
+    }
+    .css-1tmu6hb-MuiButtonBase-root-MuiAccordionSummary-root{
+      height: 10vh !important;
+    }
+    .device{
+      padding: 0px !important;
+    }
+    .title{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .description,.checkbox{
+      font-size: 14px;
+      }
+    .pricing .price{
+        font-size: 17px !important;
+        font-weight: bolder;
+      }.price span{
+        font-size: 16px !important;
+        font-weight: bolder;
+      }
+  
+  }
+  /* @media screen and (max-width: 390px){
+    .device{
+      padding: 0px!important;
+    }
+  
+  } */
+  @media screen and (max-width: 280px){
+   .-MuiButtonBase-root-MuiTab-root{
+      font-size: 0.6rem !important;
+    }
+   
+  }
+  .selectedDiv{
+    border: 2px solid var(--packageActive);
+  }
+  .selected{
+    opacity: 1!important;
+  }
+  
+  .selectedSold-text{
+    background-color: var(--packageActive);
+    color: white;
+    border: 2px solid var(--packageActive);
+  }
+  .label{
+    font-family: "Lato","Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif!important;
+    font-size: 16px;
+    word-spacing: 1px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .number{
+    font-family: "Lato","Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif!important;
+    word-spacing: 1px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.20833;
+    outline: none;
+    cursor: default;
+    box-sizing: border-box;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    height: 32px;
+    width: 32px;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.18);
+    background-image: linear-gradient(180deg,#37d348,#13cd7d);
+    font-size: 19px;
+    margin: 0 18px 0 0;
+  }
+  div.label label, div.label label p.number {
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    font-size: 24px;
+    line-height: 1.20833;
+  }
+  /* .css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    position: relative !important;
+    top: -9rem !important;
+  } */
+  .css-19kzrtu {
+    padding: 24px 0px !important;
+    /* height: 75vh; */
+  }
+  
+   .checkbox {
+    width: 24px !important;
+    height: 24px;
+    border-radius: 8px;
+    border: 2px solid #d3dce6;
+    background-color: rgba(230,236,255,0);
+    transition: border-color .3s,background-color .3s;
+    -webkit-transition: border-color .3s,background-color .3s;
+    -moz-transition: .3s border-color,.3s background-color;
+    -ms-transition: .3s border-color,.3s background-color;
+    -o-transition: .3s border-color,.3s background-color;
+    position: relative;
+  
+  }
+  .checked{
+    background-color: #ffa900;
+    border-color: #ffa900;
+    
+  }
+  
+  .marked{
+    display: block;
+    
+  }
+  .Notmarked{
+    display: none;
+  }
+  .device{
+    border-radius: 13px;
+    box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
+      background-color: #030e2e;
+    padding: 19px 14px 20px 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 115px;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+  }
+  .pricing {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0px 10px;
+  }
+    .pricing p.price {
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+  /* color: rgb(161, 161, 161); */
+  font-size: 1.5rem;
+  }
+  
+  .css-1tmu6hb-MuiButtonBase-root-MuiAccordionSummary-root{
+    height: 13vh !important;
+  }
+  
+  .title,.description,.checkbox,.price{
+    color: white;
+   
+
+  }
+  .title,.checkbox,.price{
+    font-weight: bolder;
+  }
+  #DeviceSection{
+    padding: 30px 0px;
+  }

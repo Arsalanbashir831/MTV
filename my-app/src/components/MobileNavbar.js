@@ -16,8 +16,9 @@ const MobileNavbar = (props) => {
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/Channel'> CHANNEL </Link></li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/setup'> SETUP </Link></li>
             <li><Link style={{textDecoration:'none'}} className='nav-link mob-nav-link' to='/resellers'> RESELLERS </Link></li>
-         
+            <Link style={{textDecoration:'none'}} to='/OrderPage' >
             <Button className=' login-btn btn-mob' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/login.php'}>Log in</Button>
+            </Link>
               <Button className='order-btn  btn-mob' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/store/subscriptions'}>Order Now</Button>
               <hr className='mob-hr'></hr>
 

@@ -44,7 +44,10 @@ const DesktopNavbar = () => {
           <div className="buttons">
             <div className="end-nav">
               <Button className=' login-btn' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/login.php'}>Log in</Button>
-              <Button className='order-btn' variant="contained" onClick={()=>window.location.href='https://maxcotv.com/store/subscriptions'}>Order Now</Button>
+          <Link style={{textDecoration:'none'}} to='/OrderPage'>
+          
+              <Button className='order-btn' variant="contained" >Order Now</Button>
+          </Link>
               {/* <button id='login-btn' >LOGIN</button>
         <button id='order-btn' >ORDER NOW</button> */}
               <div id='click' onClick={() => handleChange()} className='hamburger-menu'>

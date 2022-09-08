@@ -65,6 +65,12 @@
   --dark-resellers-text: #fff;
  
 
+
+
+
+  /* --backgroundColor:#1f3167; */
+  --panelbgColor:#030e2e;
+  --packageActive:#ffa900;
 }
 .ds {
   -webkit-touch-callout: none;
