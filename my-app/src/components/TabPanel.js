@@ -72,7 +72,7 @@ export default function FullWidthTabs(props) {
   }
 
   const [activatedId, setactivatedId] = React.useState('pid1');
-
+  TotalBill.planPrice = priceMap[activatedId];
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -98,7 +98,6 @@ export default function FullWidthTabs(props) {
     }
 
     TotalBill.planPrice =  priceMap[id];
-    console.log(TotalBill.planPrice);
 
   }
 

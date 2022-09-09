@@ -485,6 +485,11 @@ div#extraConnect .pricing .check {
   transition-property: transform,opacity;
     transition-duration: .3s;
     transition-timing-function: cubic-bezier(.25,.8,.5,1);
+    background-color: hsla(0,0%,100%,.47);
+}
+
+.dark-mode div#extraConnect .pricing .check {
+  background-color: hsla(0,0%,100%,.47);
 }
 div#extraConnect .pricing .check .circle {
   width: 19.2px;
@@ -522,4 +527,8 @@ div#extraConnect .content p.description {
     transition-property: transform,opacity;
     transition-duration: .3s;
     transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+
+.dark-mode div#extraConnect .pricing .check.enabled {
+  background-color: #37d348;
 }

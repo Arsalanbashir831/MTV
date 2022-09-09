@@ -17,7 +17,7 @@ export default function SimpleAccordion(props) {
     'dev3' : 15,
   }
   const [activatedId, setactivatedId] = React.useState('dev1');
-
+  TotalBill.devicePrice = priceMap[activatedId];
   // handling the selective package 
   const clickHandler = (id) => {
     const element_prev = document.getElementById(activatedId);

@@ -13,12 +13,12 @@ const OrderPage = () => {
     {
       label: 'Option 1',
       value: false,
-      selectedBackgroundColor: "#0097e6",
+      selectedBackgroundColor: "linear-gradient(180deg,#37d348,#13cd7d)",
     },
     {
       label: "Option 2",
       value: true,
-      selectedBackgroundColor: "#fbc531"
+      selectedBackgroundColor: "linear-gradient(180deg,#37d348,#13cd7d)"
     }
   ];
 
@@ -34,7 +34,7 @@ const OrderPage = () => {
       <div id='OrderSection'>
         <PackagePlans></PackagePlans>
         <div style={{marginBottom: '5%', marginTop: '5%'}}s><Label  no={2} text={'Select the Number of Devices'} ></Label> </div>
-        <div style={{ width: "100%", height: 30, justifySelf: 'center' }}>
+        <div style={{ width: "100%", height: 50, justifySelf: 'center' }}>
           <SwitchSelector
             onChange={onChange}
             options={options}
@@ -42,6 +42,9 @@ const OrderPage = () => {
             // backgroundColor={"#353b48"}
             backgroundColor={"#030e2e"}
             fontColor={"#f5f6fa"}
+            wrapperBorderRadius = {10}
+            optionBorderRadius= {10}
+            fontSize= {20}
           />
         </div>
 
