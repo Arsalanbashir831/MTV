@@ -11,7 +11,9 @@ import PriceCard from './PriceCard';
 import MobileCategories from './MobileCategories';
 import Label from './Label';
 import SmallMobile from './SmallMobile';
+import { IoPricetagSharp } from 'react-icons/io5';
 
+import TotalBill from './TotalBill';
 
 
 // helping functions 
@@ -22,21 +24,21 @@ function TabPanel(props) {
 
   return (
     <>
-    <div style={{ marginTop: "10px" }}
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-     
-    </div>
-  
+      <div style={{ marginTop: "10px" }}
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+
+      </div>
+
     </>
 
   );
@@ -57,6 +59,18 @@ function a11yProps(index) {
 // exportable functions 
 export default function FullWidthTabs(props) {
 
+  const priceMap = {
+    'pid1': 10,
+    'pid2': 20,
+    'pid3': 30,
+    'pid4': 40,
+    'pid5': 50,
+    'pid6': 60,
+    'pid7': 70,
+    'pid8': 50,
+    'pid9': 50,
+  }
+
   const [activatedId, setactivatedId] = React.useState('pid1');
 
   const theme = useTheme();
@@ -69,9 +83,7 @@ export default function FullWidthTabs(props) {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
-
-
-// handling the selective package 
+  // handling the selective package 
   const clickHandler = (id) => {
     const element_prev = document.getElementById(activatedId);
     const element = document.getElementById(id);
@@ -85,6 +97,8 @@ export default function FullWidthTabs(props) {
       element.classList.add('selectedDiv')
     }
 
+    TotalBill.planPrice =  priceMap[id];
+    console.log(TotalBill.planPrice);
 
   }
 
@@ -92,7 +106,7 @@ export default function FullWidthTabs(props) {
 
   return (
     <Box sx={{ bgcolor: `${props.bgColor}`, width: "100%" }}>
-      <AppBar style={{ background: `${props.barColor}` ,width:"99%"}} position="static">
+      <AppBar style={{ background: `${props.barColor}`, width: "99%" }} position="static">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -106,12 +120,12 @@ export default function FullWidthTabs(props) {
           <Tab label="Resellers" {...a11yProps(2)} />
           {/* {/* you can add more tabs  */}
         </Tabs>
-        
-      </AppBar> 
+
+      </AppBar>
       <br></br>
       <br></br>
-      <Label no= '1' text='Choose A Plan'></Label>
-      
+      <Label no='1' text='Choose A Plan'></Label>
+
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
@@ -120,61 +134,61 @@ export default function FullWidthTabs(props) {
         {/* pannel 1 or Trial Packages Panel */}
         <TabPanel className="tabPanel" value={value} index={0} dir={theme.direction} >
           <Box className='Packages-Container '>
-            <PriceCard handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price= {priceMap.pid1} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" lastSold="84" days="1" type="Month" price={priceMap.pid2} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" lastSold="84" days="1" type="Month" price={priceMap.pid3} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" lastSold="84" days="1" type="Month" price={priceMap.pid4} currency='£' billingCycle="Month" saving="20" ></PriceCard>
           </Box>
           <Box className='Packages-Container-Mobile '>
-           <MobileCategories handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price={priceMap.pid1} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" lastSold="84" days="1" type="Month" price={priceMap.pid2} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" lastSold="84" days="1" type="Month" price={priceMap.pid3} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" lastSold="84" days="1" type="Month" price={priceMap.pid4} currency='£' billingCycle="Month" saving="20"></MobileCategories>
           </Box>
-          <Box  className='Packages-Container-SmallMobile '>
-         <SmallMobile handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1"  days="1" type="Month" price='150' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
+          <Box className='Packages-Container-SmallMobile '>
+            <SmallMobile handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" days="1" type="Month" price={priceMap.pid1} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" days="1" type="Month" price={priceMap.pid2} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" days="1" type="Month" price={priceMap.pid3} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" days="1" type="Month" price={priceMap.pid4} currency='£' saving="20"></SmallMobile>
           </Box>
           {/* pannel 2 or Subscription Packages Panel */}
         </TabPanel>
         <TabPanel className="tabPanel" value={value} index={1} dir={theme.direction}>
           <Box className='Packages-Container '>
-            <PriceCard handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5" lastSold="84" days="1" type="Month" price={priceMap.pid5} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6" lastSold="84" days="1" type="Month" price={priceMap.pid6} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7" lastSold="84" days="1" type="Month" price={priceMap.pid7} currency='£' billingCycle="Month" saving="20" ></PriceCard>
           </Box>
           <Box className='Packages-Container-Mobile '>
-           <MobileCategories handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-          
+            <MobileCategories handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5" lastSold="84" days="1" type="Month" price={priceMap.pid5} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6" lastSold="84" days="1" type="Month" price={priceMap.pid6} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7" lastSold="84" days="1" type="Month" price={priceMap.pid7} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+
           </Box>
-          <Box  className='Packages-Container-SmallMobile '>
-         <SmallMobile handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-        
+          <Box className='Packages-Container-SmallMobile '>
+            <SmallMobile handleChange={() => clickHandler('pid5')} active={activatedId} divId="pid5" days="1" type="Month" price={priceMap.pid5} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid6')} active={activatedId} divId="pid6" days="1" type="Month" price={priceMap.pid6} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid7')} active={activatedId} divId="pid7" days="1" type="Month" price={priceMap.pid7} currency='£' saving="20"></SmallMobile>
+
           </Box>
-         
+
           {/* pannel 3 or Resellers Package Panel */}
         </TabPanel>
         <TabPanel className="tabPanel" value={value} index={2} dir={theme.direction}>
           <Box className='Packages-Container '>
-            <PriceCard handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
-            <PriceCard handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8" lastSold="84" days="1" type="Month" price={priceMap.pid8} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9" lastSold="84" days="1" type="Month" price={priceMap.pid9} currency='£' billingCycle="Month" saving="20" ></PriceCard>
           </Box>
           <Box className='Packages-Container-Mobile '>
-           <MobileCategories handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-           <MobileCategories handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9" lastSold="84" days="1" type="Month" price='50' currency='£' billingCycle="Month" saving="20"></MobileCategories>
-        
+            <MobileCategories handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8" lastSold="84" days="1" type="Month" price={priceMap.pid8} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+            <MobileCategories handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9" lastSold="84" days="1" type="Month" price={priceMap.pid9} currency='£' billingCycle="Month" saving="20"></MobileCategories>
+
           </Box>
-          <Box  className='Packages-Container-SmallMobile '>
-         
-         <SmallMobile handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-         <SmallMobile handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9"  days="1" type="Month" price='50' currency='£'  saving="20"></SmallMobile>
-        
+          <Box className='Packages-Container-SmallMobile '>
+
+            <SmallMobile handleChange={() => clickHandler('pid8')} active={activatedId} divId="pid8" days="1" type="Month" price={priceMap.pid8} currency='£' saving="20"></SmallMobile>
+            <SmallMobile handleChange={() => clickHandler('pid9')} active={activatedId} divId="pid9" days="1" type="Month" price={priceMap.pid9} currency='£' saving="20"></SmallMobile>
+
           </Box>
         </TabPanel>
         {/* you can add more panels */}

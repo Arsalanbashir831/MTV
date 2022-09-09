@@ -8,7 +8,14 @@ import DevicesCard from './DevicesCard'
 import Grid from '@mui/material/Grid';
 import Label from './Label';
 
+import TotalBill from './TotalBill';
 export default function SimpleAccordion(props) {
+
+  const priceMap= {
+    'dev1' : 5,
+    'dev2' : 10,
+    'dev3' : 15,
+  }
   const [activatedId, setactivatedId] = React.useState('dev1');
 
   // handling the selective package 
@@ -25,13 +32,13 @@ export default function SimpleAccordion(props) {
       element.classList.add('selectedDiv')
     }
 
-
+    TotalBill.devicePrice = priceMap[id];
   }
 
 
   return (
     <div id='DeviceSection'>
-      <Label no={2} text={'Select the Number of Devices'} ></Label>
+      
       {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -59,11 +66,11 @@ export default function SimpleAccordion(props) {
             </Grid>
           </Grid> */}
       <div className="Packages-Container-SmallMobile" style={{ display: "flex", flexDirection: "column", gap: "2rem", padding: '40px 0px' }}>
-        <DevicesCard divId='dev1' active={activatedId} handleChange={() => clickHandler('dev1')} devices={`1  Device`} description="Use your IPTV on Single Device at a time" price="12" duration="month" ></DevicesCard>
+        <DevicesCard divId='dev1' active={activatedId} handleChange={() => clickHandler('dev1')} devices={`1  Device`} description="Use your IPTV on Single Device at a time" price={priceMap.dev1} duration="month" ></DevicesCard>
         {props.type ?
           <>
-            <DevicesCard divId='dev2' active={activatedId} handleChange={() => clickHandler('dev2')} devices={`2   Devices`} description="Use your IPTV on Double Device at a time" price="12" duration="month" ></DevicesCard>
-            <DevicesCard divId='dev3' active={activatedId} handleChange={() => clickHandler('dev3')} devices={`3   Devices`} description="Use your IPTV on Tripple Device at a time" price="12" duration="month" ></DevicesCard>
+            <DevicesCard divId='dev2' active={activatedId} handleChange={() => clickHandler('dev2')} devices={`2   Devices`} description="Use your IPTV on Double Device at a time" price={priceMap.dev2} duration="month" ></DevicesCard>
+              <DevicesCard divId='dev3' active={activatedId} handleChange={() => clickHandler('dev3')} devices={`3   Devices`} description="Use your IPTV on Tripple Device at a time" price={priceMap.dev3} duration="month" ></DevicesCard>
           </>
           : ''}
 
