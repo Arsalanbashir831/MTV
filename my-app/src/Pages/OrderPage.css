@@ -238,7 +238,10 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      gap: 2.5rem;
+      gap: 1.5rem;
+     }
+     .product{
+      max-height: 150px !important;
      }
     .devCheck{
       width: 12% !important;
@@ -266,14 +269,19 @@
         font-size: 16px !important;
         font-weight: bolder;
       }
+      div#extraConnect .content img{
+        display: none;
+      }
   
   }
-  /* @media screen and (max-width: 390px){
-    .device{
-      padding: 0px!important;
-    }
+  @media screen and (max-width: 400px){
+    div#extraConnect .pricing {
+   
+      grid-template-columns: auto !important;
+      gap: 15px;
+  }
   
-  } */
+  }
   @media screen and (max-width: 280px){
    .-MuiButtonBase-root-MuiTab-root{
       font-size: 0.6rem !important;
@@ -373,12 +381,12 @@
     border-radius: 13px;
     box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
       background-color: #030e2e;
-    padding: 19px 14px 20px 29px;
+    padding: 19px 14px 20px 29px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    height: 115px;
+    height: 91px;
     transition-property: transform,opacity;
     transition-duration: .3s;
     transition-timing-function: cubic-bezier(.25,.8,.5,1);
@@ -418,3 +426,100 @@
   #DeviceSection{
     padding: 30px 0px;
   }
+  /* #addons {
+    padding: 37px 0 0;
+} */
+  .extra {
+    padding: 42px 0 0;
+    width: 700px;
+    margin: 0 0 41px;
+    display: grid;
+    grid-gap: 25px;
+    gap: 25px;
+}
+div#extraConnect {
+  border-radius: 13px;
+  box-shadow: 0 8px 20px 0 rgb(0 0 0 / 13%);
+  background-color: var(--panelbgColor);
+  padding: 19px 14px 20px 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 10%;
+  transition-property: transform,opacity;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+div#extraConnect .content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+div#extraConnect .content img {
+  margin-right: 27px;
+}
+div#extraConnect .pricing {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+div#extraConnect .pricing p.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.22222;
+  margin: 0 24px 0 0;
+  transition-property: transform,opacity;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+
+div#extraConnect .pricing .check {
+  width: 56px;
+  height: 25.6px;
+  border-radius: 12.8px;
+  background-color: #d9dbd9;
+  padding: 3.2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+div#extraConnect .pricing .check .circle {
+  width: 19.2px;
+  height: 19.2px;
+  border: 4px solid #fff;
+  border-radius: 100%;
+  transition-property: transform,opacity;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+div#extraConnect .content .info {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  transition-property: transform,opacity;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+div#extraConnect .content p.title {
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.23529;
+  text-transform: uppercase;
+  color: white;
+  transition-property: transform,opacity;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+div#extraConnect .content p.description {
+  font-size: 14px;
+  line-height: 1.21429;
+  margin: 0;
+  opacity: .75;
+  color: #fff;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}

@@ -9,7 +9,15 @@ const SmallMobile = (props) => {
         <p>Save {props.saving}%</p>
         </div>
         <div class="productSelect" 
-        style={{display:"flex",gap:"1rem",justifyContent:"start",alignItems:"center"}}
+        style={{display:"flex",
+        alignItems: 'center',
+        position: 'relative',
+        top: '-20px',
+        fontSize: '20px',
+        justifyContent: 'start',
+        gap: '4rem',
+      
+      }}
          >
           <div style={{marginLeft:"20px"}} class={(props.active===props.divId)?`checkbox checked`:`checkbox`}>
             {/* <CheckIcon   class={(props.active===props.divId)?`marked`:`Notmarked`} style={{fontSize:"1rem" }} ></CheckIcon> */}
@@ -20,9 +28,9 @@ const SmallMobile = (props) => {
           </div>
           <p  className={(props.active===props.divId)? ` selected name  `:`name`}>{props.days+" " }{ props.type+" "}Pass</p>
          
+        <p style={{fontSize:'20px'}} className={(props.active===props.divId)?` selected price `:` price`}>{props.price}<span>{props.currency}</span></p>
         </div>
        
-        <p style={{display:"inline",float:"right",position:"relative",top:"-36px",fontSize:"2rem",left:"-17px"}} className={(props.active===props.divId)?` selected price `:` price`}>{props.price}<span>{props.currency}</span></p>
    
     </div>
   )
