@@ -8,8 +8,8 @@ import DevicesCard from './DevicesCard'
 import Grid from '@mui/material/Grid';
 import Label from './Label';
 
-export default function SimpleAccordion() {
- const [activatedId, setactivatedId] = React.useState('dev1');
+export default function SimpleAccordion(props) {
+  const [activatedId, setactivatedId] = React.useState('dev1');
 
   // handling the selective package 
   const clickHandler = (id) => {
@@ -28,10 +28,10 @@ export default function SimpleAccordion() {
 
   }
 
-  
+
   return (
     <div id='DeviceSection'>
-        <Label no={2} text={'Select the Number of Devices'} ></Label>
+      <Label no={2} text={'Select the Number of Devices'} ></Label>
       {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -41,7 +41,7 @@ export default function SimpleAccordion() {
           <Typography>Select the Number of Devices</Typography>
         </AccordionSummary>
         <AccordionDetails> */}
-          {/* <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+      {/* <Grid sx={{ flexGrow: 1 }} container spacing={2}>
             <Grid item xs={12}>
               <Grid container justifyContent="left" spacing={2}>
              
@@ -58,12 +58,17 @@ export default function SimpleAccordion() {
               </Grid>
             </Grid>
           </Grid> */}
-          <div className="Packages-Container-SmallMobile" style={{display:"flex",flexDirection:"column",gap:"2rem",padding:'40px 0px'}}>
-          <DevicesCard divId='dev1' active={activatedId} handleChange={()=>clickHandler('dev1')} devices={`1  Device`} description="Use your IPTV on Single Device at a time" price="12" duration="month" ></DevicesCard>
-          <DevicesCard divId='dev2' active={activatedId} handleChange={()=>clickHandler('dev2')} devices={`2   Devices`} description="Use your IPTV on Double Device at a time" price="12" duration="month" ></DevicesCard>
-          <DevicesCard divId='dev3' active={activatedId} handleChange={()=>clickHandler('dev3')} devices={`3   Devices`} description="Use your IPTV on Tripple Device at a time" price="12" duration="month" ></DevicesCard>
-          </div>
-{/* 
+      <div className="Packages-Container-SmallMobile" style={{ display: "flex", flexDirection: "column", gap: "2rem", padding: '40px 0px' }}>
+        <DevicesCard divId='dev1' active={activatedId} handleChange={() => clickHandler('dev1')} devices={`1  Device`} description="Use your IPTV on Single Device at a time" price="12" duration="month" ></DevicesCard>
+        {props.type ?
+          <>
+            <DevicesCard divId='dev2' active={activatedId} handleChange={() => clickHandler('dev2')} devices={`2   Devices`} description="Use your IPTV on Double Device at a time" price="12" duration="month" ></DevicesCard>
+            <DevicesCard divId='dev3' active={activatedId} handleChange={() => clickHandler('dev3')} devices={`3   Devices`} description="Use your IPTV on Tripple Device at a time" price="12" duration="month" ></DevicesCard>
+          </>
+          : ''}
+
+      </div>
+      {/* 
         </AccordionDetails>
       </Accordion> */}
 
