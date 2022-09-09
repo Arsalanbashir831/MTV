@@ -8,7 +8,7 @@ export default function OutlinedCard(props) {
          className={(props.active===props.divId)?`selectedDiv device`:`device`}>
     <div className="content">
 
-    <div style={{marginLeft:"20px"}} className={(props.active===props.divId)?`checkbox devCheck checked`:` devCheck checkbox`}>
+    <div style={{marginRight:"20px"}} className={(props.active===props.divId)?`checkbox devCheck checked`:` devCheck checkbox`}>
             {/* <CheckIcon   class={(props.active===props.divId)?`marked`:`Notmarked`} style={{fontSize:"1rem" }} ></CheckIcon> */}
             {/* <FontAwesomeIcon class={(props.active===props.divId)?`marked`:`Notmarked`} style={{fontSize:"1rem" }} icon="fa-solid fa-check" /> */}
            <div className={(props.active===props.divId)?`marked `:`Notmarked`} style={{fontSize:"1rem",textAlign:"center" }}>
