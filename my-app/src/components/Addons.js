@@ -8,8 +8,8 @@ const Addons = () => {
             <Label no={3} text='Select Addons'></Label>
             <div id='extra' style={{padding:'40px 0px',display: 'flex',flexDirection: 'column',gap: '2rem'}}>
 
-                <AddonsCard></AddonsCard>
-                <AddonsCard></AddonsCard>
+                <AddonsCard type='worldwide'></AddonsCard>
+                <AddonsCard type='adult'></AddonsCard>
             </div>
         </section>
     )
