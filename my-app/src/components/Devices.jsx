@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 import Label from './Label';
 
 import TotalBill from './TotalBill';
+import TotalURL from './TotalURL';
 export default function SimpleAccordion(props) {
 
   const priceMap= {
@@ -16,8 +17,24 @@ export default function SimpleAccordion(props) {
     'dev2' : 10,
     'dev3' : 15,
   }
+
+  const detailsMap = {
+    'dev1': {
+      'url': '1device',
+      'details': '1 Device'
+    },
+    'dev2': {
+      'url': '2device',
+      'details': '2 Device'
+    },
+    'dev3': {
+      'url': '3device',
+      'details': '3 Device'
+    },
+  }
   const [activatedId, setactivatedId] = React.useState('dev1');
   TotalBill.devicePrice = priceMap[activatedId];
+  TotalURL.deviceDetails = detailsMap[activatedId];
   // handling the selective package 
   const clickHandler = (id) => {
     const element_prev = document.getElementById(activatedId);
@@ -33,6 +50,9 @@ export default function SimpleAccordion(props) {
     }
 
     TotalBill.devicePrice = priceMap[id];
+    TotalURL.deviceDetails = detailsMap[id];
+
+    console.log(TotalURL.deviceDetails);
   }
 
 
