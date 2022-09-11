@@ -139,7 +139,7 @@ export default function FullWidthTabs(props) {
 
     TotalBill.planPrice = priceMap[id];
     TotalURL.planDetails = detailsMap[id];
-    console.log(TotalURL.planDetails);
+    // console.log(TotalURL.planDetails);
   }
 
 

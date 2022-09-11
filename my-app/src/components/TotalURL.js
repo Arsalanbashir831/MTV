@@ -1,24 +1,24 @@
 const urlLink = {
     "planDetails" : {
         "url" : '',
-        "value" : ''
-    },
-    "typeDetails" : {
-        "url" : '',
-        "value" : ''
+        "details" : ''
     },
     "deviceDetails" : {
         "url" : '',
-        "value" : ''
+        "details" : ''
     },
     "worldwideDetails" : {
         "url" : '',
-        "value" : ''
+        "details" : ''
     },
     "adultDetails" : {
         "url" : '',
-        "value" : ''
-    }
+        "details" : ''
+    },
+    "typeDetails" : {
+        "url" : '',
+        "details" : ''
+    },
 }
 
 export default urlLink;

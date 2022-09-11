@@ -41,12 +41,12 @@ export default function SimpleAccordion(props) {
 
   if (selection == false){
     TotalURL.typeDetails.url='mag';
-    TotalURL.typeDetails.value='Mag Type';
+    TotalURL.typeDetails.details='Mag Type';
   }
 
   else{
     TotalURL.typeDetails.url='';
-    TotalURL.typeDetails.value='';
+    TotalURL.typeDetails.details='Other';
   }
   // handling the selective package 
   const clickHandler = (id) => {
@@ -65,13 +65,13 @@ export default function SimpleAccordion(props) {
 
     TotalBill.devicePrice = priceMap[id];
     TotalURL.deviceDetails = detailsMap[id];
-    if (selection == false){
+    if (selection === false){
       TotalURL.typeDetails.url='mag';
-      TotalURL.typeDetails.value='Mag Type';
+      TotalURL.typeDetails.details='Mag Type';
     }
     else{
       TotalURL.typeDetails.url='';
-      TotalURL.typeDetails.value='';
+      TotalURL.typeDetails.details='other Type';
     }
 
     console.log(TotalURL.typeDetails);
@@ -98,7 +98,14 @@ export default function SimpleAccordion(props) {
       clickHandler('dev1');
       document.getElementById('deviceType').click();
       TotalURL.typeDetails.url='mag';
-      TotalURL.typeDetails.value='Mag Type';
+      TotalURL.typeDetails.details='Mag Type';
+    }
+    else{
+      
+      TotalURL.typeDetails.url='';
+      TotalURL.typeDetails.details='Other Type';
+      document.getElementById('deviceType').click();
+      
     }
   };
 

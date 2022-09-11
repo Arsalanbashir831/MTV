@@ -1,10 +1,90 @@
+/* Container user info  */
+div#userInfo {
+    width: 100%;
+    border-radius: 13px;
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 13%);
+    background-color: #fff;
+    padding: 38px 43px 18px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+
+div#userInfo {
+    box-shadow: 0 2px 14px 0 rgb(0 0 0 / 22%);
+    background-color: #030e2e;
+}
+
+/* Container Prices */
+
+div#userInfo div#pricing {
+    display: grid;
+    grid-gap: 14px;
+    gap: 14px;
+    margin: 0 0 22px;
+}
+
+/* Price Info above total */
+.pricingInfo {
+    padding: 14px 27px 14px 24px;
+    border-radius: 4px;
+    background-color: #f1f5f8;
+    justify-content: space-between;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+.pricingInfo {
+    background-color: hsla(0,0%,100%,.17);
+}
+.pricingInfo, .pricingInfo .data {
+    display: flex;
+    align-items: center;
+}
+
+.pricingInfo .data p, .pricingInfo .price p {
+    color: #fff;
+}
+
+.pricingInfo .data p, .pricingInfo .price p {
+    color: #fff;
+}
+
+/* Paragraph inside price */
+.pricingInfo .data p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.22222;
+    min-width: 149px;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+    color: #fff;
+}
+
+.pricingInfo .price p {
+    font-size: 18px;
+    line-height: 1.22222;
+    transition-property: transform,opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+}
+
+
+/* Total Div */
 #total {
     padding: 8px 25px 10px;
     border-radius: 4px;
-    background-color: var(--components-dark-theme);
     justify-content: flex-end;
     align-items: center;
     display: flex;
+}
+
+div#total {
+    background-color: hsla(0,0%,100%,.17);
 }
 
 div#total p.title {
@@ -48,4 +128,22 @@ div#total p.total {
     color: #fff;
     line-height: 1.2;
     margin: 0 0 0 41px;
+}
+
+
+/* Button Continue */
+
+div#userInfo button#validate {
+    height: 57px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 10px 0 rgb(0 12 24 / 6%);
+    background-color: #37d348;
+    border: 0;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 17px;
 }
