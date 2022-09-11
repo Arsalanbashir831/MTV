@@ -52,7 +52,6 @@ export default function SimpleAccordion(props) {
     TotalBill.devicePrice = priceMap[id];
     TotalURL.deviceDetails = detailsMap[id];
 
-    console.log(TotalURL.deviceDetails);
   }
 
 
