@@ -24,7 +24,7 @@ const Total = ()=>{
         <div id='total'>
             <p class="title">Total</p>
             <div class="hr"></div>
-            <p class="total">{calculateTotal()}€</p>
+            <p class="total">{calculateTotal()}£</p>
         </div>
     )
 }

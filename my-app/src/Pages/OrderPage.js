@@ -53,7 +53,7 @@ const OrderPage = () => {
         <div onClick={handleTotal}><PackagePlans></PackagePlans></div>
         <div style={{ marginBottom: '5%', marginTop: '5%' }} s><Label no={2} text={'Select the Number of Devices'} ></Label> </div>
         <div style={{ width: "100%", height: 50, justifySelf: 'center' }}>
-          <SwitchSelector
+          <SwitchSelector 
             onChange={onChange}
             options={options}
             initialSelectedIndex={0}
@@ -63,6 +63,8 @@ const OrderPage = () => {
             wrapperBorderRadius={10}
             optionBorderRadius={10}
             fontSize={20}
+            
+         
           />
         </div>
 

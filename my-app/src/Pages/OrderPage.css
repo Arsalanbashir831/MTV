@@ -533,3 +533,6 @@ div#extraConnect .content p.description {
   background-color: #37d348;
 }
 
+.react-switch-selector-wrapper{
+  z-index: 0;
+}

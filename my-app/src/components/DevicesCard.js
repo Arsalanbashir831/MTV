@@ -23,7 +23,7 @@ export default function OutlinedCard(props) {
     </div>
     <div className="pricing ">
         <p className={`price `}>
-           {props.price}<span>€</span>/{props.duration}
+           {props.price}<span>£</span>/{props.duration}
         </p>
        
     </div>
