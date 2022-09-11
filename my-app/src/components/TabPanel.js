@@ -14,7 +14,7 @@ import SmallMobile from './SmallMobile';
 import { IoPricetagSharp } from 'react-icons/io5';
 
 import TotalBill from './TotalBill';
-
+import TotalURL from './TotalURL'
 
 // helping functions 
 
@@ -71,8 +71,48 @@ export default function FullWidthTabs(props) {
     'pid9': 50,
   }
 
+  const detailsMap = {
+    'pid1': {
+      'url': '1monthtrial',
+      'details': '1 Month Trial'
+    },
+    'pid2': {
+      'url': '3monthtrial',
+      'details': '3 Month Trial'
+    },
+    'pid3': {
+      'url': '6monthtrial',
+      'details': '6 Month Trial'
+    },
+    'pid4': {
+      'url': '12monthtrial',
+      'details': '12 Month Trial'
+    },
+    'pid5': {
+      'url': '1monthsubcription',
+      'details': '1 Month Subscription'
+    },
+    'pid6': {
+      'url': '3monthsubcription',
+      'details': '3 Month Subscription'
+    },
+    'pid7': {
+      'url': '6monthsubcription',
+      'details': '6 Month Subscription'
+    },
+    'pid8': {
+      'url': '1monthreseller',
+      'details': '1 Month Reseller'
+    },
+    'pid9': {
+      'url': '3monthreseller',
+      'details': '3 Month Reselller'
+    },
+  }
   const [activatedId, setactivatedId] = React.useState('pid1');
   TotalBill.planPrice = priceMap[activatedId];
+  TotalURL.planDetails = detailsMap[activatedId];
+
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -97,8 +137,9 @@ export default function FullWidthTabs(props) {
       element.classList.add('selectedDiv')
     }
 
-    TotalBill.planPrice =  priceMap[id];
-
+    TotalBill.planPrice = priceMap[id];
+    TotalURL.planDetails = detailsMap[id];
+    console.log(TotalURL.planDetails);
   }
 
 
@@ -133,7 +174,7 @@ export default function FullWidthTabs(props) {
         {/* pannel 1 or Trial Packages Panel */}
         <TabPanel className="tabPanel" value={value} index={0} dir={theme.direction} >
           <Box className='Packages-Container '>
-            <PriceCard handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price= {priceMap.pid1} currency='£' billingCycle="Month" saving="20" ></PriceCard>
+            <PriceCard handleChange={() => clickHandler('pid1')} active={activatedId} divId="pid1" lastSold="84" days="1" type="Month" price={priceMap.pid1} currency='£' billingCycle="Month" saving="20" ></PriceCard>
             <PriceCard handleChange={() => clickHandler('pid2')} active={activatedId} divId="pid2" lastSold="84" days="1" type="Month" price={priceMap.pid2} currency='£' billingCycle="Month" saving="20" ></PriceCard>
             <PriceCard handleChange={() => clickHandler('pid3')} active={activatedId} divId="pid3" lastSold="84" days="1" type="Month" price={priceMap.pid3} currency='£' billingCycle="Month" saving="20" ></PriceCard>
             <PriceCard handleChange={() => clickHandler('pid4')} active={activatedId} divId="pid4" lastSold="84" days="1" type="Month" price={priceMap.pid4} currency='£' billingCycle="Month" saving="20" ></PriceCard>
